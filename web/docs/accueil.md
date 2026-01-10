@@ -10,7 +10,7 @@ hide_table_of_contents: true
 
 <Column>
 
-Bienvenue au cours de 1P6 - Introduction à la programmation! Dans ce cours, tu apprendras la programmation à l'aide du language C#.
+Bienvenue au cours de 2P6 - Programmation orientée objet! Dans ce cours, tu apprendras les bases de la programmation orientée objet à l'aide du language C#.
 
 Le contenu des cours ainsi que les énoncés de TP sont disponibles dans les onglets **[Cours](cours/introduction)** et **[Travaux Pratiques](tp/tp1)**. Tu trouveras également les exercices et les solutions aux exercices dans les onglets **[Laboratoires](laboratoire/laboratoire1.1)** et **[Solutions](solution/Laboratoire-Solution1.1)**
 
