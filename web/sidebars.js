@@ -81,7 +81,10 @@ const sidebars = {
       type: "doc",
       label: "1.1 - Révision, objets et collection 🏁",
       id: "cours/introduction",
+      
       customProps: {
+        avancementLabel: "TP1",
+        avancement: 0.1,
         calendrier: {
           "David": [{"1090":"2025-08-25"}, {"1100":"2025-08-25"}],
           "Éric": [{"1050":"2025-08-22"}, {"1060":"2025-08-22"}],
@@ -134,8 +137,7 @@ const sidebars = {
       label: "2.2 - Encapsulation",
       id: "cours/fonctions",
       customProps: {
-        avancementLabel: "TP1",
-        avancement: 0.1,
+       
         calendrier: {
           "David": [{"1090":"2025-09-04"}, {"1100":"2025-09-04"}],
           "Éric": [{"1050":"2025-09-10"}, {"1060":"2025-09-10"}],
@@ -153,8 +155,7 @@ const sidebars = {
       label: "3.1 - TP2 - Partie 2",
       id: "cours/integration-fonctions",
       customProps: {
-        avancementLabel: "TP1",
-        avancement: 0.4,
+       
         calendrier: {
           "David": [{"1090":"2025-09-08"}, {"1100":"2025-09-08"}],
           "Éric": [{"1050":"2025-09-12"}, {"1060":"2025-09-12"}],
@@ -173,8 +174,7 @@ const sidebars = {
       id: "cours/integration-tp1",
       className: "remise-tp1",
       customProps: {
-        avancementLabel: "TP1",
-        avancement: 1.0,
+        
         calendrier: {
           "David": [{"1090":"2025-09-11"}, {"1100":"2025-09-11"}],
           "Éric": [{"1050":"2025-09-17"}, {"1060":"2025-09-17"}],
@@ -209,6 +209,8 @@ const sidebars = {
       label: "4.2 - Intègration",
       id: "cours/tableaux1d",
       customProps: {
+        avancementLabel: "TP1",
+        avancement: 1.0,
         calendrier: {
           "David": [{"1090":"2025-09-18"}, {"1100":"2025-09-18"}],
           "Éric": [{"1050":"2025-09-24"}, {"1060":"2025-09-24"}],
