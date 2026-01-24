@@ -69,13 +69,13 @@ La matière est expliquée dans chacun des cours, mais tu peux trouver plus d'in
             id: "calendar-philippe",
             label: "Philippe",
             icon: "📅",
-            component: <MainDocsCalendar professorName="Jimmy " />,
+            component: <MainDocsCalendar professorName="Philippe" />,
         },
         {
-            id: "calendar-pierre",
-            label: "Pierre-Paul",
+            id: "calendar-jimmy",
+            label: "Jimmy",
             icon: "📅",
-            component: <MainDocsCalendar professorName="Philippe" />,
+            component: <MainDocsCalendar professorName="Jimmy" />,
         },
     ]}
     defaultTabId="grid"
