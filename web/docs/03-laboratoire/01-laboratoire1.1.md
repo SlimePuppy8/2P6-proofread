@@ -86,7 +86,7 @@ Après : 12 8 4 18 2 6
 Disponible ici 👇
 <GithubDownload
   repo="2P6"
-  folder="web/docs/03-laboratoire/_Laboratoire1-1/Personnage.cs"
+  folder="web/docs/03-laboratoire/_Laboratoire1-1"
   label="📁 Exercice 3 - Classe Personnage" 
 />
 
