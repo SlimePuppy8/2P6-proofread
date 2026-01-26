@@ -91,7 +91,7 @@ La classe `Personnage` est fournie. Elle contient :
 * **Niveau** : le rang du personnage (ex : `DEBUTANT`, `APPRENTI`, `GUERRIER`, `HERO`)
 * **GagnerUnPoint()** : méthode qui augmente le nombre de points de 1
 * **AfficherEtat()** : méthode qui retourne une chaîne de caractères contenant l'état du personnage (nom, niveau, statut)
-* **Constantes de paliers** : valeurs fixes indiquant à quels niveaux le niveau doit changer (ex : 5, 10, 15)
+* **Constantes de paliers** : valeurs fixes indiquant à partir de combien de points le niveau doit changer (ex. : 5, 10, 15).
 * **Constantes de niveaux** : valeurs fixes représentant les noms des niveaux (`DEBUTANT`, `APPRENTI`, etc.)
 * **Constructeurs** : instancier des objets de la classe
 
@@ -171,7 +171,7 @@ Epona;4;DEBUTANT
 * recevoir en paramètre un nom de fichier csv
 * lire toutes les lignes du fichier csv
 * pour chaque ligne valide :
-  * extraire `Nom`, `Niveau`, `Statut`
+  * extraire `Nom`, `Points`, `Niveau`
   * créer un objet `Personnage(nom, points, niveau)`
   * l’ajouter à une `List<Personnage>`
 * retourne la liste
