@@ -121,7 +121,7 @@ int nombre = liste.ElementAt(2);
 liste[1] = -5;
 
 // Vérifier si une valeur est dans la liste
-bool estPresent = liste.Contains(15)); // estPresent contient true puisque 15 est dans la liste.
+bool estPresent = liste.Contains(15); // estPresent contient true puisque 15 est dans la liste.
 
 // Ajouter un élément à la fin de la liste
 liste.Add(20); // le contenu de la liste est {10, -5, 58, 20}
