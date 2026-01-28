@@ -18,38 +18,100 @@ Un **gestionnaire de code source** (souvent appelé système de gestion de versi
 
 ![](@site/static/img/R02/DepotLocalEtDistant.png)
 
-## Git
+## Git et GitHub
 
-### Qu'est-ce que c'est?
+### Git
+**Git** est un **logiciel de gestion de code source**. C'est un outil essentiel pour la gestion des dépôts Git. C'est un logiciel qui est utilisé en ligne de commande. Cependant, il existe des logiciels graphiques plus conviviaux tel que:
+    - GitHub Desktop
+    - GitKraken
+    - Sourcetree
+    - QGit
+    - Tortoise Git
 
-### Installation
+Pour les besoins du cours, nous allons utiliser **GitHub Desktop** que l'on peut retrouver ici: https://desktop.github.com/download/
+
+:::tip
+Notez que Git est intégré dans Visual Studio et Visual Code. Bien que très pratique, il est pertinent d'apprendre à utiliser un outil indépendant.
+:::
+
+### GitHub
+
+GitHub est une **plateforme en ligne** qui utilise Git pour l'hébergement de dépôts. Ceci permet d'avoir une copie distante de nos projets et facilite la collaboration.
+
+Pour y avoir accès, vous aurez besoin de créer votre compte étudiant.
+https://education.github.com/pack
+
+
+![](@site/static/img/R02/educationBenefits.png)
+
+Vous pouvez vous référer à cette capsule vidéo pour vous guider:
+
+- [Capsule vidéo compte GitHub](https://www.youtube.com/watch?v=dwauCcvJS7U&list=PLQUoc75aiWcQDZjP3Oy2XvG4f_QP0Ewer&index=3) : Créer mon compte GitHub et installer le Student Pack!
 
 ### Créer un dépôt
+
+
 1.	Si ce n’est pas fait, vous devez créer un compte GitHub avec votre compte du cégep (matricule@cegepmontpetit.ca ). Regardez la capsule vidéo sur Moodle et accéder à cette page pour le créer et avoir le Student Service Pack : https://education.github.com/pack
 2.	Connectez-vous à GitHub avec votre compte du cégep (matricule@cegepmontpetit.ca) 
-3.	Créez un nouveau dépôt GitHub privé et le nommez selon ce format en mettant votre propre matricule. Exemple: H26-2P6-R02Ex-MATRICULE  
-
+3.	Créez un nouveau dépôt GitHub privé et le nommez selon ce format en mettant votre propre matricule. 
 :::info
-Exceptionnellement, dans notre cours 2N6 on va utiliser ce format. Sinon, pour les autres cours, vous devez faire référence à la page Git du département et les consignes de votre professeur ! https://info.cegepmontpetit.ca/git
+Exemple: **H26-2P6-R01Ex-MATRICULE** ou **H26-2P6-TP1-MATRICULE**
+:::
+
+![](@site/static/img/R02/nouveauDepot1.png)
+
+4. Assurez-vous de choisir une **visibilité restraite (🔒 Private)** et d'ajouter un fichier .gitignore selon le template **📄Visual Studio**.
+![](@site/static/img/R02/nouveauDepot2.png)
+
+:::note
+Exceptionnellement, dans notre cours 2P6 on va utiliser ce format. Sinon, pour les autres cours, vous devez faire référence à la page Git du département et les consignes de votre professeur ! https://info.cegepmontpetit.ca/git
 ::: 
 
-![](@site/static/img/R02/newRepo.png)
-
-4.	Ajoutez votre professeur comme collaborateur à votre projet. (Sur votre repository, Onglet settings, Manage Access, Add a collaborator). Utilisez l’une des deux adresses courriel suivantes selon votre groupe :
+5.	Ajoutez votre professeur comme collaborateur à votre projet. (Sur votre repository, Onglet settings, Manage Access, Add a collaborator). Utilisez l’une des deux adresses courriel suivantes selon votre groupe :
     - Groupes 1010, 1020 	: jamil.gammoudi@cegepmontpetit.ca
     - Groupes 1030, 1040 	: david.gagne-leroux@cegepmontpetit.ca
     - Groupe 1050       	: philippe.martel@cegepmontpetit.ca
     - Groupe 1060           : jimmy.beaubien@cegepmontpetit.ca
 
-![](@site/static/img/R02/collaborators.png)
+![](@site/static/img/R02/inviterCollaborateurs.png)
 
 ### Cloner un dépôt
+Il s'agit de faire une copie de travail de votre dépôt sur votre ordinateur. Cela permet de modifier des projets avec plusieurs fichiers, de travailler dans votre environnement de développement avant de sauver vos modifications.
 
-### Enregistrer des changements
+1. Cloner le dépôt sur votre ordinateur, le plus simple est de cliquer sur le bouton vert "Code" puis de choisir "Open with Github Desktop"
 
-### Voir l'historique
+![](@site/static/img/R02/GitHubDesktopCloner.png)
 
-### Comment corriger
+2. Dans Github Desktop, choisir un dossier où cloner le repo
+
+![](@site/static/img/R02/GitHubDesktopClonerVers.png)
+
+### Enregistrer vos changements
+
+Il est important de noter que vous travaillez sur un dépôt **LOCAL** et que vos modifications **DOIVENT** être poussées vers **GitHub**. Git va vous exiger un message décrivant les modifications apportées lorsque vous allez effectuer la commande "commit". 
+
+Il est préférable de faire **plusieurs petits** "commits" au lieu d'un **~~gros~~**. 
+
+Des indices pour déterminer quand pousser ses modifications:
+- lorsqu'un **TODO est complété**
+- atteintes de **points** dans la grille d'évaluation
+- votre code **réussi de nouveaux tests** 
+- ou tout simplement que vous devez **quitter**. 
+
+Vous n'êtes pas obligé de réussir une fonctionnalité pour enregistrer vos changements, vous pouvez la terminer lors d'un prochain "commit". L'important, c'est documenter la progression.
+
+Nous vous demandons de respecter la **convention** décrite sur le site web du programme: https://info.cegepmontpetit.ca/gits
+
+Pour ce faire:
+1. Dans Github Desktop, vous verrez les fichiers modifiés
+2. Vous pouvez ajouter un message pour expliquer les modifications
+3. Cliquer sur "Commit to main"
+4. Cliquer sur "Push origin" pour envoyer les modifications sur le serveur GitHub
+5. Vous pouvez vérifier sur le site GitHub que les modifications ont bien été envoyées
+
+:::danger
+**ATTENTION** Dès que vous avez complété quelque chose d'utile, vous pouvez en faire un commit et le pousser sur GitHub. Cela vous permettra de ne pas perdre votre travail.
+:::
 
 ### Les commandes de base
 
@@ -63,216 +125,7 @@ Exceptionnellement, dans notre cours 2N6 on va utiliser ce format. Sinon, pour l
 | **pull** | **Récupère** les modifications du **dépôt distant**. Si il y a une différence entre la branche locale et distante, les deux branches seront fusionnnées et une opération merge + commit se exécutée. |
 
 ## Liens utils
+- [Lien vers GitHub](https://github.com/) : Lien vers GitHub
+- [Lien vers GitHub Desktop](https://desktop.github.com/download/) : Télécharger GitHub Desktop
+- [Capsule vidéo compte GitHub](https://www.youtube.com/watch?v=dwauCcvJS7U&list=PLQUoc75aiWcQDZjP3Oy2XvG4f_QP0Ewer&index=3) : Créer mon compte GitHub et installer le Student Pack!
 
-## Labo
-<!-- 
-## 🧠 Théorie Rencontre 2
-
-[Variable](https://info.cegepmontpetit.ca/notions-csharp/documentation/variable/variable) : une variable est une zone mémoire identifiée permettant de stocker et modifier une valeur durant l'exécution d'un programme.
-
-## 1. Déclaration et affectation
-
-La déclaration d'une variable signifie que l'on réserve un espace mémoire pour stocker une valeur d'un type précis. L'affectation consiste à attribuer une valeur à cette variable.
-
-### 🧱 Syntaxe générale
-```csharp
-type nomDeVariable = valeur;
-```
-
-### 📝 Règles de nommage
-[Identificateur](https://info.cegepmontpetit.ca/notions-csharp/documentation/identificateur) : un identificateur est un nom choisi pour désigner variables, méthodes, etc., selon des conventions précises de style.
-- Une variable commence par une lettre (pas de chiffre au début)
-- Elle ne peut pas contenir d'espaces ou de symboles spéciaux
-- Convention : camelCase (`monNom`, `nombreTotal`)
-
-### 🔹 Exemples
-```csharp
-int age = 25;
-char lettre = 'C';
-bool estValide = true;
-string nom = "Louis";
-```
-
-### 🔄 Assignation après déclaration
-
-[Assignation](https://info.cegepmontpetit.ca/notions-csharp/documentation/assignation) : l'assignation utilise `=` pour placer une valeur calculée ou littérale dans une variable.
-
-Vous pouvez aussi déclarer une variable sans lui donner de valeur immédiatement, puis l'affecter plus tard :
-```csharp
-int score;
-score = 100;
-```
-## 2. Types de base en C#
-
-[Types de données](https://info.cegepmontpetit.ca/notions-csharp/documentation/types-de-donnees) : Types de données
-
-Les types de base sont les types fondamentaux utilisés pour déclarer des variables. Voici les plus courants en C# :
-
-### 🔢 int
-- Représente un **entier** (positif ou négatif).
-- Exemples :
-```csharp
-int age = 18;
-int score = -10;
-```
-
-### 🔣 char
-- Représente un **caractère unique**.
-- Utilise des apostrophes : `'A'`, `'b'`
-- Exemples :
-```csharp
-char lettre = 'A';
-```
-
-### 🧮 double
-- Représente un **nombre décimal** avec plus de précision que `float`.
-- Exemples :
-```csharp
-double pi = 3.14159;
-double note = 87.5;
-```
-
-### 🔁 bool
-- Représente un **booléen** : `true` ou `false`
-- Utilisé pour les conditions
-```csharp
-bool estConnecte = true;
-bool aFini = false;
-```
-
-### 🧵 string
-- Représente une **chaîne de caractères**.
-- Utilise des guillemets : "Bonjour"
-```csharp
-string nom = "Alice";
-string message = "Bienvenue!";
-```
-
-## 3. Concaténation de chaînes
-
-La concaténation consiste à assembler plusieurs chaînes de caractères en une seule.
-
-### ➕ Opérateur `+`
-L’opérateur `+` permet de combiner des chaînes et des variables de type `string`.
-```csharp
-string nom = "Alice";
-string message = "Bonjour, " + nom + "!";
-Console.WriteLine(message);
-```
-
-### 📦 Concaténation avec autres types
-On peut concaténer des types différents (comme `int`) avec des chaînes : ils sont automatiquement convertis en texte.
-```csharp
-int age = 30;
-Console.WriteLine("Âge : " + age);
-```
-
-### 📏 Mise en forme avancée : interpolation (facultatif)
-On peut aussi utiliser l’interpolation (niveau plus avancé, à présenter plus tard) :
-```csharp
-string nom = "Bob";
-Console.WriteLine($"Salut, {nom}!");
-```
-## 4. Opérations arithmétiques
-
-Les opérations arithmétiques permettent de manipuler des valeurs numériques (`int`, `double`).
-
-### ➕ Opérations de base
-```csharp
-int a = 10;
-int b = 3;
-
-int somme = a + b;       // Addition
-int difference = a - b;  // Soustraction
-int produit = a * b;     // Multiplication
-int quotient = a / b;    // Division entière
-int reste = a % b;       // Modulo (reste de la division)
-```
-
-### 🧠 Exemple
-```csharp
-int x = 7;
-int y = 2;
-Console.WriteLine("x + y = " + (x + y)); //Donne 9
-Console.WriteLine("x % y = " + (x % y)); //Donne 1
-```
-
-### 🔢 Avec `double`
-```csharp
-double prix = 12.99;
-double taxe = 0.15 * prix;
-Console.WriteLine("Taxe : " + taxe); //Donne 1,9485
-```
-
-### ⚠️ Division entière
-Lorsque vous divisez deux `int`, le résultat est un entier (le reste est perdu). Pour un résultat avec décimales, utilisez `float`, `double` ou `decimal`.
-```csharp
-int a = 7;
-int b = 2;
-Console.WriteLine(a / b); // Résultat : 3 (pas 3.5)
-```
-
-### 📐 Priorité des opérateurs
-En C#, certaines opérations sont effectuées avant d'autres, selon la priorité :
-1. Parenthèses `()`
-2. Multiplication `*`, division `/`, modulo `%`
-3. Addition `+` et soustraction `-`
-
-Exemple :
-```csharp
-int resultat = 2 + 3 * 4;      // Donne 14 (car 3*4 est calculé avant)
-int correct = (2 + 3) * 4;     // Donne 20
-```
-
-### 🔁 Permutation de valeurs
-Il arrive souvent qu’on veuille échanger la valeur de deux variables. Cette opération s’appelle une **permutation**.
-
-```csharp
-int a = 5;
-int b = 10;
-
-// Permuter les valeurs de a et b
-int temporaire = a;
-a = b;
-b = temporaire;
-
-Console.WriteLine("a = " + a); // a = 10
-Console.WriteLine("b = " + b); // b = 5
-```
-## 5. Conversion de types
-
-Lorsqu’on lit une entrée utilisateur via `Console.ReadLine()`, on obtient toujours une **chaîne de caractères (`string`)**. Pour utiliser cette entrée comme un nombre, il faut la convertir.
-
-### 🔁 Convertir une `string` en `int`
-```csharp
-Console.Write("Entrez votre âge : ");
-string saisie = Console.ReadLine();
-int age = int.Parse(saisie);
-```
-
-### 🔁 Convertir en `double`
-```csharp
-Console.Write("Entrez un prix : ");
-string entree = Console.ReadLine();
-double prix = double.Parse(entree);
-```
-
-
-### 🛑 Attention aux erreurs !
-Si l’utilisateur entre un texte non numérique (ex: "abc"), `int.Parse()` ou `double.Parse()` déclencheront une **erreur d’exécution**.
-
-### ✅ Astuce (plus tard) : `TryParse()`
-Pour éviter les erreurs, on peut utiliser `TryParse()`, mais cette méthode sera vue plus tard dans le cours.
-
-Voici les documents de référence :
-
-
-
-
-- [Opérateur](https://info.cegepmontpetit.ca/notions-csharp/documentation/operateur) : un opérateur réalise des opérations arithmétiques, logiques ou d’assignation entre variables et littéraux.
-- [Priorité des opérateurs](https://info.cegepmontpetit.ca/notions-csharp/documentation/operateur/priorite) : la priorité des opérateurs détermine l’ordre dans lequel les opérations sont évaluées, comme dans les expressions mathématiques.
-- [Littéral](https://info.cegepmontpetit.ca/notions-csharp/documentation/litteral) : un littéral représente une valeur fixe directement inscrite dans le code, comme un nombre ou une chaîne de caractères.
-
-Vous devez réaliser les labos suivants :
- [🧪 Labo 1.2A](/laboratoire/laboratoire1.2A)
- [🧪 Labo 1.2B](/laboratoire/laboratoire1.2B) -->
