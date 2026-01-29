@@ -60,7 +60,7 @@ Exemple: **H26-2P6-R01Ex-MATRICULE** ou **H26-2P6-TP1-MATRICULE**
 
 ![](@site/static/img/R02/nouveauDepot1.png)
 
-4. Assurez-vous de choisir une **visibilité restraite (🔒 Private)** et d'ajouter un fichier .gitignore selon le template **📄Visual Studio**.
+4. Assurez-vous de choisir une **visibilité restreinte (🔒 Private)** et d'ajouter un fichier .gitignore selon le template **📄Visual Studio**.
 ![](@site/static/img/R02/nouveauDepot2.png)
 
 :::note
@@ -100,7 +100,7 @@ Des indices pour déterminer quand pousser ses modifications:
 
 Vous n'êtes pas obligé de réussir une fonctionnalité pour enregistrer vos changements, vous pouvez la terminer lors d'un prochain "commit". L'important, c'est documenter la progression.
 
-Nous vous demandons de respecter la **convention** décrite sur le site web du programme: https://info.cegepmontpetit.ca/gits
+Nous vous demandons de respecter la **convention** décrite sur le site web du programme: https://info.cegepmontpetit.ca/git
 
 Pour ce faire:
 1. Dans Github Desktop, vous verrez les fichiers modifiés
