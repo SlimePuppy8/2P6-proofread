@@ -66,6 +66,55 @@ Voici la classe et sa structure que vous devrez créer:
 
 ![](@site/static/img/R03/montre.png)
 
+---
+
+### 📝 Description de la classe
+
+#### Champs
+
+* **m_heures**
+  Stocke l’heure courante de la montre, comprise entre 0 et 23.
+* **m_minutes**
+  Stocke les minutes courantes de la montre, comprises entre 0 et 59.
+* **m_secondes**
+  Stocke les secondes courantes de la montre, comprises entre 0 et 59.
+
+---
+
+#### Propriétés
+
+* **Heures**
+  Permet d’obtenir la valeur actuelle des heures de la montre.
+* **Minutes**
+  Permet d’obtenir la valeur actuelle des minutes de la montre.
+* **Secondes**
+  Permet d’obtenir la valeur actuelle des secondes de la montre.
+
+---
+
+#### Constructeurs
+
+* **Constructeur sans paramètre**
+  Initialise une nouvelle montre à l’heure **00 heures, 00 minutes et 00 secondes**.
+
+* **Constructeur avec paramètres**
+  Initialise une nouvelle montre avec une heure, des minutes et des secondes passées en paramètres.
+
+---
+
+#### Méthodes
+
+* **Avancer une seconde**
+  Augmente le temps courant d’une seconde.
+  Gère automatiquement le passage des secondes aux minutes, des minutes aux heures, et le retour à zéro après 23 heures.
+
+* **Temps courant**
+  Retourne l’heure actuelle de la montre sous forme de texte formaté heures, minutes et secondes.
+
+---
+
+
+
 ### ⭐ Exemple d'exécution
 
 ```
@@ -123,10 +172,9 @@ Veuillez sélectionner une option :
 
 ### 🛠️ Instructions
 Vous devez écrire un programme qui simule un parcomètre. Ce programme instancie un objet de la classe **`Parcometre`**. 
-Il permet d'augmenter ou de diminuer la température d'un degrés à la fois. La température autorisée est 
-entre 5 et 35 degrés Celcius.
+Il permet de gérer du temps de stationnement à partir d’argent inséré par un utilisateur.
 
-Ajoutez une nouvelle classe au projet nommée **`AppParcometre`**.
+Ajoutez une nouvelle classe **`Parcometre`** au projet nommée **`AppParcometre`**.
 
 ### 📋 Structure de la classe
 
@@ -134,6 +182,52 @@ Voici la classe et sa structure que vous devrez créer:
 
 ![](@site/static/img/R03/parcometre.png)
 
+### 📝 Description de la classe
+
+#### Constantes
+
+* **Coût par minute**
+  Montant fixe, en cents, représentant le prix d’une minute de stationnement.
+* **Montant minimum**
+  Montant minimal d’argent pouvant être inséré dans le parcomètre.
+
+---
+
+#### Champs
+
+* **Minutes restantes**
+  Nombre de minutes de stationnement encore disponibles avant l’infraction.
+
+* **Montant total**
+  Somme totale d’argent, en cents, insérée dans le parcomètre depuis son initialisation.
+
+---
+
+#### Propriétés
+
+* **Montant total**
+  Permet d’obtenir le montant total d’argent actuellement contenu dans le parcomètre.
+---
+
+#### Constructeurs
+
+* **Constructeur du parcomètre**
+  Crée un nouveau parcomètre sans argent et sans temps de stationnement au départ.
+---
+
+#### Méthodes
+
+* **Insérer monnaie**
+  Permet à l’utilisateur d’ajouter un montant d’argent au parcomètre.
+  Le montant inséré est converti en minutes de stationnement selon le coût par minute, et ajouté au temps restant.
+* **Consommer une minute de temps**
+  Simule l’écoulement du temps en retirant une minute au temps de stationnement restant.
+* **Obtenir le temps restant**
+  Retourne le temps de stationnement restant sous la forme heures et minutes.
+* **Est en infraction**
+  Indique si le véhicule est en situation d’infraction, c’est-à-dire lorsque le temps de stationnement est écoulé.
+
+---
 ### ⭐ Exemple d'exécution
 
 ```
