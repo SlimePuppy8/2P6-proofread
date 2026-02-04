@@ -639,6 +639,13 @@ const sidebars = {
       collapsible: true,
       collapsed: collapseBloc1,
       items: ['laboratoire/laboratoire2.1']
+    },
+    {
+      type: 'category',
+      label: 'Laboratoire 2.2',
+      collapsible: true,
+      collapsed: collapseBloc1,
+      items: ['laboratoire/laboratoire2.2']
     }
 
   ],

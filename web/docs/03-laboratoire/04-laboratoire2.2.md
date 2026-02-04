@@ -2,7 +2,7 @@
 title: Définition des classes (Encapsulation)
 ---
 
-# 🧪 Labo 2.1 – Définition des classes (Encapsulation)
+# 🧪 Labo 2.2 – Définition des classes (Encapsulation)
 
 📎 **Référence** : [Instanciation objet](https://info.cegepmontpetit.ca/notions-csharp/documentation/instanciation-objet)
 
@@ -11,7 +11,7 @@ title: Définition des classes (Encapsulation)
 Ce laboratoire doit être développé à l'aide du logiciel **Git**. Vous devrez **créer un nouveau dépôt dans GitHub** 
 et **inviter votre professeur** en tant que collaborateur.
 
-Voici le format du dépôt exigé: **H26-2P6-R03-MATRICULE**
+Voici le format du dépôt exigé: **H26-2P6-R04-MATRICULE**
 
 Il devrait y avoir **un commit** pour **chaque** exercice.
 
@@ -22,148 +22,12 @@ Il devrait y avoir **un commit** pour **chaque** exercice.
 Disponible ici 👇
 <GithubDownload
   repo="2P6"
-  folder="web/docs/03-laboratoire/_Laboratoire2-1"
+  folder="web/docs/03-laboratoire/_Laboratoire2-2"
   label="📁 Fichiers de départ" 
 />
 ---
-## 🟢 Exercice 1 – AppCompteurHydro
-### 🎯 Objectifs 
-* Se familiariser avec le diagramme d'une classe
-* Instancier et utiliser un objet
-* Créer un menu console
-
-### 🛠️ Instructions
-Écrire un programme qui simule un compteur d'Hydro Québec. Ce compteur garde en mémoire la quantité de Kw/h consommé et permet même de compter
-le coût de la consommation. Vous devrez instancier et utiliser la classe **`CompteurHydro`**.
-
-Vous devrez compléter un menu en mode console permttant les actions suivantes:
-- Consommer une quantité de Kw/h
-- Afficher la consommation actuelle
-- Afficher le coût de la consommation
-- Quitter
-
-### 📋 Structure de la classe
-La classe que vous allez utiliser existe déjà et voici sa structure:
-
-![](@site/static/img/R03/compteurHydro.png)
----
-
-## 🟡 Exercice 2 – AppMontre
-### 🎯 Objectifs 
-* Créer une classe
-* Se familiariser avec le diagramme d'une classe
-* Instancier et utiliser un objet
-* Créer un menu console
-
-### 🛠️ Instructions
-Vous devez écrire un programme qui simule une montre. Ce programme instancie une classe **`Montre`** qui permet de modifier les
-heures, les minutes et les secondes. Il permet également de faire avancer le temps de la montre d'une seconde.
-
-Ajoutez une nouvelle classe au projet nommée **`AppMontre`** qui correspond à la structure de la classe ci-bas.
-
-### 📋 Structure de la classe
-Voici la classe et sa structure que vous devrez créer:
-
-![](@site/static/img/R03/montre.png)
-
----
-
-### 📝 Description de la classe
-
-#### Champs
-
-* **m_heures**
-  Stocke l’heure courante de la montre, comprise entre 0 et 23.
-* **m_minutes**
-  Stocke les minutes courantes de la montre, comprises entre 0 et 59.
-* **m_secondes**
-  Stocke les secondes courantes de la montre, comprises entre 0 et 59.
-
----
-
-#### Propriétés
-
-* **Heures**
-  Permet d’obtenir la valeur actuelle des heures de la montre.
-* **Minutes**
-  Permet d’obtenir la valeur actuelle des minutes de la montre.
-* **Secondes**
-  Permet d’obtenir la valeur actuelle des secondes de la montre.
-
----
-
-#### Constructeurs
-
-* **Constructeur sans paramètre**
-  Initialise une nouvelle montre à l’heure **00 heures, 00 minutes et 00 secondes**.
-
-* **Constructeur avec paramètres**
-  Initialise une nouvelle montre avec une heure, des minutes et des secondes passées en paramètres.
-
----
-
-#### Méthodes
-
-* **Avancer une seconde**
-  Augmente le temps courant d’une seconde.
-  Gère automatiquement le passage des secondes aux minutes, des minutes aux heures, et le retour à zéro après 23 heures.
-
-* **Temps courant**
-  Retourne l’heure actuelle de la montre sous forme de texte formaté heures, minutes et secondes.
-
----
-
-
-
-### ⭐ Exemple d'exécution
-
-```
-=== Menu Principal ===
-1 - Avancer la montre d'une seconde
-2 - Initialiser la montre à 0:00:00
-3 - Initialiser la montre à 12:30:59
-4 - Initialiser la montre à 12:59:59
-5 - Initialiser la montre à 23:59:59
-Q - Quitter
-=======================
-Veuillez sélectionner une option : 
-```
----
-
-## 🟡 Exercice 3 – AppThermostat
-### 🎯 Objectifs 
-* Créer une classe
-* Se familiariser avec le diagramme d'une classe
-* Instancier et utiliser un objet
-* Créer un menu console
-
-### 🛠️ Instructions
-Vous devez écrire un programme qui simule un thermostat. Ce programme instancie un objet de la classe **`Thermostat`**. 
-Il permet d'augmenter ou de diminuer la température d'un degrés à la fois. La température autorisée est 
-entre 5 et 35 degrés Celcius.
-
-Ajoutez une nouvelle classe au projet nommée **`AppThermostat`** qui correspond au schéma.
-
-### 📋 Structure de la classe
-Voici la classe et sa structure que vous devrez créer:
-
-![](@site/static/img/R03/thermostat.png)
-
-### ⭐ Exemple d'exécution
-
-```
-=== Menu Principal ===
-1 - Augmenter la température
-2 - Diminuer la température
-3 - Température Maximale autorisée
-4 - Température Minimale autorisée
-Q - Quitter
-=======================
-Veuillez sélectionner une option : 
-```
----
     
-## 🔴 Exercice 4 – AppParcometre
+## 🟢 Exercice 1 – AppRobot
 ### 🎯 Objectifs 
 * Créer une classe
 * Se familiariser avec le diagramme d'une classe
@@ -171,78 +35,91 @@ Veuillez sélectionner une option :
 * Créer un menu console
 
 ### 🛠️ Instructions
-Vous devez écrire un programme qui simule un parcomètre. Ce programme instancie un objet de la classe **`Parcometre`**. 
-Il permet de gérer du temps de stationnement à partir d’argent inséré par un utilisateur.
+Dans cet exercice, vous devez créer une classe Robot qui permet de simuler le fonctionnement d’un robot mobile.
+Le robot peut démarrer, s’arrêter, accélérer, ralentir et afficher son état. Sa vitesse maximale est de 10 km/h.
 
-Ajoutez une nouvelle classe **`Parcometre`** au projet nommée **`AppParcometre`**.
+Ajoutez une nouvelle classe **`Robot`** au projet nommée **`AppRobot`**.
 
 ### 📋 Structure de la classe
 
 Voici la classe et sa structure que vous devrez créer:
 
-![](@site/static/img/R03/parcometre.png)
+![](@site/static/img/R04/robot.png)
 
-### 📝 Description de la classe
+### 📝 Description de la classe `Robot`
 
 #### Constantes
 
-* **Coût par minute**
-  Montant fixe, en cents, représentant le prix d’une minute de stationnement.
-* **Montant minimum**
-  Montant minimal d’argent pouvant être inséré dans le parcomètre.
-
+* **Vitesse maximale (`VITESSE_MAX`)**
+  Valeur maximale, en km/h, que le robot peut atteindre.
+* **Nom par défaut (`NOM_PAR_DEFAUT`)**
+  Nom attribué automatiquement au robot lorsque le nom fourni est invalide ou absent.
 ---
-
 #### Champs
 
-* **Minutes restantes**
-  Nombre de minutes de stationnement encore disponibles avant l’infraction.
-
-* **Montant total**
-  Somme totale d’argent, en cents, insérée dans le parcomètre depuis son initialisation.
-
+* **Vitesse actuelle (`m_vitesseActuelle`)**
+  Représente la vitesse courante du robot en km/h.
+* **Moteur en marche (`m_estAllume`)**
+  Indique si le moteur du robot est actuellement allumé.
 ---
-
 #### Propriétés
 
-* **Montant total**
-  Permet d’obtenir le montant total d’argent actuellement contenu dans le parcomètre.
+* **Nom**
+  Permet d’obtenir le nom du robot.
+  Cette propriété est en lecture seule à l’extérieur de la classe.
+* **Vitesse actuelle (`VitesseActuelle`)**
+  Permet d’obtenir la vitesse courante du robot.
+  La modification est réservée à la classe.
+* **Moteur en marche (`EstAllume`)**
+  Indique si le robot est allumé.
+* **En mouvement (`EnMouvement`)**
+  Indique si le robot est en déplacement, c’est-à-dire lorsque sa vitesse est supérieure à zéro.
 ---
-
 #### Constructeurs
 
-* **Constructeur du parcomètre**
-  Crée un nouveau parcomètre sans argent et sans temps de stationnement au départ.
+* **Constructeur sans paramètre**
+  Crée un robot nommé *Anonyme*, éteint et avec une vitesse initiale de 0 km/h.
+* **Constructeur avec paramètre**
+  Crée un robot avec le nom fourni en paramètre.
+  Si le nom contient moins de trois caractères, le nom par défaut est utilisé.
+  Le robot est éteint et la vitesse est initialisée à 0 km/h.
+
 ---
 
 #### Méthodes
 
-* **Insérer monnaie**
-  Permet à l’utilisateur d’ajouter un montant d’argent au parcomètre.
-  Le montant inséré est converti en minutes de stationnement selon le coût par minute, et ajouté au temps restant.
-* **Consommer une minute de temps**
-  Simule l’écoulement du temps en retirant une minute au temps de stationnement restant.
-* **Obtenir le temps restant**
-  Retourne le temps de stationnement restant sous la forme heures et minutes.
-* **Est en infraction**
-  Indique si le véhicule est en situation d’infraction, c’est-à-dire lorsque le temps de stationnement est écoulé.
+* **`Demarrer`**
+  Allume le robot s’il est actuellement éteint.
+* **`Arreter`**
+  Éteint le robot et remet sa vitesse à 0 km/h.
+* **`Accelerer`**
+  Augmente la vitesse du robot selon la valeur fournie, sans dépasser la vitesse maximale.
+* **`Ralentir`**
+  Diminue la vitesse du robot selon la valeur fournie, sans descendre sous 0 km/h.
+  Cette méthode fonctionne uniquement si le robot est allumé.
+* **`Infos`**
+  Retourne une description textuelle de l’état du robot, incluant son nom, sa vitesse, l’état du moteur et son mouvement.
+ **Exemple :** Robot RoboCup, Vitesse actuelle: 6 km/h, Moteur en marche: Oui, En mouvement: Oui
 
 ---
 ### ⭐ Exemple d'exécution
 
 ```
-=== Menu Principal ===
-1 - Est en infraction?
-2 - Obtenir le temps restant
-3 - Inserer de la monnaie
-4 - Avancer le temps d'une minute
-Q - Quitter
+=== MENU ROBOT ===
+1 - Créer un robot
+2 - Démarrer
+3 - Arreter
+4 - Accélérer
+5 - Ralentir
+6 - Afficher les infos du robot
+7 - Quitter
 =======================
 Veuillez sélectionner une option : 
 ```
 ---
 
-## 🔴 Exercice 5 – AppMultiThermostat
+
+## 🟢 Exercice 2 – Personnage
 ### 🎯 Objectifs 
 * Créer une classe
 * Se familiariser avec le diagramme d'une classe
@@ -250,33 +127,189 @@ Veuillez sélectionner une option :
 * Créer un menu console
 
 ### 🛠️ Instructions
-Vous devez écrire un programme qui simule **trois** thermostat!
+Dans cet exercice, Vous devez d/finir une classe Personnage qui représente un aventurier dans un jeu.
+Un personnage possède un nom, un âge, une classe (type), des points de vie et des statistiques. Il peut recevoir des dégâts, se soigner, calculer sa puissance d’attaque et afficher sa fiche.
 
-Ce programme instancie 3 objets de la classe **`Thermostat`**, car il permet de contrôler la température dans 3 emplacements différents,
-soit : la chambre, la cuisine ou encore le salon. Une quatrième variable va servir uniquement à référer sur le Thermostat courant.
-Au départ le thermostat courant est celui de la chambre, ensuite l'utilisateur peut au besoin le changer pour celui de la cuisine ou du salon.
-Les options pour augmenter ou diminuer la température affecte uniquement le Thermostat courant.   
+Dans ce jeu d’aventure, chaque personnage appartient à une **classe** :
 
-Ajoutez une nouvelle classe au projet nommée **`AppMultiThermostat`** qui correspond au schéma.
+* **G** = Guerrier
+* **M** = Mage
+* **V** = Voleur
+
+Selon sa classe (et parfois son âge), ses statistiques varient.
+
+Ajoutez une nouvelle classe **`Personnage`** au projet nommée **`AppPersonnage`**.
 
 ### 📋 Structure de la classe
+
 Voici la classe et sa structure que vous devrez créer:
 
-![](@site/static/img/R03/thermostat.png)
+![](@site/static/img/R04/personnage.png)
 
+### 📝 Description de la classe `Robot`
+
+#### Constantes
+
+Votre classe doit contenir les constantes suivantes :
+
+* `PV_MAX = 100`
+* `AGE_MIN = 12`
+* `AGE_MAX = 80`
+* `NOM_PAR_DEFAUT = "Anonyme"`
+* `AGE_PAR_DEFAUT = 18`
+* `CLASSE_PAR_DEFAUT = 'G'`
+
+---
+
+
+#### Champs
+
+* **`m_nom`**: Contient le nom du personnage. Il permet d’identifier l’aventurier dans le jeu.
+* **`m_age`**: Représente l’âge du personnage en années. Cette valeur influence ses statistiques.
+* **`m_classe`**: Indique la classe du personnage :
+
+  * `G` → Guerrier
+  * `M` → Mage
+  * `V` → Voleur
+
+  La classe détermine ses compétences principales.
+
+* **`m_pointsDeVie`**: Représente les points de vie actuels du personnage. Lorsqu’ils atteignent 0, le personnage est considéré comme mort.
+
+---
+#### Propriétés
+
+* **`Nom`**
+  Permet d’obtenir le nom du personnage.
+  Cette propriété est en lecture seule à l’extérieur de la classe afin de protéger l’identité du personnage.
+
+* **`Age`**
+  Permet d’obtenir l’âge du personnage.
+  La modification de cette valeur est contrôlée par la classe pour garantir qu’elle respecte les limites autorisées.
+
+* **`Classe`**
+  Permet d’obtenir la classe du personnage (Guerrier, Mage ou Voleur).
+  Cette propriété est protégée contre les modifications directes afin d’assurer la cohérence des statistiques.
+
+* **`PointsDeVie`**
+  Permet d’obtenir le nombre de points de vie actuels du personnage.
+  Cette valeur est modifiée uniquement par les méthodes de la classe (dégâts, soins) afin d’éviter des valeurs invalides.
+
+* **`Force`**
+  Représente la puissance physique du personnage.
+  Cette statistique influence principalement les capacités de combat des guerriers.
+  Elle est définie automatiquement selon la classe et l’âge du personnage et ne peut pas être modifiée directement de l’extérieur.
+
+* **`Intelligence`**
+  Représente les capacités mentales et magiques du personnage.
+  Cette statistique influence surtout les compétences des mages.
+  Elle est calculée automatiquement lors de la création du personnage et est protégée contre toute modification externe.
+
+* **`Vitesse`**
+Représente la rapidité du personnage lors de ses déplacements et de ses actions.
+Cette valeur est déterminée automatiquement selon sa classe : 
+  * `G` (Guerrier) → 2
+  * `M` (Mage) → 3
+  * `V` (Voleur) → 4
+  * Autre → 2
+
+  La vitesse ne peut pas être modifiée directement.
+
+* **`EstVivant`**  
+  Indique si le personnage est encore en vie.  Elle retourne :
+  * `true` si `PointsDeVie` est supérieur à 0  
+  * `false` si `PointsDeVie` est égal à 0
+
+  Cette propriété permet de vérifier si le personnage peut encore combattre ou agir.
+
+* **`StatPrincipale`**
+Représente la statistique la plus importante du personnage selon sa classe.
+Elle est utilisée notamment pour calculer la puissance d’attaque.
+  La valeur retournée dépend de la classe :
+    * `G` (Guerrier) → `Force`
+    * `M` (Mage) → `Intelligence`
+    * `V` (Voleur) → `Vitesse`
+
+  Cette propriété permet d’adapter automatiquement le comportement du personnage à son rôle dans le jeu.
+
+---
+#### Constructeurs
+
+* **Constructeur sans paramètre**
+  Crée un personnage nommé *Anonyme* avec des valeurs par d/faut. Puis il doit appeler une méthode `calculerStatistiques()`.
+* **Constructeur avec paramètre**
+  Crée un personnage avec les valeurs fournies en paramètre.
+    * Si `nom` est vide → utiliser le nom par défaut
+    * Si `age` n’est pas entre `AGE_MIN` et `AGE_MAX` → utiliser l’âge par défaut
+    * Si `classe` n’est pas `G`, `M` ou `V` → utiliser la classe par défaut
+
+   Ensuite, appeler `calculerStatistiques()`.
+
+---
+
+#### Méthodes
+
+* **`recevoirDegats`**
+  * Si `degats < 0` → ne fait rien
+  * Diminue les points de vie
+  * Les PV ne doivent jamais descendre sous 0
+* **`soigner`**
+  * Si `points < 0` → ne fait rien
+  * Augmente les PV
+  * Les PV ne doivent jamais dépasser `PV_MAX`
+* **`PuissanceAttaque`**
+  * Si le personnage est mort → retourne 0
+  * Sinon → retourne `StatPrincipale * 2`
+* **`Ralentir`**
+  Diminue la vitesse du robot selon la valeur fournie, sans descendre sous 0 km/h.
+  Cette méthode fonctionne uniquement si le robot est allumé.
+* **`Fiche`**
+  Retourne une description textuelle du personnage.
+
+ **Exemple :**
+```
+   Nom           : Toto
+   Âge           : 25
+   Classe        : G
+   PV            : 20/100
+   Force         : 10
+   Intelligence  : 0
+   Vitesse       : 2
+   Stat principale : 10
+   État          : Vivant
+```
+
+* **`calculerStatistiques`**
+  Retourne une description textuelle du personnage.
+  Cette méthode initialise les statistiques selon la classe :
+
+    * **G** : Intelligence = 5, Force = 15, PV = 20
+    * **M** : Intelligence = 18, Force = 5, PV = 12
+    * **V** : Intelligence = 10, Force = 10, PV = 15
+
+  Ensuite, selon l’âge :
+
+    * Si `Age > 40` :
+
+       * Intelligence += 10
+       * Force += 10
+       * PointsDeVie -= 10
+    * Sinon :
+
+       * Intelligence -= 5
+       * Force -= 5
+
+---
 ### ⭐ Exemple d'exécution
 
 ```
-=== Menu Principal ===
-1 - Augmenter la température du Thermostat courant
-2 - Diminuer la température du Thermostat courant
-3 - Température Maximale autorisée
-4 - Température Minimale autorisée
-5 - Fixe le Thermostat courant à celui de la chambre
-6 - Fixe le Thermostat courant à celui de la cuisine
-7 - Fixe le Thermostat courant à celui du salon
+=== MENU PERSONNAGE ===
+1 - Créer un personnage
+2 - Afficher la fiche
+3 - Recevoir des dégâts
+4 - Se soigner
+5 - Calculer la puissance d'attaque
 Q - Quitter
 =======================
 Veuillez sélectionner une option : 
 ```
-    
