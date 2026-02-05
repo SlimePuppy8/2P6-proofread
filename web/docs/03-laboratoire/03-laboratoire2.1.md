@@ -19,12 +19,8 @@ Il devrait y avoir **un commit** pour **chaque** exercice.
 ---
 ### Télécharger la solution contenant les différents exercices de ce laboratoire.
 
-Disponible ici 👇
-<GithubDownload
-  repo="2P6"
-  folder="web/docs/03-laboratoire/_Laboratoire2-1"
-  label="📁 Fichiers de départ" 
-/>
+Disponible ici 👉 [Laboratoire2_1](../../static/files/laboratoires/Laboratoire2_1.zip)
+
 ---
 ## 🟢 Exercice 1 – AppCompteurHydro
 ### 🎯 Objectifs 

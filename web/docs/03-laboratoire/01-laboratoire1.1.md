@@ -83,12 +83,7 @@ Après : 12 8 4 18 2 6
 * Utiliser une classe fournie pour instancier un objet et manipuler son état (lecture et modification des propriétés, appel de méthodes).
 
 ### Télécharger le fichier de la classe Personnage
-Disponible ici 👇
-<GithubDownload
-  repo="2P6"
-  folder="web/docs/03-laboratoire/_Laboratoire1-1"
-  label="📁 Exercice 3 - Classe Personnage" 
-/>
+Disponible ici 👉 [Personnage.cs](../../static/files/laboratoires/Laboratoire1_1.zip)
 
 Vous devez télécharger le fichier Personnage.cs, puis le rajouter à votre projet Visual Studio. N'oubliez pas de changer le nom du namespace au besoin.
 
