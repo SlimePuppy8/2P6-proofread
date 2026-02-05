@@ -59,19 +59,20 @@ Voici la classe et sa structure que vous devrez créer:
 
 * **Vitesse actuelle (`m_vitesseActuelle`)**
   Représente la vitesse courante du robot en km/h.
-* **Moteur en marche (`m_estAllume`)**
-  Indique si le moteur du robot est actuellement allumé.
+* **Robot allumé (`m_estAllume`)**
+  Représente l'état du robet (allumé ou non).
 ---
 #### Propriétés
 
 * **Nom**
-  Permet d’obtenir le nom du robot.
+  Permet d’obtenir et modifier le nom du robot.
   Cette propriété est en lecture seule à l’extérieur de la classe.
 * **Vitesse actuelle (`VitesseActuelle`)**
-  Permet d’obtenir la vitesse courante du robot.
-  La modification est réservée à la classe.
-* **Moteur en marche (`EstAllume`)**
-  Indique si le robot est allumé.
+  Permet d’obtenir et modifier la vitesse courante du robot.
+  Cette propriété est en lecture seule à l’extérieur de la classe.
+* **Robot allumé (`EstAllume`)**
+  Permet d’obtenir et modifier l'état du robot (allumé ou non).
+  Cette propriété est en lecture seule à l’extérieur de la classe.
 * **En mouvement (`EnMouvement`)**
   Indique si le robot est en déplacement, c’est-à-dire lorsque sa vitesse est supérieure à zéro.
 ---
@@ -98,8 +99,8 @@ Voici la classe et sa structure que vous devrez créer:
   Diminue la vitesse du robot selon la valeur fournie, sans descendre sous 0 km/h.
   Cette méthode fonctionne uniquement si le robot est allumé.
 * **`Infos`**
-  Retourne une description textuelle de l’état du robot, incluant son nom, sa vitesse, l’état du moteur et son mouvement.
- **Exemple :** Robot RoboCup, Vitesse actuelle: 6 km/h, Moteur en marche: Oui, En mouvement: Oui
+  Retourne une description textuelle de l’état du robot, incluant son nom, sa vitesse, l’état du robot et son mouvement.
+ **Exemple :** Robot RoboCup, Vitesse actuelle: 6 km/h, Allumé: Oui, En mouvement: Oui
 
 ---
 ### ⭐ Exemple d'exécution
@@ -146,7 +147,7 @@ Voici la classe et sa structure que vous devrez créer:
 
 ![](@site/static/img/R04/personnage.png)
 
-### 📝 Description de la classe `Robot`
+### 📝 Description de la classe `Personnage`
 
 #### Constantes
 
@@ -180,50 +181,48 @@ Votre classe doit contenir les constantes suivantes :
 #### Propriétés
 
 * **`Nom`**
-  Permet d’obtenir le nom du personnage.
+  Permet d’obtenir et modifier le nom du personnage.
   Cette propriété est en lecture seule à l’extérieur de la classe afin de protéger l’identité du personnage.
 
 * **`Age`**
-  Permet d’obtenir l’âge du personnage.
+  Permet d’obtenir et modifier l’âge du personnage.
   La modification de cette valeur est contrôlée par la classe pour garantir qu’elle respecte les limites autorisées.
 
 * **`Classe`**
-  Permet d’obtenir la classe du personnage (Guerrier, Mage ou Voleur).
+  Permet d’obtenir et modifier la classe du personnage (Guerrier, Mage ou Voleur).
   Cette propriété est protégée contre les modifications directes afin d’assurer la cohérence des statistiques.
 
 * **`PointsDeVie`**
-  Permet d’obtenir le nombre de points de vie actuels du personnage.
-  Cette valeur est modifiée uniquement par les méthodes de la classe (dégâts, soins) afin d’éviter des valeurs invalides.
+  Permet d’obtenir et mettre à jour le nombre de points de vie actuels du personnage.
+  Cette valeur est modifiée uniquement par les méthodes à l'interieur de de la classe (dégâts, soins) afin d’éviter des valeurs invalides.
 
 * **`Force`**
-  Représente la puissance physique du personnage.
+  Permet d'obtenir et modifier la puissance physique du personnage.
   Cette statistique influence principalement les capacités de combat des guerriers.
   Elle est définie automatiquement selon la classe et l’âge du personnage et ne peut pas être modifiée directement de l’extérieur.
 
 * **`Intelligence`**
-  Représente les capacités mentales et magiques du personnage.
+  Permet d'obtenir les capacités mentales et magiques du personnage.
   Cette statistique influence surtout les compétences des mages.
   Elle est calculée automatiquement lors de la création du personnage et est protégée contre toute modification externe.
 
 * **`Vitesse`**
-Représente la rapidité du personnage lors de ses déplacements et de ses actions.
+Permet d'obtenir la rapidité du personnage lors de ses déplacements et de ses actions.
 Cette valeur est déterminée automatiquement selon sa classe : 
   * `G` (Guerrier) → 2
   * `M` (Mage) → 3
   * `V` (Voleur) → 4
   * Autre → 2
 
-  La vitesse ne peut pas être modifiée directement.
-
 * **`EstVivant`**  
-  Indique si le personnage est encore en vie.  Elle retourne :
+  Permet d'obtenir l'état du personnage (en vie ou non). Elle retourne :
   * `true` si `PointsDeVie` est supérieur à 0  
   * `false` si `PointsDeVie` est égal à 0
 
   Cette propriété permet de vérifier si le personnage peut encore combattre ou agir.
 
 * **`StatPrincipale`**
-Représente la statistique la plus importante du personnage selon sa classe.
+Permet d'obtenir la statistique la plus importante du personnage selon sa classe.
 Elle est utilisée notamment pour calculer la puissance d’attaque.
   La valeur retournée dépend de la classe :
     * `G` (Guerrier) → `Force`
@@ -236,7 +235,7 @@ Elle est utilisée notamment pour calculer la puissance d’attaque.
 #### Constructeurs
 
 * **Constructeur sans paramètre**
-  Crée un personnage nommé *Anonyme* avec des valeurs par d/faut. Puis il doit appeler une méthode `calculerStatistiques()`.
+  Crée un personnage nommé *Anonyme* avec des valeurs par défaut. Puis il doit appeler une méthode `calculerStatistiques()`.
 * **Constructeur avec paramètre**
   Crée un personnage avec les valeurs fournies en paramètre.
     * Si `nom` est vide → utiliser le nom par défaut
@@ -260,9 +259,6 @@ Elle est utilisée notamment pour calculer la puissance d’attaque.
 * **`PuissanceAttaque`**
   * Si le personnage est mort → retourne 0
   * Sinon → retourne `StatPrincipale * 2`
-* **`Ralentir`**
-  Diminue la vitesse du robot selon la valeur fournie, sans descendre sous 0 km/h.
-  Cette méthode fonctionne uniquement si le robot est allumé.
 * **`Fiche`**
   Retourne une description textuelle du personnage.
 
@@ -280,7 +276,6 @@ Elle est utilisée notamment pour calculer la puissance d’attaque.
 ```
 
 * **`calculerStatistiques`**
-  Retourne une description textuelle du personnage.
   Cette méthode initialise les statistiques selon la classe :
 
     * **G** : Intelligence = 5, Force = 15, PV = 20
