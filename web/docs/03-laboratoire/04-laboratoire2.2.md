@@ -124,7 +124,7 @@ Veuillez sélectionner une option :
 * Créer un menu console
 
 ### 🛠️ Instructions
-Dans cet exercice, Vous devez d/finir une classe Personnage qui représente un aventurier dans un jeu.
+Dans cet exercice, Vous devez définir une classe Personnage qui représente un aventurier dans un jeu.
 Un personnage possède un nom, un âge, une classe (type), des points de vie et des statistiques. Il peut recevoir des dégâts, se soigner, calculer sa puissance d’attaque et afficher sa fiche.
 
 Dans ce jeu d’aventure, chaque personnage appartient à une **classe** :
