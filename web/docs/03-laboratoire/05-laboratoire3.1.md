@@ -65,9 +65,13 @@ Vous n'êtes pas obligé de fournir un menu pour cet exercice.
 * **Nom du fichier par défaut (`NOM_FICHIER_DEFAUT`)** Valeur string qui vaut `monFichier.csv`.
 ---
 
+#### Champs
+* **m_type** Le type de délimiteur choisi `TypeDelimiteur`.
+---
 #### Propriétés
 * **`CheminAccess`** Garde en mémoire le répertoire où sera enregistré le fichier. (C:/EspaceLabo). Cette propriété est en lecture seule à l’extérieur de la classe. Si le chemin n'existe pas, la propriété devrait retourner le `CHEMIN_PAR_DEFAUT`.
 * **`NomFichier`** Garde en mémoire le nom du fichier qui sera enregistré. (fichierVirgule.csv). Cette propriété est en lecture seule à l’extérieur de la classe. Si le fichier n'est pas valide(longueur plus petite que zéro?), la propriété devrait retourner le `NOM_FICHIER_DEFAUT`.
+* **`Delimiteur`** Une propriété calculé qui retourne la valeur string en fonction du délimiteur contenu dans `m_type`.
 
 #### Constructeur
 * Un seul constructeur où l'on spécifie le chemin d'accès, le nom du fichier et l'enum `TypeDelimiteur`.
