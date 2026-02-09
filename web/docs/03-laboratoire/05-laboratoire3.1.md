@@ -163,7 +163,7 @@ Le serpent Gary CRIE de toutes ses forces: "SSSS!!!"
 
 Votre distributrice devra:
 * Avoir ses cinqs breuvages initialisé à une quantité de zéro unité.
-* Permettre de d'indiquer si elle est vide. 
+* Permettre d'indiquer si la distributrice est vide, qu'elle n'a plus aucun breuvage. 
 * Indiquer la quantité d'unité restante pour un breuvage spécifié.
 * Éjecter/consommer un breuvage spécifié.
 * Vérifier la disponibilité d'un breuvage spécifié.
