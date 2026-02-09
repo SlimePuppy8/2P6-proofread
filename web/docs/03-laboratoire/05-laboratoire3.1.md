@@ -89,7 +89,6 @@ Trois fichiers CSV dans `C:/EspaceLabo`:
 * Écrire une classe
 * Utiliser l'énumération
 * Utiliser la condition `switch-case`
-* Utiliser un dictionnaire
 
 ### 🛠️ Instructions
 Écrire une classe qui permet déterminer le son des quatres animaux suivant: le chat 🐈 (*Miaou*), le chien 🐕 (*Wouf*), le lion 🦁 (*Roar*) et le serpent 🐍(*Ssss*). De plus, la classe doit supporter les animaux inconnus 👻(*????).*
@@ -116,14 +115,14 @@ Animal[] animaux =
 * **`TypeAnimal`** Un `enum` ayant les cinq types possibles`.
 ---
 #### Champs (privés)
-* **`m_son`** Un dictionnaire (**`Dictionary<TypeAnimal, string>`**) faisant le lien entre le type d'animal et le son qu'il émet.
 * **`m_nom`** Le nom de l'animal.
 * **`m_type`** Le type de l'animal de l'énumération. (ex.: `TypeAnimal.Chat`)
 ---
 #### Propriétés
 * **`Type`** Le type de l'animal de l'énumération en lecture seul. (ex.: `TypeAnimal.Chat`) Vérifiez que l'`enum` ne sort pas des options possible. Affectez le type `TypeAnimal.Inconnu` si la valeur n'est pas valide.
 * **`Nom`** Le nom de l'animal en lecture seul.
-* **`Espece`** Une propriété calculé qui retourne le nom de l'espèce de l'animal en chaîne de caractère en fonction de son type.
+* **`Son`** Une propriété calculée qui retourne le son d'un animal en fonction de son type. ("Miaou", "Wouf", "Roar", "Ssss", "????")
+* **`Espece`** Une propriété calculée qui retourne le nom de l'espèce de l'animal en chaîne de caractère en fonction de son type.
 
 #### Constructeur
 * Un seul constructeur où l'on spécifie le nom et le type de l'animal.
