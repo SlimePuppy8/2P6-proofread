@@ -54,11 +54,11 @@ List<string[]> texteDepart = new List<string[]>()
 Vous n'êtes pas obligé de fournir un menu pour cet exercice.
 
 
-### 📋 Structure de la classe **`EcriveurFichierCSV`**
-
-#### Énumérations
+### 📋 Énumérations
 * **`TypeDelimiteur`** Un `enum` ayant pour option `Virgule`, `PointVirgule` et `LigneVerticale`.
 ---
+
+### 📋 Structure de la classe **`EcriveurFichierCSV`**
 
 #### Constantes
 * **Chemin par défaut (`CHEMIN_PAR_DEFAUT`)** Valeur string qui vaut `c:/EspaceLabo`.
@@ -113,11 +113,11 @@ Animal[] animaux =
 };
 ```
 
+### 📋 Énumérations
+* **`TypeAnimal`** Un `enum` ayant les cinq types possibles.
+---
 ### 📋 Structure de la classe **`Animal`**
 
-#### Énumérations
-* **`TypeAnimal`** Un `enum` ayant les cinq types possibles`.
----
 #### Champs (privés)
 * **`m_nom`** Le nom de l'animal.
 * **`m_type`** Le type de l'animal de l'énumération. (ex.: `TypeAnimal.Chat`)
