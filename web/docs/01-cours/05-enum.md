@@ -180,9 +180,9 @@ public enum OptionsRecherche
 
 public void Rechercher(string texte, OptionsRecherche options)
 {
-    bool ignorerCasse = options & OptionsRecherche.IgnorerCasse != 0;
-    bool ignorerAccents = options & OptionsRecherche.IgnorerAccents != 0;
-    bool MotEntier = options & OptionsRecherche.MotEntier != 0;
+    bool ignorerCasse = (options & OptionsRecherche.IgnorerCasse) != 0;
+    bool ignorerAccents = (options & OptionsRecherche.IgnorerAccents) != 0;
+    bool MotEntier = (options & OptionsRecherche.MotEntier) != 0;
     // …
 }
 
