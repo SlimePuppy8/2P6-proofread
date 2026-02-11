@@ -53,6 +53,9 @@ List<string[]> texteDepart = new List<string[]>()
 ```
 Vous n'êtes pas obligé de fournir un menu pour cet exercice.
 
+### 📊 Diagramme de classes
+
+![](@site/static/img/R05/ecrivainFichierCSV.png)
 
 ### 📋 Énumérations
 * **`TypeDelimiteur`** Un `enum` ayant pour option `Virgule`, `PointVirgule` et `LigneVerticale`.
@@ -112,6 +115,9 @@ Animal[] animaux =
     new Animal("Gary", Animal.TypeAnimal.Serpent)
 };
 ```
+### 📊 Diagramme de classes
+
+![](@site/static/img/R05/animal.png)
 
 ### 📋 Énumérations
 * **`TypeAnimal`** Un `enum` ayant les cinq types possibles.
@@ -187,6 +193,9 @@ switch (choix)
         break;
 }
 ```
+### 📊 Diagramme de classes
+
+![](@site/static/img/R05/distributrice.png)
 
 ### 📋 Structure de la classe **`Distributrice`**
 C'est à vous de déterminer la structure de votre classe.
