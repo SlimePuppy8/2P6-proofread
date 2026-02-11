@@ -205,6 +205,8 @@ const sidebars = {
       label: "3.1 - Type par énumération - TP1 (Partie 2)",
       id: "cours/enum",
       customProps: {
+        avancementLabel: "TP1",
+        avancement: 0.4,
         calendrier: {
           "Jamil": [{ "1010": g1010[4] }, { "1020": g1010[4] }],
           "Philippe": [{ "1050": g1010[4] }],
@@ -219,6 +221,8 @@ const sidebars = {
       label: "3.2 - TP1 (Partie 2)",
       id: "cours/tp1-p2",
       customProps: {
+        avancementLabel: "TP1",
+        avancement: 0.6,
         calendrier: {
           "Jamil": [{ "1010": g1010[5] }, { "1020": g1010[5] }],
           "Philippe": [{ "1050": g1010[5] }],
