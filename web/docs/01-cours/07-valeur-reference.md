@@ -159,7 +159,7 @@ Résultat :
 
 ---
 
-### Exemple — Passage en paramètre
+### Exemple — Passage par référence
 
 Reprenons maintenant l'exemple initial en modifiant la méthode `Doubler()` pour que celle-ci ait comme paramètre un tableau d'entiers `int[]`, qui est un **type référence**.
 ```csharp
@@ -211,7 +211,6 @@ Thermostat t = null;
 Cela signifie que la variable ne réfère vers **aucun objet.**
 
 ---
-
 ## 🧩 Petit *puzzle* pour voir si vous avez bien compris...
 
 ### 📘 Cas 1 — Liste de int
@@ -259,6 +258,62 @@ Double niveau de référence :
 
 ---
 
+
+## Paramètre `out` - Passage par référence explicite
+
+Jusqu’à présent, nous avons vu que les **types valeur** sont passés aux méthodes **par copie**.
+La méthode travaille donc sur une variable locale indépendante de la variable passée comme argument.
+
+Le mot-clé `out` permet de **passer un type valeur par référence** à une méthode.
+
+👉 La méthode pourra ainsi modifier directement la variable d’origine.
+
+>⚠️ Le type reste un type valeur — mais il est passé par référence.
+
+Nous avons déjà manipulé le mot-clé `out` lorsque nous utilisions `TryParse`.
+
+```csharp
+string texte = "123";
+int valeur;
+
+bool ok = int.TryParse(texte, out valeur);
+```
+
+**Que se passe-t-il ici ?**
+- La méthode retourne `true` ou `false` selon le succès du *parsing*
+- Le résultat de la convertion est écrit dans le paramètre `out`
+- La méthode modifie directement la variable `valeur` fournie en argument au `TryParse` !
+
+---
+
+### Exemple — sans `out` (copie)
+
+```csharp
+void Doubler(int x)
+{
+    x = x * 2;
+}
+```
+```csharp
+int a = 10;
+Doubler(a);
+// Après l'appel à Doubler(), la variable a vaut toujours 10
+```
+---
+### Exemple — avec `out`
+
+```csharp
+void Doubler(out int x)
+{
+    x = 20;
+}
+```
+```csharp
+int a = 10;
+Doubler(out a);
+// Après l'appel à Doubler(), la variable a vaut maintenant 20 !
+```
+---
 ## En Résumé
 
 | Type valeur | Type référence |
@@ -266,6 +321,6 @@ Double niveau de référence :
 Contient la valeur | Contient une adresse |
 Copie la valeur à l’affectation | Référence copiée |
 Indépendant | Objet partagé |
-Ne peut pas être null* | Peut être null |
+Ne peut pas être null | Peut être null |
 
 ---
