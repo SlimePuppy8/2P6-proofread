@@ -323,4 +323,3 @@ Copie la valeur à l’affectation | Référence copiée |
 Indépendant | Objet partagé |
 Ne peut pas être null | Peut être null |
 
----
