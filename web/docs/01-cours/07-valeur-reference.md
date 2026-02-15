@@ -305,7 +305,7 @@ Doubler(a);
 ```csharp
 void Doubler(int x, out int pResultat)
 {
-    resultat = x * 2;
+    pResultat = x * 2;
 }
 ```
 ```csharp
