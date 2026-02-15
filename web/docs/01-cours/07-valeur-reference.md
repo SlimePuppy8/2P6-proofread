@@ -303,15 +303,14 @@ Doubler(a);
 ### Exemple — avec `out`
 
 ```csharp
-void Doubler(out int x)
+void Doubler(int x, out int pResultat)
 {
-    x = 20;
+    resultat = x * 2;
 }
 ```
 ```csharp
 int a = 10;
-Doubler(out a);
-// Après l'appel à Doubler(), la variable a vaut maintenant 20 !
+Doubler(a, out resultat);
 ```
 ---
 ## En Résumé
