@@ -310,6 +310,7 @@ void Doubler(int x, out int pResultat)
 ```
 ```csharp
 int a = 10;
+int resultat;
 Doubler(a, out resultat);
 ```
 ---
