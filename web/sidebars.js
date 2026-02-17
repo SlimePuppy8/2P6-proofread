@@ -248,7 +248,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "4.2 - Intègration",
+      label: "4.2 - Intégration",
       id: "cours/integration-module1",
       className: "remise-tp1",
       customProps: {
@@ -397,7 +397,7 @@ const sidebars = {
     {
       type: "doc",
 
-      label: "9.2 - Intègration",
+      label: "9.2 - Intégration",
       id: "cours/integration-module2",
       className: "remise-tp2",
       customProps: {
@@ -571,7 +571,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "14.2 - Intègration",
+      label: "14.2 - Intégration",
       id: "cours/integration-module3",
       className: "remise-tp3",
       customProps: {

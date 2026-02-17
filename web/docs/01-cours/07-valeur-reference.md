@@ -1,3 +1,6 @@
+---
+description: Type valeur vs référence
+---
 
 # Types valeur vs types référence
 
