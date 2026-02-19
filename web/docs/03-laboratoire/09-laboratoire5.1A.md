@@ -22,11 +22,15 @@ Disponible ici 👉 [Laboratoire5_1](../../static/files/laboratoires/Laboratoire
 ---
 
 # 📊 Critères d’évaluation
+* **Exactitude du fonctionnement**
+  La méthode produit les résultats attendus dans les cas demandés.
+* **Respect des validations**
+  Les validations exigées sont correctement implémentées (valeurs permises, cas limites, erreurs).
+* **Respect des standards de programmation**
+  Nommage clair, indentation correcte, commentaires pertinents et respect des conventions vues en classe.
+* **Qualité du code (lisibilité et organisation)**
+  Code bien structuré, facile à lire et à comprendre, sans duplication inutile.
 
-* Exactitude du fonctionnement
-* Respect des validations
-* Respect des standards
-* Qualité du code : Lisibilité et organisation
 
 ---
     
@@ -45,20 +49,32 @@ Vous devez développer un ensemble de méthodes permettant de gérer une collect
 
 La classe `Personne` et le type par énumération `TypeRecherche` sont fournies. Il ne faut pas les modifier. 
 
+---
 :::success
+## 🧪 Directives pour utiliser les tests
+* Des tests sont fournis pour vous aider à valider votre travail. ils ne sont **pas exhaustifs** et ne remplacent pas **vos propres tests**, nécessaires pour assurer que votre code est correct.
+* Tous les tests sont regroupés dans **un fichier séparé** du programme principal (`TestsPersonne.cs`).
+* Pour utiliser un test, vous devez d’abord **définir la méthode demandée** en respectant exactement sa définition (paramètres et type de retour).
+* **Décommentez ensuite le test correspondant**.
+* **Démarrez l’application** et observez le résultat affiché dans la console.
+* ⚠️ Si le programme ne compile pas après avoir décommenté un test, cela signifie que la méthode n’est **pas définie comme demandé**.
 
-* Il existe des tests de validation dans le projet que vous pouvez décommenter pour vérifier vos méthodes.
 
-* Ces tests ne sont pas exhaustifs et ne couvrent pas tous les cas possibles.
-
-* Vous devez donc penser à tester vos méthodes vous-mêmes avec différents scénarios pour vous assurer qu’elles fonctionnent correctement.
-
-* Les tests fournis sont un point de départ pour vous aider à détecter certaines erreurs, mais la responsabilité de la robustesse du code vous incombe.
-:::danger
-⚠ Les tests de validation fournis **ne fonctionneront pas** si vous ne respectez pas les signatures des méthodes (types de paramètres, ordre, type de retour, static/non-static).  
-Assurez-vous donc de concevoir vos méthodes conformément aux indications générales de l’énoncé.
+Les lignes à décommenter pour activer les tests se tgrouvent au début du fichier (`TestsPersonne.cs`).
+```
+//#define TEST_EST_DANS_LA_LISTE
+//#define TEST_AJOUTER_PERSONNE
+//#define TEST_SUPPRIMER_PERSONNE
+//#define TEST_FILTRER_AGE
+//#define TEST_MOYENNE_AGE
+//#define TEST_RECHERCHE
+//#define TEST_SAUVEGARDER
+//#define TEST_CHARGER
+```
 :::
-:::
+
+---
+
 
 ### 📊 Diagramme de classes
 
@@ -198,7 +214,7 @@ Trouver une personne dans une liste selon un critère de recherche (Nom, Prénom
 * Si la valeur recherchée est vide ou null → retourner null
 ---
 
-#### 6️⃣ `SauvegarderListe`
+#### 6️⃣ `Sauvegarder`
 
 Enregistrer les personnes dans un fichier texte.
 
@@ -224,7 +240,7 @@ Exemple :
 100000001,Jean,DUPONT,30
 ```
 ---
-#### 7️⃣ `ChargerPersonnes`
+#### 7️⃣ `Charger`
 
 Lire un fichier texte et remplir une liste de personnes.
 
