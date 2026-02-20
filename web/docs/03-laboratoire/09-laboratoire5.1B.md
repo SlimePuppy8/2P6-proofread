@@ -2,7 +2,7 @@
 title: MicroOnde
 ---
 
-# 🟡 Labo 5.1B – MicroOnde
+# 🟡 Labo 5.1B – Formatif
 
 ## 🎯 Objectifs 
 
