@@ -60,7 +60,7 @@ La classe `Personne` et le type par énumération `TypeRecherche` sont fournies.
 * ⚠️ Si le programme ne compile pas après avoir décommenté un test, cela signifie que la méthode n’est **pas définie comme demandé**.
 
 
-Les lignes à décommenter pour activer les tests se tgrouvent au début du fichier (`TestsPersonne.cs`).
+Les lignes à décommenter pour activer les tests se trouvent au **début** du fichier (`TestsPersonne.cs`).
 ```
 //#define TEST_EST_DANS_LA_LISTE
 //#define TEST_AJOUTER_PERSONNE

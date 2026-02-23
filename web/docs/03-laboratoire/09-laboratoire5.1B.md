@@ -24,6 +24,23 @@ title: MicroOnde
 Vous devez créer une classe MicroOnde qui représente un micro-ondes utilisé dans un établissement (ex. cafétéria). Le micro-ondes peut démarrer une cuisson selon un mode et un nombre de minutes, et permet de calculer la consommation en watts pour une cuisson.
 
 ---
+:::success
+## 🧪 Directives pour utiliser les tests
+* Des tests sont fournis pour vous aider à valider votre travail. ils ne sont **pas exhaustifs** et ne remplacent pas **vos propres tests**, nécessaires pour assurer que votre code est correct.
+* Tous les tests sont regroupés dans **un fichier séparé** du programme principal (`TestsMicroOnde.cs`).
+* Pour utiliser un test, vous devez d’abord **définir la classe demandée** en respectant exactement sa définition.
+* **Décommentez ensuite le test correspondant**.
+* **Démarrez l’application** et observez le résultat affiché dans la console.
+* ⚠️ Si le programme ne compile pas après avoir décommenté un test, cela signifie que la classe n’est **pas définie comme demandé**.
+
+
+La ligne à décommenter pour activer les tests se trouvent au **début** du fichier (`TestsMicroOnde.cs`).
+```
+//#define TEST_CLASSE_MICR_OONDES
+```
+:::
+
+---
 
 ## 📊 Diagramme de classes
 
