@@ -325,10 +325,11 @@ const sidebars = {
       label: "7.1 - Relation d'association",
       id: "cours/rencontre13",
       customProps: {
-
         calendrier: {
-          "Jamil": [{ "1010": g1010[12] }, { "1020": g1010[12] }],
-          "Philippe": [{ "1050": g1010[12] }]
+          "Jamil": [{ "1010": g1010[10] }, { "1020": g1010[10] }],
+          "Philippe": [{ "1050": g1010[10] }],
+          "David": [{ "1030": g1030[10] }, { "1040": g1030[10] }],
+          "Jimmy": [{ "1060": g1010[10] }],
         },
         tooltip: "cache"
       }
@@ -339,8 +340,10 @@ const sidebars = {
       id: "cours/exceptions",
       customProps: {
         calendrier: {
-          "Jamil": [{ "1010": g1010[13] }, { "1020": g1010[13] }],
-          "Philippe": [{ "1050": g1010[13] }]
+          "Jamil": [{ "1010": g1010[10] }, { "1020": g1010[10] }],
+          "Philippe": [{ "1050": g1010[10] }],
+          "David": [{ "1030": g1030[10] }, { "1040": g1030[10] }],
+          "Jimmy": [{ "1060": g1010[10] }],
         },
         tooltip: "cache"
       }
@@ -351,30 +354,24 @@ const sidebars = {
       id: "cours/tp2",
       customProps: {
         calendrier: {
-          "David": [{ "1090": "2026-10-20" }, { "1100": "2026-10-20" }],
-          "Éric": [{ "1050": "2026-10-24" }, { "1060": "2026-10-24" }],
-          "Jamil": [{ "1010": "2026-10-21" }, { "1020": "2026-10-21" }],
-          "Jean-Michel": [{ "1120": g1010[14] }, { "1080": g1030[14] }],
-          "Pierre-Paul": [{ "1030": "2026-10-20" }, { "1040": "2026-10-20" }],
-          "Tommy": [{ "1130": "2026-10-21" }],
-          "Philippe": [{ "1070": "2026-10-20" }],
+          "Jamil": [{ "1010": g1010[10] }, { "1020": g1010[10] }],
+          "Philippe": [{ "1050": g1010[10] }],
+          "David": [{ "1030": g1030[10] }, { "1040": g1030[10] }],
+          "Jimmy": [{ "1060": g1010[10] }],
         },
         tooltip: "cache"
       }
     },
     {
       type: "doc",
-      label: "8.2 - rencontre16",
+      label: "8.2 - Datetime, Timespan et ListView",
       id: "cours/rencontre16",
       customProps: {
         calendrier: {
-          "David": [{ "1090": "2026-10-23" }, { "1100": "2026-10-23" }],
-          "Éric": [{ "1050": "2026-10-29" }, { "1060": "2026-10-29" }],
-          "Jamil": [{ "1010": "2026-10-23" }, { "1020": "2026-10-23" }],
-          "Jean-Michel": [{ "1120": g1010[15] }, { "1080": g1030[15] }],
-          "Pierre-Paul": [{ "1030": "2026-10-22" }, { "1040": "2026-10-22" }],
-          "Tommy": [{ "1130": "2026-10-24" }],
-          "Philippe": [{ "1070": "2026-10-23" }],
+          "Jamil": [{ "1010": g1010[10] }, { "1020": g1010[10] }],
+          "Philippe": [{ "1050": g1010[10] }],
+          "David": [{ "1030": g1030[10] }, { "1040": g1030[10] }],
+          "Jimmy": [{ "1060": g1010[10] }],
         },
         tooltip: "cache"
       }
@@ -699,7 +696,7 @@ const sidebars = {
       items: ['laboratoire/laboratoire6.2A', 'laboratoire/laboratoire6.2B', 'laboratoire/laboratoire6.2C']
 
     },
-     {
+    {
       type: 'category',
       label: 'Laboratoire 7.1',
       collapsible: true,
@@ -713,6 +710,14 @@ const sidebars = {
       collapsible: true,
       collapsed: collapseBloc3,
       items: ['laboratoire/laboratoire7.2A', 'laboratoire/laboratoire7.2B', 'laboratoire/laboratoire7.2C']
+
+    },
+    {
+      type: 'category',
+      label: 'Laboratoire 8.2',
+      collapsible: true,
+      collapsed: collapseBloc3,
+      items: ['laboratoire/laboratoire8.2A', 'laboratoire/laboratoire8.2B', 'laboratoire/laboratoire8.2C']
 
     }
 
