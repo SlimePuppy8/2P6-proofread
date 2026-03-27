@@ -320,7 +320,6 @@ const sidebars = {
       label: "7.1 - Relation d'association",
       id: "cours/rencontre13",
       customProps: {
-
         calendrier: {
           "Jamil": [{ "1010": g1010[12] }, { "1020": g1010[12] }],
           "Philippe": [{ "1050": g1010[12] }],
@@ -398,7 +397,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[17] }, { "1020": g1010[17] }],
           "Philippe": [{ "1050": g1010[17] }],
-          "David": [{ "1030":"2026-04-10" }, { "1040": "2026-04-10" }],
+          "David": [{ "1030": "2026-04-10" }, { "1040": "2026-04-10" }],
           "Jimmy": [{ "1060": g1060[17] }]
         },
         tooltip: "cache"
@@ -441,7 +440,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[20] }, { "1020": g1010[20] }],
           "Philippe": [{ "1050": g1010[20] }],
-          "David": [{ "1030": "2026-11-27" }, { "1040": "2026-11-27"  }],
+          "David": [{ "1030": "2026-11-27" }, { "1040": "2026-11-27" }],
           "Jimmy": [{ "1060": g1060[20] }]
         },
         tooltip: "cache"
@@ -455,7 +454,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[21] }, { "1020": g1010[10] }],
           "Philippe": [{ "1050": g1010[21] }],
-          "David": [{ "1030": "2026-11-27"  }, { "1040": "2026-11-27"  }],
+          "David": [{ "1030": "2026-11-27" }, { "1040": "2026-11-27" }],
           "Jimmy": [{ "1060": g1060[21] }]
         },
         tooltip: "cache"
@@ -656,7 +655,7 @@ const sidebars = {
       items: ['laboratoire/laboratoire6.2A', 'laboratoire/laboratoire6.2B', 'laboratoire/laboratoire6.2C']
 
     },
-     {
+    {
       type: 'category',
       label: 'Laboratoire 7.1',
       collapsible: true,
@@ -670,6 +669,14 @@ const sidebars = {
       collapsible: true,
       collapsed: collapseBloc3,
       items: ['laboratoire/laboratoire7.2A', 'laboratoire/laboratoire7.2B', 'laboratoire/laboratoire7.2C']
+
+    },
+    {
+      type: 'category',
+      label: 'Laboratoire 8.2',
+      collapsible: true,
+      collapsed: collapseBloc3,
+      items: ['laboratoire/laboratoire8.2A', 'laboratoire/laboratoire8.2B', 'laboratoire/laboratoire8.2C']
 
     }
 
