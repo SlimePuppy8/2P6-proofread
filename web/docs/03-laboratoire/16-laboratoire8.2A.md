@@ -53,7 +53,7 @@ Dans ce projet, un contrôle de menu déroulant est utilisé pour choisir une ac
 Le préfixe pour un **`ComboBox`** est **`cbo`**.
 :::
 
-![combobox](@site/static/img/R16/combobox.png)
+![combobox](@site/static/img/R16/comboBox.png)
 
 La propriété **`SelectedIndex`** est utilisée pour identifier la sélection de l'utilisateur:
 ```csharp
