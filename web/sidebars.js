@@ -421,12 +421,11 @@ const sidebars = {
     {
       type: "doc",
 
-      label: "9.2 - Intégration",
-      id: "cours/integration-module2",
-      className: "remise-tp2",
+      label: "9.2 - TP2 (Suite)",
+      id: "cours/tp2-suite",     
       customProps: {
         avancementLabel: "TP2",
-        avancement: 1.0,
+        avancement: 0.6,         
         calendrier: {
           "Jamil": [{ "1010": g1010[17] }, { "1020": g1010[17] }],
           "Philippe": [{ "1050": g1050[17] }],
@@ -435,12 +434,15 @@ const sidebars = {
         },
         tooltip: "cache"
       }
-    },
+    },  
     {
       type: "doc",
-      label: "10.1 - Examen formatif 2",
-      id: "cours/formatif2",
+
+      label: "10.1 - Intégration",
+      id: "cours/integration-module2",      
       customProps: {
+        avancementLabel: "TP2",
+        avancement: 0.8,
         calendrier: {
           "Jamil": [{ "1010": g1010[18] }, { "1020": g1010[18] }],
           "Philippe": [{ "1050": g1050[18] }],
@@ -452,14 +454,16 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.2 - Examen 2",
-      id: "cours/examen2",
-      className: "examen",
+      label: "10.2 - Examen formatif 2",
+      id: "cours/formatif2",
+      className: "remise-tp2",
       customProps: {
+        avancementLabel: "TP2",
+        avancement: 1.0,
         calendrier: {
           "Jamil": [{ "1010": g1010[19] }, { "1020": g1010[19] }],
           "Philippe": [{ "1050": g1050[19] }],
-          "David": [{ "1030": "2026-04-21" }, { "1040": "2026-04-21" }],
+          "David": [{ "1030": "2026-04-14" }, { "1040": "2026-04-14" }],
           "Jimmy": [{ "1060": g1060[19] }]
         },
         tooltip: "cache"
@@ -467,13 +471,14 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "11.1 - rencontre21",
-      id: "cours/rencontre21",
+      label: "11.1 - Examen 2",
+      id: "cours/examen2",
+      className: "examen",
       customProps: {
         calendrier: {
           "Jamil": [{ "1010": g1010[20] }, { "1020": g1010[20] }],
           "Philippe": [{ "1050": g1050[20] }],
-          "David": [{ "1030": "2026-11-27" }, { "1040": "2026-11-27" }],
+          "David": [{ "1030": "2026-04-21" }, { "1040": "2026-04-21" }],
           "Jimmy": [{ "1060": g1060[20] }]
         },
         tooltip: "cache"
