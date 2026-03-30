@@ -19,6 +19,10 @@ Il devrait y avoir **un commit** pour **chaque** exercice.
 
 Disponible ici 👉 [Laboratoire8_2](../../static/files/laboratoires/Laboratoire8_2.zip)
 
+### Télécharger la démonstration des différents exercices de ce laboratoire.
+
+Disponible ici 👉 [Demonstration8_2](../../static/files/demonstrations/Demonstrations8_2.zip)
+
 ---
 
 ### 🎯 Objectifs 
