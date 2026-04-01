@@ -700,6 +700,14 @@ const sidebars = {
       collapsed: collapseBloc3,
       items: ['laboratoire/laboratoire8.2A', 'laboratoire/laboratoire8.2B', 'laboratoire/laboratoire8.2C']
 
+    },
+    {
+      type: 'category',
+      label: 'Laboratoire 9.1',
+      collapsible: true,
+      collapsed: collapseBloc2,
+      items: ['laboratoire/laboratoire9.1A', 'laboratoire/laboratoire9.1B']
+
     }
 
 
