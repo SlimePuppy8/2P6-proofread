@@ -86,7 +86,7 @@ Ce constructeur initialise une nouvelle planète à partir des informations four
 #### ``AjouterSatellite(Satellite satellite)``
 Ajoute un objet Satellite à la liste de satellites.
 ##### Validation à faire : 
-* Si l’objet à ajouter est null, vous devez lever l’exception : 
+* Si l’objet à ajouter est *null*, vous devez lever l’exception : 
 ```
 ArgumentNullException
 ```
@@ -154,11 +154,11 @@ L’objectif de cet exercice est de tester l'implémentation de vos classes et d
 Dans une **application console**, écrivez un programme qui demande à l'utilisateur d'entrer le nom d'un satellite.
 
 Le programme doit lui retourner :
- - La description du satellite (son nom et sa masse);
- - La planète qui lui est associée;
+ - La description du satellite (son nom et sa masse, faites appel à la méthode appropriée);
+ - La planète qui lui est associée (son nom, son type, sa masse et son nombre de satellites).
 
 :::tip
-Exigences : Vous devez utiliser adéquatement les boucles ``for``/``foreach``
+Exigences : Vous devez utiliser adéquatement les boucles ``for``/``foreach``. L'utilisation d'un *switch-case* est déconseillée.
 :::
 
 Utilisez les tableaux suivants pour construire votre jeu de données  :
