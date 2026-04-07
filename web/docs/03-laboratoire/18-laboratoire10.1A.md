@@ -83,12 +83,23 @@ public Planete(string nom, double masse, TypePlanete type)
 Ce constructeur initialise une nouvelle planète à partir des informations fournies.
 
 ### Méthodes
+
+#### ``SatelliteEstDejaDansLaListe(string nom)``
+Parcourt la liste des satellites de la planète afin de vérifier si un satellite portant ce nom est déjà présent.
+
+Retourne *true* si le satellite existe déjà, sinon *false*.
+
+
 #### ``AjouterSatellite(Satellite satellite)``
 Ajoute un objet Satellite à la liste de satellites.
-##### Validation à faire : 
+##### Validations à faire : 
 * Si l’objet à ajouter est *null*, vous devez lever l’exception : 
 ```
 ArgumentNullException
+```
+* Si un satellite du même nom que celui qu'on tente d'ajouter existe déjà, vous devez lever l’exception : 
+```
+InvalidOperationException
 ```
 
 #### ``ToString()``
