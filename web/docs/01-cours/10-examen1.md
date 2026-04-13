@@ -4,7 +4,8 @@ description: Pondération 15%
 
 # Examen 1
 
-
+La solution de l'examen 1 est disponible à partir de ce lien :
+ [🧪 Examen 1 : Solution](../../static/files/examens/solution/H26_2P6_Ex1_Solution.zip) 
 <Row>
 
 <Column>
