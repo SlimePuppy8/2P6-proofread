@@ -17,7 +17,7 @@ Elle regroupe **des données** (champs) et **des comportements** (méthodes) qui
 En C#, le mot-clé **`class`** permet de définir une classe.
 Chaque classe possède un **identificateur significatif**, choisi de manière à représenter clairement son rôle.
 
-Pour s'imaginer la distinction entre une **classe** et un **objet**, on peut s'imaginer que la classe est la **recette** pour faire une pizza et que les quatres pizzas sont des instances différentes de la classe. La pizza **`aux pépéronie`**, la **`toute garnie`**, la **`aux tomates et basiliques`** et la **`fromage`** sont des **objets** de la **classe `RecettePizza`**.
+Pour s'imaginer la distinction entre une **classe** et un **objet**, on peut s'imaginer que la classe est la **recette** pour faire une pizza et que les quatre pizzas sont des instances différentes de la classe. La pizza **`aux pepperonis`**, la **`toute garnie`**, la **`aux tomates et basiliques`** et la **`fromage`** sont des **objets** de la **classe `RecettePizza`**.
 
 ![](@site/static/img/R03/recettePizzas.png)
 
@@ -37,15 +37,15 @@ public class CompteurHydro
 
 Afin de créer une classe, vous devrez ajouter un fichier **`.cs`** poutant son nom. 
 
-À partir de l'explorateur de solution, cliquez avec le **bouton droit** de la souris sur le **projet** où vous voulez ajouter la classe. Choissiez **`Ajouter`** et allez sélectionner **`Classe...`**.
+À partir de l'explorateur de solution, cliquez avec le **bouton droit** de la souris sur le **projet** où vous voulez ajouter la classe. Choisissiez **`Ajouter`** et allez sélectionner **`Classe...`**.
 
 ![](@site/static/img/R03/ajouterClasse.png)
 
-Dans la liste d'éléments affichés, choisissez **`Classe Élements C#`** et choisissez un nom pertinant.
+Dans la liste d'éléments affichés, choisissez **`Classe Élements C#`** et choisissez un nom pertinent.
 
 ![](@site/static/img/R03/nommerClasse.png)
 
-**Visual Studio** va vous créer votre nouvelle classe dans un fichier **`.cs`** pourtant le même nom. Vous pouver maintenant ajouter vos fonctionnalités!
+**Visual Studio** va vous créer votre nouvelle classe dans un fichier **`.cs`** pourtant le même nom. Vous pouvez maintenant ajouter vos fonctionnalités!
 
 ![](@site/static/img/R03/positionClasse.png)
 
@@ -67,7 +67,7 @@ La classe `CompteurHydro` représente un compteur d’électricité permettant d
      private int m_consommationActuelle;
 
      /// <summary>
-     /// Propriété : permet d'accéder à la consommation actuelle du compteur.
+     /// Propriété : permets d'accéder à la consommation actuelle du compteur.
      /// </summary>
      public int ConsommationActuelle
      {
@@ -154,7 +154,7 @@ public int ConsommationActuelle
 Un **constructeur** est une méthode particulière appelée lors de la création d’un objet.
 Il sert à **initialiser tous les champs** (variables membres) de la classe. Il est possible d'avoir plus d'un constructeur. À ce moment,
 les constructeurs sont différenciés par leurs paramètres.
-Dans cet exemple, le constructuer CompteurHydro initialise le champ m_consommationActuelle à zéro.
+Dans cet exemple, le constructeur CompteurHydro initialise le champ m_consommationActuelle à zéro.
 
 ```csharp
 public CompteurHydro()
@@ -167,7 +167,7 @@ public CompteurHydro()
 
 ### ⚙️ Méthode
 
-Une **méthode** définit un comportemnent de l'objet. Elle permet d’**effectuer un traitement** ou une action sur un ou plusieurs champs de la classe.
+Une **méthode** définit un comportement de l'objet. Elle permet d’**effectuer un traitement** ou une action sur un ou plusieurs champs de la classe.
 Il est important de s'assurer de ne donner qu'une seule responsabilité à une méthode. Des méthodes courtes, simples et ciblées sont la clé du succès.
 
 Dans cet exemple, la méthode Consommer permet de **modifier la consommation** en ajoutant une quantité donnée.

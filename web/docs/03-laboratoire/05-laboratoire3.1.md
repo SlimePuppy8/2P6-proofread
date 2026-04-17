@@ -23,7 +23,7 @@ Disponible ici 👉 [Laboratoire3_1](../../static/files/laboratoires/Laboratoire
 ---
 
 :::warning
-Prenez la peine de vous assurer que personne ne peut briser vos classes. **Valider vos paramètres**, ne faites confiance en personne. Lors des TP est des examens, nous nous ferons un malin plaisir à briser vos classe. 🦹 Testez, testez, testez...
+Prenez la peine de vous assurer que personne ne peut briser vos classes. **Valider vos paramètres**, ne faites confiance en personne. Lors des TP et des examens, nous nous ferons un malin plaisir à briser vos classes. 🦹 Testez, testez, testez...
 :::
 ---
 ## 🟢 Exercice 1 - ÉcriveurFichierCSV
@@ -39,7 +39,7 @@ fichiers csv** ayant un délimiteur différent pour chacun.
 
 Voici les trois **délimiteurs** qui devront être supportés: `|`, `;` et `,`.
 
-Utilisez la liste de colonne déjà fournie pour écrire vos fichiers:
+Utilisez la liste de colonnes déjà fournie pour écrire vos fichiers:
 ```csharp
 Console.WriteLine("Écriture des trois fichiers csv...");
 List<string[]> texteDepart = new List<string[]>()
@@ -73,8 +73,8 @@ Vous n'êtes pas obligé de fournir un menu pour cet exercice.
 ---
 #### Propriétés
 * **`CheminAccess`** Garde en mémoire le répertoire où sera enregistré le fichier. (C:/EspaceLabo). Cette propriété est en lecture seule à l’extérieur de la classe. Si le chemin n'existe pas, la propriété devrait retourner le `CHEMIN_PAR_DEFAUT`.
-* **`NomFichier`** Garde en mémoire le nom du fichier qui sera enregistré. (fichierVirgule.csv). Cette propriété est en lecture seule à l’extérieur de la classe. Si le fichier n'est pas valide(longueur plus petite que zéro?), la propriété devrait retourner le `NOM_FICHIER_DEFAUT`.
-* **`Delimiteur`** Une propriété calculé qui retourne la valeur string en fonction du délimiteur contenu dans `m_type`.
+* **`NomFichier`** Garde en mémoire le nom du fichier qui sera enregistré. (fichierVirgule.csv). Cette propriété est en lecture seule à l’extérieur de la classe. Si le fichier n'est pas valide (longueur plus petite que zéro?), la propriété devrait retourner le `NOM_FICHIER_DEFAUT`.
+* **`Delimiteur`** Une propriété calculée qui retourne la valeur string en fonction du délimiteur contenu dans `m_type`.
 
 #### Constructeur
 * Un seul constructeur où l'on spécifie le chemin d'accès, le nom du fichier et l'enum `TypeDelimiteur`.
@@ -85,7 +85,7 @@ Vous n'êtes pas obligé de fournir un menu pour cet exercice.
 
 ### 🏁 Résultat attendu
 Trois fichiers CSV dans `C:/EspaceLabo`:
-* `fichierLigneVerticale.csv`  séparé par des lignes verticale `|`.
+* `fichierLigneVerticale.csv`  séparé par des lignes verticales `|`.
 * `fichierPointVirgule.csv`  séparé par des points-virgules `;`.
 * `fichierVirgule.csv` séparé par des virgules `,`.
 
@@ -98,7 +98,7 @@ Trois fichiers CSV dans `C:/EspaceLabo`:
 * Utiliser la condition `switch-case`
 
 ### 🛠️ Instructions
-Écrire une classe qui permet déterminer le son des quatres animaux suivant: le chat 🐈 (*Miaou*), le chien 🐕 (*Wouf*), le lion 🦁 (*Roar*) et le serpent 🐍(*Ssss*). De plus, la classe doit supporter les animaux inconnus 👻(*????).*
+Écrire une classe qui permet de déterminer le son des quatre animaux suivant: le chat 🐈 (*Miaou*), le chien 🐕 (*Wouf*), le lion 🦁 (*Roar*) et le serpent 🐍(*Ssss*). De plus, la classe doit supporter les animaux inconnus 👻(*????).*
 
 :::note
 Pensez à utiliser une énumération pour les cinq types supportés.
@@ -172,7 +172,7 @@ Le serpent Gary CRIE de toutes ses forces: "SSSS!!!"
 Écrire un programme qui simule une distributrice de breuvage. La distributrice offre du jus d'orange, du jus de raisin, du jus de pomme et du thé glacé. Pour chaque sorte, la distributrice peut contenir une quantité maximale de cinq (5) unités.
 
 Votre distributrice devra:
-* Avoir ses cinqs breuvages initialisé à une quantité de zéro unité.
+* Avoir ses cinq breuvages initialisés à une quantité de zéro unité.
 * Permettre d'indiquer si la distributrice est vide, qu'elle n'a plus aucun breuvage. 
 * Indiquer la quantité d'unité restante pour un breuvage spécifié.
 * Éjecter/consommer un breuvage spécifié.
@@ -205,8 +205,8 @@ L'exercice se prête facilement à l'utilisation des énumérations et des `swit
 Vous aurez à implémenter:
 * Une énumération des breuvages.
 * Une constante maximale.
-* Garder un champs privé de la quantité de chaque breuvage offert.
-* Une propriété booléenne calculé `EstVide`.
+* Garder un champ privé de la quantité de chaque breuvage offert.
+* Une propriété booléenne calculée `EstVide`.
 * Un constructeur.
 * Une méthode pour :
     * Recharger tous les breuvages à une quantité de cinq.

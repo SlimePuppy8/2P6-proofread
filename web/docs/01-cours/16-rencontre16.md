@@ -7,7 +7,7 @@ description: 8.2 - DateTime, TimeSpan & ListView
 ## ✅ DateTime
 
 Le **`DateTime`** est une **structure** de l'espace de nom `System` qui permet de représenter **un moment précis** dans un **calendrier** grégorien.
-C'est un calendrier qui comment du `0001-01-01 00:00:00` jsuqu'au `9999-12-31-23:59:59`. 
+C'est un calendrier qui comment du `0001-01-01 00:00:00` jusqu'au `9999-12-31-23:59:59`. 
 
 ### ✨ Initialisation
 
@@ -47,7 +47,7 @@ int seconde = uneDate.Second; // un nombre entre 0 et 59 inclusivement
 
 ### 🧮 Calculs
 
-La structure **`DateTime`** nous permet aussi d'effectuer certain calculs pour nous:
+La structure **`DateTime`** nous permet aussi d'effectuer certains calculs pour nous:
 
 ```csharp
 bool estHeureAvancée = DateTime.Now.IsDaylightSavingTime();
@@ -85,13 +85,13 @@ string dateFormatée = uneDate.ToString("yyyy-MM-dd HH:mm:ss");
 
 [👉 Lien vers la classe DateTimePicker](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/datetimepicker-control-windows-forms)
 
-Un controle très utile dans Windows Forms existe pour visualizer et choisir une date, c'est le **`DateTimePicker`**.
+Un contrôle très utile dans Windows Forms existe pour visualiser et choisir une date, c'est le **`DateTimePicker`**.
 
 :::warning
 Le préfixe pour un **`DateTimePicker`** est **`dtp`**.
 :::
 
-On peut le retrouver dans la boîte à outil sous le nom de **`DateTimePicker`**
+On peut le retrouver dans la boîte à outils sous le nom de **`DateTimePicker`**
 ![Boîte à outil et DateTimePicker](@site/static/img/R16/datetimepicker.png)
 
 ...et voici à quoi il ressemble en action:
@@ -120,16 +120,16 @@ Avec le **`TimeSpan`**, il est maintenant possible de calculer et mémoriser l'i
 DateTime dateDebut = new DateTime(2020, 1, 1); // le 1 janvier 2020
 DateTime dateFin = new DateTime(2020, 3, 1); // le 1 mars 2020
  
-TimeSpan intervalle = dateFin - dateDebut; // dans ce cas l'intervalle est de 60 jours
+TimeSpan intervalle = dateFin - dateDebut; // dans ce cas, l'intervalle est de 60 jours
 ```
 
-Un intervalle de temps est bien pratique, mais il nous sert à rien sans les outils pour nous aider à calculer.
+Un intervalle de temps est bien pratique, mais il ne nous sert à rien sans les outils pour nous aider à calculer.
 Il est possible de facilement obtenir le détail d'un intervalle de temps grâce à ces méthodes:
 ```csharp
 DateTime dateDebut = new DateTime(2020, 1, 1, 12, 15, 30); // le 1 janvier 2020 à 12:15:30
 DateTime dateFin = new DateTime(2020, 1, 2, 12, 15, 30); // le 2 janvier 2020 à 12:15:30
  
-TimeSpan intervalle = dateFin - dateDebut; // dans ce cas l'intervalle est 1 jour
+TimeSpan intervalle = dateFin - dateDebut; // dans ce cas, l'intervalle est 1 jour
   
 int heures = intervalle.Hours; // le résultat est de 0 heure
 double totalHeures = intervalle.TotalHours; // le résultat est de 24 heures
@@ -151,19 +151,19 @@ DateTime uneDate = DateTime.Now.Add(new TimeSpan(3, 2, 0, 0)); // Dans 3 jours e
 [👉 Lien vers la classe ListView](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/listview-control-windows-forms)
 
 Le **`ListView`** est un contrôle de l'interface graphique très utile qui nous permet d'afficher et de sélectionner différents items 
-d'une collection. Sa forme la plus courrante est une liste de rangées divisées par des colonnes.
+d'une collection. Sa forme la plus courante est une liste de rangées divisées par des colonnes.
 
 :::warning
 Le préfixe pour une **`ListView`** est **`lsv`**.
 :::
 
 ### 🎛️ Configurer
-Il est possible de venir modifier la **`ListView`** dans la conception avec le petit triangle au dessus à droite du contrôle, mais il est aussi
+Il est possible de venir modifier la **`ListView`** dans la conception avec le petit triangle au-dessus à droite du contrôle, mais il est aussi
 possible de venir configurer dans la fenêtre **Propriété (F4)**. La propriété **`Columns`** nous permet d'ajouter des colonnes, tandis que la propriété **`Items`** nous permet d'ajouter directement des lignes.
 ![Boîte à outil et DateTimePicker](@site/static/img/R16/listViewConception.png)
 
 ### 🏛️ Ajouter des colonnes
-Notez ici que le nom des colonnes doit commencer par le préfix **`clh`**:
+Notez ici que le nom des colonnes doit commencer par le préfixe **`clh`**:
 
 ![DateTimePicker en action](@site/static/img/R16/listViewAjouterColonnes.png)
 
@@ -176,7 +176,7 @@ lsvExemple.Items.Add("Texte de l'élément");
 ListViewItem objItem = new ListViewItem("Allo");
 lsvExemple.Items.Add(objItem);
 
-// Puisque les items sont une liste, il est facillement possible de compter le nombre de rangée.
+// Puisque les items sont une liste, il est facilement possible de compter le nombre de rangées.
 int nbRangées = lsvExemple.Items.Count; 
 ```
 

@@ -29,11 +29,11 @@ Disponible ici 👉 [Laboratoire2_1](../../static/files/laboratoires/Laboratoire
 * Créer un menu console
 
 ### 🛠️ Instructions
-Écrire un programme qui simule un compteur d'Hydro Québec. Ce compteur garde en mémoire la quantité de Kw/h consommé et permet même de compter
+Écrire un programme qui simule un compteur d'Hydro-Québec. Ce compteur garde en mémoire la quantité de kW/h consommé et permet même de compter
 le coût de la consommation. Vous devrez instancier et utiliser la classe **`CompteurHydro`**.
 
-Vous devrez compléter un menu en mode console permttant les actions suivantes:
-- Consommer une quantité de Kw/h
+Vous devrez compléter un menu en mode console permettant les actions suivantes:
+- Consommer une quantité de kW/h
 - Afficher la consommation actuelle
 - Afficher le coût de la consommation
 - Quitter
@@ -135,8 +135,8 @@ Veuillez sélectionner une option :
 
 ### 🛠️ Instructions
 Vous devez écrire un programme qui simule un thermostat. Ce programme instancie un objet de la classe **`Thermostat`**. 
-Il permet d'augmenter ou de diminuer la température d'un degrés à la fois. La température autorisée est 
-entre 5 et 35 degrés Celcius.
+Il permet d'augmenter ou de diminuer la température d'un degré à la fois. La température autorisée est 
+entre 5 et 35 degrés Celsius.
 
 Ajoutez une nouvelle classe au projet nommée **`AppThermostat`** qui correspond au schéma.
 
@@ -183,7 +183,7 @@ Voici la classe et sa structure que vous devrez créer:
 #### Constantes
 
 * **Coût par minute**
-  Montant fixe, en cents, représentant le prix d’une minute de stationnement.
+  Montant fixe, en cent, représentant le prix d’une minute de stationnement.
 * **Montant minimum**
   Montant minimal d’argent pouvant être inséré dans le parcomètre.
 
@@ -195,7 +195,7 @@ Voici la classe et sa structure que vous devrez créer:
   Nombre de minutes de stationnement encore disponibles avant l’infraction.
 
 * **Montant total**
-  Somme totale d’argent, en cents, insérée dans le parcomètre depuis son initialisation.
+  Somme totale d’argent, en cent, insérée dans le parcomètre depuis son initialisation.
 
 ---
 
@@ -246,12 +246,12 @@ Veuillez sélectionner une option :
 * Créer un menu console
 
 ### 🛠️ Instructions
-Vous devez écrire un programme qui simule **trois** thermostat!
+Vous devez écrire un programme qui simule **trois** thermostats!
 
 Ce programme instancie 3 objets de la classe **`Thermostat`**, car il permet de contrôler la température dans 3 emplacements différents,
 soit : la chambre, la cuisine ou encore le salon. Une quatrième variable va servir uniquement à référer sur le Thermostat courant.
 Au départ le thermostat courant est celui de la chambre, ensuite l'utilisateur peut au besoin le changer pour celui de la cuisine ou du salon.
-Les options pour augmenter ou diminuer la température affecte uniquement le Thermostat courant.   
+Les options pour augmenter ou diminuer la température affectent uniquement le Thermostat courant.   
 
 Ajoutez une nouvelle classe au projet nommée **`AppMultiThermostat`** qui correspond au schéma.
 

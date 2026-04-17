@@ -6,7 +6,7 @@ title: 🟡 Montre
 ### 🎯 Objectifs 
 * Création d'une classe
 * Se familiariser avec la structure **`DateTime`** 
-* Formatter une date
+* Formater une date
 
 ### 🛠️ Instructions
 Vous aurez à compléter le projet en créant la classe **`Montre`**. 

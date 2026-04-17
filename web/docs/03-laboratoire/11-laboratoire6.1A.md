@@ -28,7 +28,7 @@ Disponible ici 👉 [Laboratoire6_1](../../static/files/laboratoires/Laboratoire
 ---
 
 ## 🛠️ Instructions
-Dans cet exercice, vous devez créer une application Windows Forms en c#. Votre fenêtre devra être en mesure de prendre un prénom et un nom. Lorsqu'on appuie sur le bouton **`Bonjour!`**, une boîte de message devra appraraîte avec le message : **"Bonjour prenom nom!"**.
+Dans cet exercice, vous devez créer une application Windows Forms en c#. Votre fenêtre devra être en mesure de prendre un prénom et un nom. Lorsqu'on appuie sur le bouton **`Bonjour!`**, une boîte de message devra apparaîte avec le message : **"Bonjour prenom nom!"**.
 
 Dans la fenêtre, vous devrez ajouter:
 - Une **étiquette** et une **boîte** de texte pour le **prénom**.
@@ -36,7 +36,7 @@ Dans la fenêtre, vous devrez ajouter:
 - Un **bouton** bonjour qui affichera, par un événement **`click`**, le message dans une **`MessageBox`**.
 
 :::warning
-Vous devrez valider les champs **prénom** et **nom**. Ils ne doivent pas être vide. Affichez un message d'erreur dans ce cas.
+Vous devrez valider les champs **prénom** et **nom**. Ils ne doivent pas être vides. Affichez un message d'erreur dans ce cas.
 :::
 
 Voici un exemple du résultat attendu:
@@ -48,7 +48,7 @@ Voici un exemple du résultat attendu:
 
 ## 📥 MessageBox
 
-La boîte de message est un outil essentiel pour les applications utilisant Windows Forms. Elle permet d'afficher une petite fenêtre d'information pour l'utilisateur. Elle est souvent utiliser pour afficher des messages d'erreur, d'information ou d'avertissement. Cette fenêtre apparaît lorsqu'on l'appel avec la méthode **`Show()`**.
+La boîte de message est un outil essentiel pour les applications utilisant Windows Forms. Elle permet d'afficher une petite fenêtre d'information pour l'utilisateur. Elle est souvent utilisée pour afficher des messages d'erreur, d'information ou d'avertissement. Cette fenêtre apparaît lorsqu'on l'appelle avec la méthode **`Show()`**.
 
 La méthode **`Show()`** a pour paramètre:
 - Le message en `string`.

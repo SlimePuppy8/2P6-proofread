@@ -14,14 +14,14 @@ Un **gestionnaire de code source** (souvent appelé système de gestion de versi
 ![](@site/static/img/R02/SCV.png)
 
 
-- **Collaborer dans le cadre d'un projet d'équipe.** Lorsqu’on collabore dans le cadre d’un projet, les membres de l’équipe partagent le code source dans un référentiel ou encore dépôt distant (remote repository). Chaque membre peut avoir sa copie (clone) dans son dépôt local (local repository) pour ajouter de nouvelles fonctionnalités ou corriger des bugs et tester avant de le pousser (push) vers le dépôt distant. Le dépôt est une copie (clone) de l’ensemble des fichiers d’un projet dans un gestionnaire de versions.
+- **Collaborer dans le cadre d'un projet d'équipe.** Lorsqu’on collabore dans le cadre d’un projet, les membres de l’équipe partagent le code source dans un référentiel ou encore dépôt distant (remote repository). Chaque membre peut avoir sa copie (clone) dans son dépôt local (local repository) pour ajouter de nouvelles fonctionnalités ou corriger des bogues et tester avant de le pousser (push) vers le dépôt distant. Le dépôt est une copie (clone) de l’ensemble des fichiers d’un projet dans un gestionnaire de versions.
 
 ![](@site/static/img/R02/DepotLocalEtDistant.png)
 
 ## Git et GitHub
 
 ### Git
-**Git** est un **logiciel de gestion de code source**. C'est un outil essentiel pour la gestion des dépôts Git. C'est un logiciel qui est utilisé en ligne de commande. Cependant, il existe des logiciels graphiques plus conviviaux tel que:
+**Git** est un **logiciel de gestion de code source**. C'est un outil essentiel pour la gestion des dépôts Git. C'est un logiciel qui est utilisé en ligne de commande. Cependant, il existe des logiciels graphiques plus conviviaux, tels que:
     - GitHub Desktop
     - GitKraken
     - Sourcetree
@@ -53,14 +53,14 @@ Vous pouvez vous référer à cette capsule vidéo pour vous guider:
 
 1.	Si ce n’est pas fait, vous devez créer un compte GitHub avec votre compte du cégep (matricule@cegepmontpetit.ca ). Regardez la capsule vidéo sur Moodle et accéder à cette page pour le créer et avoir le Student Service Pack : https://education.github.com/pack
 2.	Connectez-vous à GitHub avec votre compte du cégep (matricule@cegepmontpetit.ca) 
-3.	Créez un nouveau dépôt GitHub privé et le nommez selon ce format en mettant votre propre matricule. 
+3.	Créez un nouveau dépôt GitHub privé et nommez le selon ce format en mettant votre propre matricule. 
 :::info
 Exemple: **H26-2P6-R01Ex-MATRICULE** ou **H26-2P6-TP1-MATRICULE**
 :::
 
 ![](@site/static/img/R02/nouveauDepot1.png)
 
-4. Assurez-vous de choisir une **visibilité restreinte (🔒 Private)** et d'ajouter un fichier .gitignore selon le template **📄Visual Studio**.
+4. Assurez-vous de choisir une **visibilité restreinte (🔒 Private)** et d'ajouter un fichier .gitignore selon le gabarit (template) **📄Visual Studio**.
 ![](@site/static/img/R02/nouveauDepot2.png)
 
 :::note
@@ -76,7 +76,7 @@ Exceptionnellement, dans notre cours 2P6 on va utiliser ce format. Sinon, pour l
 ![](@site/static/img/R02/inviterCollaborateurs.png)
 
 ### Cloner un dépôt
-Il s'agit de faire une copie de travail de votre dépôt sur votre ordinateur. Cela permet de modifier des projets avec plusieurs fichiers, de travailler dans votre environnement de développement avant de sauver vos modifications.
+Il s'agit de faire une copie de travail de votre dépôt sur votre ordinateur. Cela permet de modifier des projets avec plusieurs fichiers, de travailler dans votre environnement de développement avant de sauvegarder vos modifications.
 
 1. Cloner le dépôt sur votre ordinateur, le plus simple est de cliquer sur le bouton vert "Code" puis de choisir "Open with Github Desktop"
 
@@ -118,11 +118,11 @@ Pour ce faire:
 | Comamnde  | Description |
 | --------- | ------------------ |
 | **clone** | Crée une **copie locale** d'un dépôt Git existant. |
-| **commit** | Crée un **noeud** dans le dépôt contenant les modificatons apportées aux fichiers qui ont été placés à l'état "staged". Il faut spécifier un message aux changements apportés. |
+| **commit** | Crée un **noeud** dans le dépôt contenant les modifications apportées aux fichiers qui ont été placés à l'état "staged". Il faut spécifier un message aux changements apportés. |
 | **branch** | Crée une **nouvelle branche** dans le dépôt. Ceci permet d'avoir une copie avec des changements isolés des autres branches. |
 | **merge** | **Fusionne** une branche dans une autre. Cette opération peut être à l'origine de conflits que nous devons résoudre manuellement. |
-| **push** | **Pousse** tous les noeuds locales de la branche vers la branche du **dépôt distant**. Il est possible que cette opération produise des conflits. |
-| **pull** | **Récupère** les modifications du **dépôt distant**. Si il y a une différence entre la branche locale et distante, les deux branches seront fusionnnées et une opération merge + commit se exécutée. |
+| **push** | **Pousse** tous les noeuds locaux de la branche vers la branche du **dépôt distant**. Il est possible que cette opération produise des conflits. |
+| **pull** | **Récupère** les modifications du **dépôt distant**. S'il y a une différence entre la branche locale et distante, les deux branches seront fusionnnées et une opération merge + commit se exécutée. |
 
 ## Liens utils
 - [Lien vers GitHub](https://github.com/) : Lien vers GitHub

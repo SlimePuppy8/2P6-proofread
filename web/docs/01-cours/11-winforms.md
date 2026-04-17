@@ -15,7 +15,7 @@ description: Windows Forms
 Windows Forms est une structure logicielle, offerte par Microsoft, pour développer des interfaces utilisateur. Cette structure est simple, mature et rapide. Elle est idéale pour nous. Il s'agit tout simplement d'une boîte à outils nous offrant des fenêtres et des contrôles avec lesquels nous pourrons composer notre application. Nous serons donc en mesure d'ajouter une interface graphique à nos programmes.
 
 :::info
-Une interface graphique (**Graphical User Interface**) permet à l’utilisateur d’interagir avec l’ordinateur à l’aide d’éléments visuels comme des fenêtres, boutons, menus ou icônes. Contrairement aux applications console, elle est plus intuitive : l’utilisateur clique, sélectionne ou saisit des données au lieu de taper des commandes. Les interfaces graphiques rendent les applications plus faciles à utiliser et moins sujettes aux erreurs. Dans ce cours, nous utiliserons WinForms en C# pour apprendre à créer des fenêtres, ajouter des contrôles et gérer les actions de l’utilisateur.
+Une interface graphique (**Graphical User Interface**) permet à l’utilisateur d’interagir avec l’ordinateur à l’aide d’éléments visuels, comme des fenêtres, boutons, menus ou icônes. Contrairement aux applications console, elle est plus intuitive : l’utilisateur clique, sélectionne ou saisit des données au lieu de taper des commandes. Les interfaces graphiques rendent les applications plus faciles à utiliser et moins sujettes aux erreurs. Dans ce cours, nous utiliserons WinForms en C# pour apprendre à créer des fenêtres, ajouter des contrôles et gérer les actions de l’utilisateur.
 :::
 
 Vous retrouverez Windows Forms dans plusieurs contextes comme:
@@ -41,7 +41,7 @@ Le point d'entrée reste le même fichier, soit **`Program.cs`**. Parcontre, on 
     internal static class Program
     {
         /// <summary>
-        /// Point d'entrée principal de l'application.
+        /// Point d'entrée principale de l'application.
         /// </summary>
         [STAThread]
         static void Main()
@@ -125,7 +125,7 @@ Prenons, par exemple, l'ajout d'un simple bouton **`Quitter`**:
 
 <Row>
 
-Remarquez maintenant que le designer reflète dans le code les propriétés que nous avons spécifiées, comme par exemple, la position (Location = 198; 59).
+Remarquez maintenant que le designer reflète dans le code les propriétés que nous avons spécifiées, par exemple, la position (Location = 198; 59).
 <Column>
 
 ```csharp

@@ -12,7 +12,7 @@ description: Type par énumération
 
 ## ✅ L'énumération **`enum`**
 ### 📜 Définition
-Une énumération est un **type de valeur** spécial que l'on appel **`enum`**. Elle permet de définir une suite
+Une énumération est un **type de valeur** spécial que l'on appelle **`enum`**. Elle permet de définir une suite
 de constantes d'**entier nommées**.
 
 ### 🔢Valeurs par défaut
@@ -53,7 +53,7 @@ public enum ChoixAlignement
 ### 📜 Définition
 La structure de contrôle de sélection **`switch`** est une condition C# qui permet de facilement
 illustré plusieurs conditions d'évaluation sur une valeur. Cette structure offre beaucoup de lisibilité
-aux développeurs contrairement une une longue liste de conditions **`if-else`**.
+aux développeurs, contrairement une longue liste de conditions **`if-else`**.
 
 ```csharp
 int choix = cboChoix.SelectedIndex;
@@ -96,14 +96,14 @@ switch (choix)
 ## ✅ Initialiseur d'objet et de collection
 
 ### 📜Définition
-Pour sauver du temps, c# nous permet d'initialiser des objets directement lors de leurs créations. Il est donc possible
-de garder ce qui est strictement nécessaire d'initialisation dans le constructeur et de quand-même rapidement
+Pour économiser du temps, c# nous permet d'initialiser des objets directement lors de leurs créations. Il est donc possible
+de garder ce qui est strictement nécessaire d'initialisation dans le constructeur et de quand même rapidement
 créer un objet complet.
 
 ### 💡 Exemples
 Voici un exemple d'initialisation d'un objet avec un constructeur vide":
 ```csharp
-// Quelques fois on ne dispose pas d'un constructeur avec plusieurs paramètres.
+// Quelques fois, on ne dispose pas d'un constructeur avec plusieurs paramètres.
 // Mais il est tout de même possible de fournir des valeurs aux propriétés
 // au moment de l'instanciation, en utilisant un initialiseur d'objet comme suit :
 
@@ -111,7 +111,7 @@ m_objMontre = new Montre() { Heures = 12, Minutes = 20, Secondes = 55 }
 ```
 
 
-Il est aussi possible d'effectuer cette initialisation avec des collections d'objet tel que la liste:
+Il est aussi possible d'effectuer cette initialisation avec des collections d'objets tels que la liste:
 ```csharp
 m_colPersonnes = new List<Personne>() { 
     new Personne() { Nom = "Robert Lapointe", Nas = "276187261" },
@@ -124,9 +124,9 @@ m_colPersonnes = new List<Personne>() {
 
 Explorons quelques exemples d'utilisations de ce que nous avons appris aujourd'hui:
 ### 🎭 Exposer différents paramètres de configuration
-Les énumérations et les ``switch-case`` sont très pratique lorsqu'on veut exposer
+Les énumérations et les ``switch-case`` sont très pratiques lorsqu'on veut exposer
 des options. Avec IntelliSense, les ``enum`` peuvent exposer très clairement
-des fonctionnalités sans pour autant s'enchaîner avec la gestions de ``string`` ou
+des fonctionnalités sans pour autant s'enchaîner avec la gestion de ``string`` ou
 de chiffres magiques. 
 
 L'appel d'une méthode générant un fichier du format `pdf` pourrait se faire comme suit:
@@ -162,7 +162,7 @@ public string GenererRapport(FormatRapport format)
 Il est possible de combiner des valeurs d'une énumération pour spécifier des choix multiples. Il faut s'assurer de faire des bons
 de deux après la première valeur.
 
-Voici un exemple d'options que vous risquez de souvent rencontrer lorsque vous utiliser la bibliothèque de Microsoft. Notez
+Voici un exemple d'options que vous risquez de souvent rencontrer lorsque vous utilisez la bibliothèque de Microsoft. Notez
 l'utilisation de l'opérateur logique **`|`** pour combiner les valeurs.
 ```csharp
 Rechercher("csharp", OptionsRecherche.IgnorerCasse | OptionsRecherche.MotEntier);
@@ -194,7 +194,7 @@ Si c’est un Flags, utiliser des puissances de 2 tel que
 :::
 ### 🪄 Éviter les chiffres magiques
 
-Si vous remarquez que votre application contient beaucoup de chiffre magique, tentez de les remplacer
+Si vous remarquez que votre application contient beaucoup de chiffres magiques, tentez de les remplacer
 par des constantes et/ou des énumérations. L'intention derrière vos chiffres magiques devient explicite et robuste.
 ```csharp
 public enum NiveauLog { Trace, Debug, Info, Warning, Error, Critical }
@@ -211,7 +211,7 @@ public enum RoleUtilisateur { Etudiant, Enseignant, Admin }
 Prenez garde de toujours prévoir un cas par défaut défensif. Bien qu'il n'y ait que trois rôles possibles dans l'énumération, rien n'empêche
 un programmeur de transformer un `int` en votre `enum` et tout briser.
 
-Le rôle `999` n'existe pas et peut-être qu'il pourrait venir briser votre code:
+Le rôle `999` n'existe pas et peut venir briser votre code:
 ```csharp
 RoleUtilisateur roleDouteux = (RoleUtilisateur)999;
 ```
@@ -230,7 +230,7 @@ Console.WriteLine($"{colonnes[(int)NomColonne.Prenom]} possède {colonnes[(int)N
 ```
 
 #### ✅ Utilisez plutôt un dictionnaire
-Un dictionnaire est une collection d'objet. Cette collection est similaire à une liste **`List<>`**, mais elle a la particularité de lier une donnée à un identifiant de façon très sécuritaire.
+Un dictionnaire est une collection d'objets. Cette collection est similaire à une liste **`List<>`**, mais elle a la particularité de lier une donnée à un identifiant de façon très sécuritaire.
 
 ```csharp
 public enum NomColonne { Nom, Prenom, Solde }

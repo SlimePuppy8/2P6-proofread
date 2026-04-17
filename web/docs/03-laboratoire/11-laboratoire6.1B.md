@@ -12,7 +12,7 @@ title: 🟡 Convertisseur
 - Ajouter et positionner des contrôles.
 - Ajouter un événement à un contrôle.
 - Extraire du texte d'une boîte de texte.
-- Retourner un calcul dans une boîte de texte.- 
+- Retourner un calcul dans une boîte de texte. 
 ---
 
 ## 🛠️ Instructions
@@ -22,10 +22,10 @@ Dans la fenêtre, vous devrez ajouter:
 - Une **étiquette** d'instruction.
 - Une **boîte de texte** et une **étiquette** pour la température en **Fahrenheit**.
 - Un **bouton** convertir qui affichera, par un événement **`click`**, le résultat dans une étiquette.
-- Une **étiquette** résultat et une **étiquette** pour l'unité **Celcius**.
+- Une **étiquette** résultat et une **étiquette** pour l'unité **Celsius**.
 
 :::tip
-La formule pour transformer la température Fahrenheit en degré Celcius est la suivante: **celcius = (fahrenheit - 31) * 5 / 9**. Si vous n'êtes pas en mesure de convertir le texte pour la température Fahrenheit, vous pouvez tout simplement afficher un texte vite pour la température en celcius. Essayez d'afficher seulement deux chiffres après la virgule.
+La formule pour transformer la température Fahrenheit en degré Celsius est la suivante: **celsius = (fahrenheit - 31) * 5 / 9**. Si vous n'êtes pas en mesure de convertir le texte pour la température Fahrenheit, vous pouvez tout simplement afficher un texte vite pour la température en celsius. Essayez d'afficher seulement deux chiffres après la virgule.
 :::
 
 Voici un exemple du résultat attendu:
