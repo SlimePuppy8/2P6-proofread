@@ -2,7 +2,7 @@
 description: Pondération 15%
 ---
 
-# Examen 1
+# Examen 2
 
 
 <Row>
@@ -33,6 +33,31 @@ L'examen dure 2h (plus si vous avez droit à du temps supplémentaire). Il s'agi
 Vous avez le droit à :
 
 - Une feuille de note manuscrite recto-verso de format lettre. (Soit 8½ x 11)
+
+:::
+
+</Column>
+
+</Row>
+
+<Row>
+
+<Column>
+
+:::tip Éléments d'évaluation et pondération
+
+
+
+- Définition de classes (45%)
+    - Implémenter des classes en assurant l’encapsulation et la validation des données 
+    - Utiliser correctement les exceptions 
+- Manipulation de relation entre classes (32%)
+    - Comprendre et exploiter les relations entre classes 
+    - Initialiser et manipuler un jeu de données complexe 
+- Modélisation (23%)
+    - Modéliser un problème avec un diagramme UML 
+    - Traduire une modélisation en code 
+
 
 :::
 
