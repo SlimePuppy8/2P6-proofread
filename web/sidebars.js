@@ -487,7 +487,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.1 - rencontre23",
+      label: "12.1 - Polymorphisme",
       id: "cours/rencontre23",
       customProps: {
         calendrier: {
@@ -501,7 +501,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.2 - rencontre24",
+      label: "12.2 - Polymorphisme (suite)",
       id: "cours/rencontre24",
       customProps: {
         calendrier: {
