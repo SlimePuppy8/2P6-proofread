@@ -15,7 +15,7 @@ description: Polymorphisme - intro
 
 :::info
 
-Polymorphisme : Du grec ancien polús (plusieurs) et morphê (forme) ⇾ Plusieurs formes.
+Polymorphisme : Du grec ancien **polús** (plusieurs) et **morphê** (forme) ⇾ **Plusieurs formes**.
 
 :::
 
@@ -25,7 +25,7 @@ Quel est l'objet suivant et à quoi il sert ?
 
 ![](@site/static/img/R23/bouton-lumiere.jpg)
 
-Il s'agit d'un **intérrupteur** qui permet d'**allumer ou éteindre la lumière** lorsqu'on **appuie** sur le **bouton**.
+Il s'agit d'un **interrupteur** qui permet d'**allumer ou éteindre la lumière** lorsqu'on **appuie** sur le **bouton**.
 
 Quel est l'objet suivant et à quoi il sert ?
 
@@ -56,7 +56,7 @@ Ces objets sont liés par l'héritage. De plus, ils offrent tous la même **mét
 <Column>
 **Les classes dérivées offrent leur propre implémentation.**
 
-**``Intérupteur``** 
+**``Interrupteur``** 
     
 Action résultante d'``Appuyer`` -> Allumer/éteindre la lumière
 
@@ -111,7 +111,7 @@ Notez la présence du mot clé ``virtual`` au niveau de la déclaration de ``Mé
 public class Dérivée : Base {
     // méthode substituée
   public override void Méthode() {
-// implémentation dérivée
+    // implémentation dérivée
   }
 }
 
@@ -149,16 +149,16 @@ public class Bouton {
 
 ```csharp
 
-public class Intérupteur : Bouton {
+public class Interrupteur : Bouton {
     // méthode substituée
-  public override void Méthode() {
+  public override void Appuyer() {
     Console.WriteLine("Et la lumière fût!");
   }
 }
 
 public class Alarme : Bouton {
     // méthode substituée
-  public override void Méthode() {
+  public override void Appuyer() {
     Console.WriteLine("Les pompiers sont en route!");
   }
 }
@@ -179,7 +179,7 @@ public class Alarme : Bouton {
 List<Bouton> listeBoutons = new List<Bouton>();
 
 listeBoutons.Add( new Bouton() );
-listeBoutons.Add( new Intérupteur() );
+listeBoutons.Add( new Interrupteur() );
 listeBoutons.Add( new Alarme() );
 
 foreach( Bouton bouton in listeBoutons )
