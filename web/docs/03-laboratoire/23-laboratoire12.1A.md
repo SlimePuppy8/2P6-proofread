@@ -213,8 +213,8 @@ Pour chacune des illustrations,
 ### Exemple de résultat attendu dans la console:
 
 ```
-Illustration 1 : 
-Illustration 2 : 
-Illustration 3 : 
+L'aire totale de l'illustration 1 est 16.96460032938488
+L'aire totale de l'illustration 2 est 31.200276485650665
+L'aire totale de l'illustration 3 est 110.68049437891702
 
 ```
