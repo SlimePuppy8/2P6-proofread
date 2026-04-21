@@ -473,7 +473,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "11.2 - rencontre 22",
+      label: "11.2 - Héritage et interfaces",
       id: "cours/rencontre22",
       customProps: {
         calendrier: {
