@@ -646,8 +646,8 @@ Par défaut, l'interface nouvellement créée aura une visibilité `internal`. N
 
 ---
 
-## 🧪 Laboratoire 11.1
+## 🧪 Laboratoire 11.2
 Vous devez réaliser le labo suivant :
- [🧪 Labo 11.1](/laboratoire/laboratoire11.1A)
+ [🧪 Labo 11.2](/laboratoire/laboratoire11.2A)
 
 ---
