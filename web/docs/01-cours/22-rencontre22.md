@@ -126,7 +126,161 @@ Nous sommes familié avec deux niveaux d'accès aux éléments d'une classe, soi
 ### 📖 Exemples
 
 ## ✅ Interface
+
+Dans la section précédente, nous avons vu que *l’héritage* permet d’établir une relation de type « **est un** » entre une classe *enfant* et une classe *parent* (ex. Chien **est un** Animal). Cela permettait à la classe Chien d’hériter de l’ensemble des constantes, variables membres, propriétés et méthodes implémentées dans la classe Animal.
+
+👉 L’héritage permet donc principalement de **réutiliser du code**.
+
+
+Mais que faire si les objets qu’on souhaite regrouper ne respectent pas une relation « **est un** » ? 
+
+Exemples :
+
+* Un robot *peut* avoir un nom et *peut* danser, mais **n’est pas** un animal.
+* Un humain *peut* avoir un nom et *peut* danser, mais **n’est pas** un animal.
+
+👉 Ici, l’héritage devient forcé et conceptuellement incorrect. Il convient alors de parler d'une relation «**peut faire**».
+
+
 ### 📜 Définition
+
+Une interface est un *contrat* dans lequel il est précisé ce qu’un objet **peut faire**, mais **pas comment le faire**.
+
+Concrètement, cela signifie que l'interface contient :
+* des propriétés
+>> Uniquement leur nom, leur type et leur mode d'accès minimal (*get/set*)
+* des méthodes
+>> Uniquement leur signature incluant les paramètres et leur type, ainsi et que le type de retour de la méthode
+
+L'interface ne contient :
+
+❌ aucune implémentation
+
+❌ aucun champ (ou variable membre)
+
+👉 En d'autres mots, l'interface impose une **structure globale**, mais pas d'implémentation spécifique.
+
+Voici à quoi ressemblerait *Animal* sous forme d'interface :
+
+```csharp
+interface IAnimal
+{
+    string Nom { get; set; } // Aucune implémentation
+
+    void Danser(); // Aucune implémentation, strictement la signature
+}
+
+```
+
+:::note
+Par défaut, tout le contenu d'une interface est `abstract` et `public`. Nous aborderons la notion d'abstraction lors de l'introduction au *Polymorphisme* !
+:::
+
+:::important
+Tous les identificateurs des interfaces débutent par la lettre **i** en majuscule.
+:::
+
+
+### Utiliser une interface existante
+
+
+1)  Au moment de définir une nouvelle classe, complétez l’identificateur de la classe par « **:** » suivi du nom de l'interface (comme pour l'*héritage* !)
+    
+    >> Si le nom de l’interface est souligné en *rouge*, c’est normal à ce stade : le contrat n’est pas encore respecté ! Pour satisfaire le compilateur, il faut implémenter les propriétés et les méthodes de l'interface. 
+    
+    :::tip
+     Positionnez votre souris sur l'erreur du compilateur > Faites dérouler les *Actions rapides* > Cliquez sur **Implémenter l’interface**. Ceci génère le squelette d’une classe qui satisfait le contrat de `ICreationDivine`.
+    
+
+    ![Générer le squelette d'une classe qui satisfait le contrat de l'interface](@site/static/img/R22/implementer_interface.png)
+
+    :::
+
+2)	Complétez la classe pour la rendre fonctionnelle.
+
+
+
+<Tabs>
+    <TabItem value="interface" label="Interface" default>
+```csharp
+public interface ICreationDivine
+{
+    string Nom { get; set; }
+
+    void Danser();
+
+}
+
+```
+</TabItem>
+    <TabItem value="robot" label="Classe Robot">
+```csharp
+public class Robot : ICreationDivine
+{
+    public string Nom { get; set; }
+
+    public Robot(string nom)
+    {
+        Nom = nom;
+    }
+
+    public void Danser()
+    {
+        Console.WriteLine($"{Nom} est maître de Tecktonik.");
+    }
+}
+
+```
+
+    </TabItem>
+    <TabItem value="humain" label="Classe Humain">
+```csharp
+public class Humain : ICreationDivine
+{
+    public string Nom { get; set; }
+
+    public Humain(string nom)
+    {
+        Nom = nom;
+    }
+
+    public void Danser()
+    {
+        Console.WriteLine($"{Nom} effectue le moonwalk.");
+    }
+}
+
+```
+    </TabItem>
+    <TabItem value="exemple" label="Main">
+```csharp
+public void Main()
+{
+    ICreationDivine robot = new Robot("R2D2");
+    ICreationDivine humain = new Humain("Philippe");
+
+    robot.Danser(); // Affichera "R2D2 est maître de Tecktonik."
+    humain.Danser(); // Affichera "Philippe effectue le moonwalk."
+    
+}
+```
+    </TabItem>
+</Tabs>
+
+
+### Définir une nouvelle interface
+
+Pour définir une nouvelle interface, cliquez sur votre **projet** dans l'*Explorateur de solution* avec le bouton droit de votre souris. Choisissez **Ajouter**, puis **Nouvel élément...** . Vous pourrez alors sélectionner l'élément **Interface** et le renommer en respectant la nomenclature.
+
+:::note
+Par défaut, l'interface nouvellement créée aura une visibilité `internal`. N'hésitez pas à l'adapter au besoin.
+:::
+
+
+
+:::danger
+**AJOUTER IMPLÉMENTATION D'INTERFACES MULTIPLES ? L'AJOUT DE MÉTHODES QUI NE SONT PAS DÉFINIES DANS L'INTERFACE ?**
+:::
 
 ## ✅ Héritage vs Interface
 
