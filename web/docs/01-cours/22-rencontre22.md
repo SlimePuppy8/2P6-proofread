@@ -461,3 +461,10 @@ public void Test()
 |Réutilise du code|Définit un contrat|
 |Relation “est-un”|Capacité / comportement|
 Une seule classe parente|Plusieurs interfaces
+
+
+## 🧪 Laboratoire 11.1
+Vous devez réaliser le labo suivant :
+ [🧪 Labo 11.1](/laboratoire/laboratoire11.1A)
+
+---
