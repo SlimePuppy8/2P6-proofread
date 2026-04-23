@@ -5,28 +5,29 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Héritage et interfaces
+---
 
 ## 🎯 Objectifs
+
+À la fin de cette séance, vous serez en mesure de :
+
 1. Définir une classe dérivée
 2. Accéder à la classe de base par la classe dérivée
 3. Gérer les accès à la classe
 4. Surcharger des éléments d'une classe dérivée
-5. Définir et utiliser une interface
+5. Utiliser une interface existante
+6. Définir une nouvelle interface
+---
 
 ## ✅ Héritage
 
 
 
 ### 📜 Définition
-L’héritage est un mécanisme qui permet à une nouvelle classe, que l'on va appeler classe dérivée ou enfant, d'acquérir automatiquement les caractéristiques d'une classe existante, que l'on va appeler classe de base ou parente. 
 
-L’héritage est un mécanisme fondamental de la programmation orientée objet qui permet de créer une nouvelle classe à partir d’une classe existante (classe de base ou parente). La classe dérivée va donc recevoir (hériter 😉) tous les champs, constantes, propriétés et méthodes de la classe d’initiale. Ceci nous permet d'éviter d'écrire du code redondant.
+L’héritage est un mécanisme fondamental de la programmation orientée objet qui permet de créer une nouvelle classe (**classe dérivée ou enfant**) à partir d’une classe existante (**classe de base ou parent**). La classe dérivée va donc recevoir (ou hériter 😉) de tous les champs, constantes, propriétés et méthodes de la classe de base. Ceci nous permet d'éviter d'écrire du code redondant.
 
-La classe dérivée hérite :
-- Constantes
-- Variables
-- Propriétés
-- Méthodes
+L'exemple suivant illustre comment une classe dérivée *Chien* hérite des membres d'une classe de base *Animal*. Notez que la classe dérivée peut tout de même avoir ses propres propriétés et méthodes.
 
 <Tabs>
     <TabItem value="parent" label="Base (parent)" default>
@@ -37,38 +38,55 @@ public class Animal
 
     public void Danser()
     {
-        // ...
+        Console.WriteLine("Olé!");
     }
 }
 ```
     </TabItem>
     <TabItem value="enfant" label="Dérivée (enfant)">
 ```csharp
-public class Chien : Animal
-{
-    const bool TERRESTRE = true;
+ public class Chien : Animal
+ {
+     public const bool TERRESTRE = true;
 
-    public Couleur Pelage { get; set; }
-    public string Aboyer()
-    {
-        return "Woof!";
-    }
+     public Couleur Pelage { get; set; }
+     public string Aboyer()
+     {
+         return "Woof!";
+     }
+ }
+```
+</TabItem>
+    <TabItem value="enum" label="enum">
+```csharp
+public enum Couleur
+{
+    Gris,
+    Brun,
+    Noir,
+    Blanc,
+    Orange
 }
 ```
     </TabItem>
     <TabItem value="exemple" label="exemple">
 ```csharp
-public void Test()
+static void Main()
 {
+   
     Chien toto = new Chien();
-    toto.Pelage = Couleur.Gris;
-    console.log(toto.Aboyer()); // 📢 Woof! 
 
-    // Classe de base (Animal)
-    if(Animal.TERRESTRE) // ✅ ceci est possible puisque la classe chien hérite de la classe Animal.
+    // Membres hérités de Animal
+    toto.Nom = "Toto";
+    Console.WriteLine(toto.Nom); // ✅ Toto
+    toto.Danser(); // ✅ 🕺 Olé! 💃
+
+    // Membres propres à Chien
+    toto.Pelage = Couleur.Gris;
+    Console.WriteLine(toto.Aboyer()); // 📢 Woof! 
+    if (Chien.TERRESTRE)
     {
-        toto.Nom = "Toto"; // ✅ Toto! 🐶
-        toto.Danser(); // ✅ 🕺olé! 💃
+        Console.WriteLine("Le chien est un animal terrestre.");
     }
 }
 ```
@@ -76,11 +94,12 @@ public void Test()
 </Tabs>
 
 :::danger
-Dans le langage de programmation que nous utilisons, **C#**, il n'est pas possible de faire de l'héritage avec plusieurs classes de bases. Nous sommes restreints à **une seule classe** de base.
+Avec le langage de programmation C#, il n'est pas possible de faire de l'héritage avec plusieurs classes de bases. Nous sommes restreints à **une seule classe** de base.
 :::
 
+---
 
-### 🤔 Pourquoi?
+### 🤔 Pourquoi utiliser l'héritage ?
 
 L’héritage permet notamment de :
 - ✅ Réduire la duplication de code
@@ -93,8 +112,9 @@ L’héritage permet notamment de :
 L'héritage ne sert pas seulement à réutiliser du code, mais principalement à fournir une **structure logique**. L'héritage servira aussi lorsque nous verrons le **polymorphisme**.
 :::
 
-Voici un exemple où l'héritage devient un outil intéressant. On remarque que les trois classes **`Chien`**, **`Chat`** et **`Lapin`** sont initialisées de la même façon.
-Le code est redondant et pourrait être amélioré. En utilisant l'héritage, la méthode **`Initialiser`** n'est plus répétée. 🥳
+Voici un exemple où l’héritage devient particulièrement utile. On remarque que les trois classes **`Chien`**, **`Chat`** et **`Lapin`** contiennent une méthode ``Initialiser`` identique. Cette duplication de code est redondante et rend l’entretien plus difficile. 
+
+En introduisant une classe de base **``Animal``**, on centralise ce comportement commun. La méthode ``Initialiser`` est définie une seule fois dans cette classe, puis automatiquement héritée par les classes dérivées. On évite ainsi la répétition, on simplifie le code et on le rend plus facile à maintenir. 🥳
 <Tabs>
     <TabItem value="probleme" label="❌ Code redondant" default>
 ```csharp
@@ -180,32 +200,28 @@ public class Program
     </TabItem>
 </Tabs>
 
+
+---
+
 ### ⚠️ Héritage ou composition?
 
-Dernièrement, nous avons appris la **composition** d'objet. Nous avons vu qu'un objet peut posséder un autre objet. 
-Une personne **a-un** ou plusieurs animaux. 
+Dernièrement, nous avons exploré la **composition** d'objets. Nous avons vu qu’un objet peut en contenir un autre : par exemple, une personne **a un** ou plusieurs animaux. 
 
-L'**héritage** nous apporte un nouveau défi. Il sera difficile de choisir entre implémenter l'**héritage** ou la **composition**.
+L'**héritage** nous apporte un nouveau défi : comment choisir entre implémenter l'**héritage** ou la **composition**.
 
-Un truc très utile est le test du langage naturel. Nous devons comparer les deux classes et verbaliser leur relation. Lorsque nous sommes en mesure de dire 
-qu'une classe **a-un**, nous utiliserons la **composition**. Parcontre, nous devrions considérer l'héritage lorsque la réponse pourrait être un **est-un**.
+Un truc très utile est le test du langage naturel. Il consiste à verbaliser la relation entre deux classes à voix haute :
 
-Si la phrase correcte est :
+* Si l’on peut dire qu’une classe "**a un**" (ex. : une personne *a un* animal), on privilégie la composition.
+* Si l’on peut dire qu’une classe "**est un**" (ex. : un chien *est un* animal), on privilégie l’héritage.
 
-Un objetA **a-un** objetB, alors on utilise la composition.
 
-✅ Exemples :
+✅ Exemples de composition :
 - Une Voiture **a un** Moteur
 - Un Cours **a un** Enseignant
 - Un Ordinateur **a un** Processeur
 
 
-✅ Héritage → **est-un**
-Si la phrase suivante est vraie sans ambiguïté :
-
-Un **`objetA`** est un **`objetB`**, alors l’héritage est possible.
-
-✅ Exemples valides :
+✅ Exemples valides d'héritage :
 - Un Chien **est un** Animal
 - Un Étudiant **est un** Humain
 - Un CompteÉpargne **est un** Compte
@@ -221,15 +237,17 @@ L’héritage est puissant… mais parfois mal utilisé.
 ❌ Mauvais usage :
 - Juste pour partager du code
 - Hiérarchie trop profonde
-- Relation “a-un” au lieu de “est-un”
+- Relation “*a un*” au lieu de “*est un*”
 
 :::tip
 👉 Règle classique :  Favoriser la composition plutôt que l’héritage
 :::
 
-### ☎️ Constructeur parent (Base)
+---
 
-En C#, il est possible d'appeler le constructeur de la classe de base avant d'appeler le constructeur de la classe dérivée. Ceci est très pratique pour compléter la
+### ☎️ Appel au constructeur de la classe parent (avec le mot-clé `base`)
+
+En C#, il est possible d'appeler le constructeur de la classe **parent** avant d'appeler le constructeur de la classe **dérivée**. Ceci est très pratique pour compléter
 l'initialisation de notre nouvelle classe.
 
 ```csharp
@@ -239,7 +257,7 @@ class Animal
 {
     protected string m_nom;
 
-    public Animal(string pNom)
+    public Animal(string pNom) // Constructeur de la classe de base
     {
         m_nom = pNom;
     }
@@ -258,15 +276,17 @@ class Chien : Animal
 }
 ```
 
+---
+
 ### ⛔ Public, private et protected!
 
-Nous sommes familié avec deux niveaux d'accès aux éléments d'une classe, soit **`public`** et **`private`**. Un troisième niveau vient s'ajouter, le niveau **`protected`**.
+Nous sommes déjà familiers avec deux niveaux d’accès aux éléments d’une classe : **`public`** et **`private`**. Un troisième niveau vient s'ajouter, le niveau **`protected`**.
 
-🔓 Le comportement de **`public`** ne change pas et restera le même. Tous les éléments ayant le préfixe public seront accessibles de partout. Il n'y a aucune restriction. Ce qui veut dire que, dans le cas de l'héritage, les éléments de la classe de base seront accessibles par la classe dérivée. 
+🔓 **`public`** : les éléments ayant le préfixe ``public`` sont accessibles de partout, sans restriction. Dans un contexte d’héritage, ils sont donc accessibles autant dans la classe de base que dans les classes dérivées. 
 
-🔒 Idem pour le comportement du préfix **`private`**. Aucun des éléements ayant ce préfixe ne seront accessibles. La classe dérivée n'aura donc pas accès aux éléments ayant le préfixe **`private`**.
+🔒 **`private`** : les éléments sont accessibles uniquement à l’intérieur de la classe qui les définit. Une classe dérivée n’y a donc pas accès..
 
-🔐 Parcontre, il existe une situation où l'on voudrait garder la restriction d'accès **`private`**, mais où on voudrait quand même réutiliser ces éléments restreints à l'intérieur de notre classe dérivée. C'est exactement le rôle du préfixe **`protected`**.
+🔐 Mais il existe une situation intermédiaire : on souhaite **restreindre l’accès au monde extérieur**, tout en permettant aux classes dérivées d’y accéder. C’est exactement le rôle de **``protected``**. Les éléments déclarés ``protected`` sont accessibles dans la classe de base **et** dans toutes ses classes dérivées, mais demeurent inaccessibles depuis l’extérieur.
 
 #### Prenons l'exemple suivant:
 
@@ -406,11 +426,14 @@ Regardons ce qui se passe lorsque l'on change le **préfixe** de la propriété 
 |protected|✅|
 |private|❌|
 
+
+---
+
 ### 🧑‍🤝‍🧑 Virtual et Override
 
-Le mot-clé **virtual** est utilisé dans la classe de base pour indiquer qu'il est possible de redéfinir cette méthode dans la classe dérivée.
+Le mot-clé **virtual** est utilisé **dans la classe de base** pour indiquer qu’une méthode (ou propriété) peut être redéfinie dans une classe dérivée.
 
-Le mot‑clé **override** est utilisé dans une classe dérivée pour redéfinir le comportement d’une méthode (ou propriété) héritée de la classe de base.
+Le mot‑clé **override** est utilisé **dans une classe dérivée** pour fournir une nouvelle implémentation d’une méthode (ou propriété) héritée de la classe de base. Il permet ainsi de spécialiser ou modifier le comportement défini initialement.
 
 Ces deux mots-clés sont d'excellents amis et se retrouvent souvent ensemble. Ceux-ci permettent à une classe dérivée de fournir sa propre version 
 d'une méthode définie dans la classe parente.
@@ -449,12 +472,13 @@ public void Test()
     </TabItem>
 </Tabs>
 
+
+---
+
+
 ## ✅ Interface
 
 Dans la section précédente, nous avons vu que *l’héritage* permet d’établir une relation de type « **est un** » entre une classe *enfant* et une classe *parent* (ex. Chien **est un** Animal). Cela permettait à la classe Chien d’hériter de l’ensemble des constantes, variables membres, propriétés et méthodes implémentées dans la classe Animal.
-
-👉 L’héritage permet donc principalement de **réutiliser du code**.
-
 
 Mais que faire si les objets qu’on souhaite regrouper ne respectent pas une relation « **est un** » ? 
 
@@ -504,6 +528,7 @@ Par défaut, tout le contenu d'une interface est `abstract` et `public`. Nous ab
 Tous les identificateurs des interfaces débutent par la lettre **i** en majuscule.
 :::
 
+---
 
 ### Utiliser une interface existante
 
@@ -513,7 +538,7 @@ Tous les identificateurs des interfaces débutent par la lettre **i** en majuscu
     >> Si le nom de l’interface est souligné en *rouge*, c’est normal à ce stade : le contrat n’est pas encore respecté ! Pour satisfaire le compilateur, il faut implémenter les propriétés et les méthodes de l'interface. 
     
     :::tip
-     Positionnez votre souris sur l'erreur du compilateur > Faites dérouler les *Actions rapides* > Cliquez sur **Implémenter l’interface**. Ceci génère le squelette d’une classe qui satisfait le contrat de `ICreationDivine`.
+     Positionnez votre curseur sur l'erreur du compilateur > Faites dérouler les *Actions rapides* > Cliquez sur **Implémenter l’interface**. Ceci génère le squelette d’une classe qui satisfait le contrat de `ICreationDivine`.
     
 
     ![Générer le squelette d'une classe qui satisfait le contrat de l'interface](@site/static/img/R22/implementer_interface.png)
@@ -591,20 +616,23 @@ public void Main()
     </TabItem>
 </Tabs>
 
+---
 
 ### Définir une nouvelle interface
 
-Pour définir une nouvelle interface, cliquez sur votre **projet** dans l'*Explorateur de solution* avec le bouton droit de votre souris. Choisissez **Ajouter**, puis **Nouvel élément...** . Vous pourrez alors sélectionner l'élément **Interface** et le renommer en respectant la nomenclature.
+Pour définir une nouvelle interface : 
+1. Cliquez sur votre **projet** dans l'*Explorateur de solution* avec le bouton droit de votre souris
+2. Choisissez **Ajouter**, puis **Nouvel élément...** 
+3. Vous pourrez alors sélectionner l'élément **Interface** et le renommer en respectant la nomenclature.
+
+![Ajouter une nouvelle interface](@site/static/img/R22/ajouter_interface.png)
+
 
 :::note
 Par défaut, l'interface nouvellement créée aura une visibilité `internal`. N'hésitez pas à l'adapter au besoin.
 :::
 
-
-
-:::danger
-**AJOUTER IMPLÉMENTATION D'INTERFACES MULTIPLES ? L'AJOUT DE MÉTHODES QUI NE SONT PAS DÉFINIES DANS L'INTERFACE ?**
-:::
+---
 
 ## ✅ Héritage vs Interface
 
@@ -612,10 +640,11 @@ Par défaut, l'interface nouvellement créée aura une visibilité `internal`. N
 
 |Héritage|Interface|
 |--------|---------|
-|Réutilise du code|Définit un contrat|
-|Relation “est-un”|Capacité / comportement|
-Une seule classe parente|Plusieurs interfaces
+|Permet de réutiliser du code|Définit un contrat à respecter|
+|Relation “*est un*” entre classe *enfant* et classe *parent*| Relation "*peut faire*" entre une classe et une interface|
+|Une classe *enfant* ne peut hériter que d'une seule classe *parent*|Une même classe peut implémenter plusieurs interfaces
 
+---
 
 ## 🧪 Laboratoire 11.1
 Vous devez réaliser le labo suivant :
