@@ -44,17 +44,17 @@ Les info de la carte devrait être inscrit dans la méthode ``ToString``. Ex: "C
 Elle offre une accumuluation de points lors des achats en fonction d'un pourcentage fixe par client. Ce pourcentage varie d'une carte à une autre mais se situe toujours entre 2% et 10% inclusivement.
 Les points bonis sont des entiers qui s'accumule à chaque achat. Ils représentent un pourcentage des achats. Par exemple, si la carte boni est 2%, sur un achat de 100$, 2pts seront accumulé. Les points sont toujours arrondi au plus bas entier. Par exemple, un achat de 105$ donne en théorie 2.1 pts mais une fois arrondi vers le bas c'est 2pts qui s'accumule sur la carte. Le type de carte doit être représenté dans la méthode ``ToString``. Ex: "Boni 2%". Le 2% représente le pourcentage d'accumulation de points.
 
-Lorsque l'utilisateur de la carte fait un remboursement, un rabais est appliqué en convertissant les points. Pour chaque points, un dollar est soustrait au montant du remboursement avant de s'appliquer sur solde. Par exemple, si on essai de rembourser 100$ sur un solde de 200$ et que la carte a 5 points, le nouveau solde devient 95$ (200$-100$-5$).
+Lorsque l'utilisateur de la carte fait un remboursement, le montant du remboursement est tout d'abord appliqué. S'il reste un solde, un remoursement supplémentaire est appliqué en convertissant les points accumulés. Chaque point équivait à un dollar. 
+Par exemple, 
+    - si on essai de rembourser 100$ sur un solde de 200$ et que la carte a 5 points, le nouveau solde devient 95$ (200$-100$-5$). Tous les points ont été convertis. 
+    - si on essai de rembourser 100$ sur un solde de 103$ et que la carte a 5 points, le nouveau solde devient 0$ (103$-100$-3$). Seul 3 points sont convertis. Il reste donc 2 points.
+    - si on essai de rembourser 100$ sur un solde de 100$ et que la carte a 5 points, le nouveau solde devient 0$ (100$-100$). Aucun point n'est converti car le solde est à zéro. Il reste donc 5 points.
 
 Le nombre de points devrait être disponible dans la propriété ``Avantage``. Ex: "Point(s) Boni(s): 100.".
 
 ### La carte VIP
 Tout comme la carte Boni, la carte VIP offre aussi une accumulation de points lors des achats mais cette fois le pourcentage utilisé varie en fonction du montant d'emprunt (voir table).
- e type de carte doit être représenté dans la méthode ``ToString``. Ex: "VIP 2%". Le 2% représente le pourcentage d'accumulation de points.
-
-Finalement la carte VIP permet d'accumuler des points VIP pour chaque emprunt de 250$ et plus. Les points VIP sont utilisé lorsque c'est le moment d'appliquer les intérêts. Pour chaque 5 points, le taux d'intérêt est réduit de 1%. Les points sont reduit à zéro lors de l'application des intérêts peut importe s'ils sont utilisés ou non.
-
-Le nombre de points devrait être disponible dans la propriété ``Avantage``. Ex: "Point(s) Bonis: 100. Point(s) VIP: 1".
+Le type de carte doit être représenté dans la méthode ``ToString``. Ex: "VIP 2%". Le 2% représente le pourcentage d'accumulation de points.
 
 | Montant |   Pourcentage     |
 |---------|-------------------|
@@ -62,12 +62,17 @@ Le nombre de points devrait être disponible dans la propriété ``Avantage``. E
 | [ 100$, 500$ [  | base + 2% |
 | Plus de 500$    | base + 3% |
 
+Une fonction virtuelle ``DéterminerPointsBonis`` partagé avec la ``CarteBoni`` serait fort utile ici.
+
+Finalement la carte VIP permet d'accumuler des points VIP pour chaque emprunt de **250$ et plus**. Les points VIP sont utilisé lorsque c'est le moment d'appliquer les intérêts. Pour chaque 5 points, le taux d'intérêt est réduit de 1%. Les points sont reduit à zéro lors de l'application des intérêts peut importe s'ils sont utilisés ou non.
+
+Le nombre de points devrait être disponible dans la propriété ``Avantage``. Ex: "Point(s) Bonis: 100. Point(s) VIP: 1".
 
 L’objectif de cet exercice est de modeliser une hierarchie de classes comportant une classe abstraite.
 
 ### 🛠️ Instructions
 
-À l'aide de visio (ou autre logiciel), identifié les classes requises pour modeliser le problème précédant. Assurez-vous d'identifier d'avoir une classe abstraite au départ de votre hiearchie de classe. Assurez-vous aussi de mettre les attributs, propriétés et méthodes au bon niveau.
+À l'aide de visio (ou autre logiciel), identifié les classes requises pour modeliser le problème précédant. Assurez-vous d'identifier d'avoir une classe abstraite au départ de votre hiearchie de classe. Assurez-vous aussi de mettre les attributs, propriétés et méthodes au bon niveau. Ça serait aussi bien de mettre des constantes dans vos classes pour les montants et limites.
 
 ---
 
