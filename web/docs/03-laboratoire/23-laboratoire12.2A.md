@@ -1,7 +1,7 @@
 ---
 title: Classes Forme et Calculateur
 ---
-# 🧪 Labo 12.2A – De retour sur les classes Forme et Calculateur
+# 🧪 Labo 12.2A – Pratique de classe abstraite et de surcharge
 
 ---
 
@@ -33,7 +33,8 @@ Une banque désire offir des nouvelles cartes de crédit à ses membres. Elle a 
     - la méthode doit retourne faux à ce moment là
 
 En plus de cela, les cartes doivent avoir:
-- une méthode ``AppliquerIntérêt`` qui ajoute au solde un montant calculé en fonction du ``TauxIntérêt`` de la carte. A ce moment le ``Solde`` peut dépasser la ``Limite``.
+- une méthode ``AppliquerIntérêt`` qui ajoute au solde un montant calculé en fonction du ``TauxIntérêt`` de la carte. A ce moment le ``Solde`` peut dépasser la ``Limite``. Mais il ne sera plus possible de faire d'emprunt tant que le ``Solde`` n'est pas redescendu sous la ``Limite``.
+- une propriété ``Avantage`` (voir le détail pour chacune des cartes)
 
 ### La carte régulière
 A un taux d'intérêt fixe annuel et n'offre d'autre de particulier.
@@ -41,15 +42,19 @@ Les info de la carte devrait être inscrit dans la méthode ``ToString``. Ex: "C
 
 ### La carte Boni
 Elle offre une accumuluation de points lors des achats en fonction d'un pourcentage fixe par client. Ce pourcentage varie d'une carte à une autre mais se situe toujours entre 2% et 10% inclusivement.
-Les points bonis sont des entiers qui s'accumule à chaque achat. Ils représentent un pourcentage des achats. Par exemple, si la carte boni est 2%, sur un achat de 100$, 2pts seront accumulé. Les points sont toujours arrondi au plus bas entier. Par exemple, un achat de 105$ donne en théorie 2.1 pts mais une fois arrondi vers le bas c'est 2pts qui s'accumule sur la carte. Les nombres de points devrait être inscrit dans la méthode ``ToString``. Ex: "Carte Boni 3% (22pts) - Taux: 3% - Limite 1000.00$".
+Les points bonis sont des entiers qui s'accumule à chaque achat. Ils représentent un pourcentage des achats. Par exemple, si la carte boni est 2%, sur un achat de 100$, 2pts seront accumulé. Les points sont toujours arrondi au plus bas entier. Par exemple, un achat de 105$ donne en théorie 2.1 pts mais une fois arrondi vers le bas c'est 2pts qui s'accumule sur la carte. Le type de carte doit être représenté dans la méthode ``ToString``. Ex: "Boni 2%". Le 2% représente le pourcentage d'accumulation de points.
 
-Lorsque l'utilisateur de la carte fait un remboursement, un rabais est appliqué en convertissant les points. Pour chaque points, un dollar est soustrait au montant du remboursement avant de s'appliquer sur solde.
+Lorsque l'utilisateur de la carte fait un remboursement, un rabais est appliqué en convertissant les points. Pour chaque points, un dollar est soustrait au montant du remboursement avant de s'appliquer sur solde. Par exemple, si on essai de rembourser 100$ sur un solde de 200$ et que la carte a 5 points, le nouveau solde devient 95$ (200$-100$-5$).
+
+Le nombre de points devrait être disponible dans la propriété ``Avantage``. Ex: "Point(s) Boni(s): 100.".
 
 ### La carte VIP
-Elle offre aussi une accumulation de points lors des achats mais cette fois le pourcentage utilisé varie en fonction du montant d'emprunt (voir table).
-Les nombres de points devrait être inscrit dans la méthode ``ToString``. Ex: "VIP 5% (100pts) - Taux: 3% - Limite 1000.00$".
+Tout comme la carte Boni, la carte VIP offre aussi une accumulation de points lors des achats mais cette fois le pourcentage utilisé varie en fonction du montant d'emprunt (voir table).
+ e type de carte doit être représenté dans la méthode ``ToString``. Ex: "VIP 2%". Le 2% représente le pourcentage d'accumulation de points.
 
-De plus lors du remboursement, si le solde dépasse la moitié de la limite de la carte, les points sont comptés en double. Donc valent 2$ à la place. Une fonction ```ConvertirPoints``` serait utile ici :D (et à un autre endroit :P)
+Finalement la carte VIP permet d'accumuler des points VIP pour chaque emprunt de 250$ et plus. Les points VIP sont utilisé lorsque c'est le moment d'appliquer les intérêts. Pour chaque 5 points, le taux d'intérêt est réduit de 1%. Les points sont reduit à zéro lors de l'application des intérêts peut importe s'ils sont utilisés ou non.
+
+Le nombre de points devrait être disponible dans la propriété ``Avantage``. Ex: "Point(s) Bonis: 100. Point(s) VIP: 1".
 
 | Montant |   Pourcentage     |
 |---------|-------------------|
@@ -62,8 +67,7 @@ L’objectif de cet exercice est de modeliser une hierarchie de classes comporta
 
 ### 🛠️ Instructions
 
-À l'aide de visio (ou autre logiciel), identifié les classes requises pour modeliser le problème précédant. Assurez-vous d'identifier une classe abstraite et ses classes enfants. Assurez-vous aussi de mettre les attributs, propriétés et méthodes au bon niveau.
-
+À l'aide de visio (ou autre logiciel), identifié les classes requises pour modeliser le problème précédant. Assurez-vous d'identifier d'avoir une classe abstraite au départ de votre hiearchie de classe. Assurez-vous aussi de mettre les attributs, propriétés et méthodes au bon niveau.
 
 ---
 
@@ -80,5 +84,5 @@ Faites usage du projet de tests unitaires afin de valider votre implémentation.
 
 Quelques éléments à garder en têtes:
 - Vous devez mettre en place des exceptions dans les propriétés afin d'assurer une bonne encapsulation.
-- Assurez-vous de bien utiliser les 3 niveaux de protections des attributs, propriétés et méthodes de vos classes (```public```, ```protected```, ```private```)
-- Vos classes ne devrait pas contenir du copié-collé de code commun. Assurez-vous de le placer au bon endroit dans la hierarchie de classe. Faites usage du mot clé ```base``` pour accèder au code du parent.
+- Assurez-vous de bien utiliser les 3 niveaux de protections des attributs, propriétés et méthodes de vos classes (``public``, ``protected``, ``private``)
+- Vos classes ne devrait pas contenir du copié-collé de code commun. Assurez-vous de le placer au bon endroit dans la hierarchie de classe. Faites usage du mot clé ``base`` pour accèder au code du parent.
