@@ -153,7 +153,3 @@ Forme rectangle = new Rectangle(5,10);  // OK: Le rectangle implémente bien la 
 Console.WriteLine($"L'aire d'un rectangle de {rectangle.Largeur} x {rectangle.Hauteur} est {rectangle.Aire}");
 
 ```
-
-## Interface
-
-TODO

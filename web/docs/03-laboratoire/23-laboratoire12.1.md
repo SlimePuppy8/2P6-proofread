@@ -35,6 +35,9 @@ L’objectif de cet exercice est d'illustrer adéquatement une relation entre pl
 ### 🛠️ Instructions
 
 Commençez par récuperer le projet de départ. 
+
+Disponible ici 👉 [Laboratoire12_1](../../static/files/laboratoires/Laboratoire12_1.zip)
+
 Par la suite consultez les descriptions de classes afin de les créer dans le projet ``Modèles``.
 Finalement, faites usage du projet de tests unitaires afin de valider votre implémentation.
 

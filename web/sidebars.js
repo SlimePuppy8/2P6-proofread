@@ -727,7 +727,7 @@ const sidebars = {
       label: 'Laboratoire 12.1',
       collapsible: true,
       collapsed: collapseBloc1,
-      items: ['laboratoire/laboratoire12.1A']
+      items: ['laboratoire/laboratoire12.1']
     }
     ,
     {
@@ -735,7 +735,7 @@ const sidebars = {
       label: 'Laboratoire 12.2',
       collapsible: true,
       collapsed: collapseBloc1,
-      items: ['laboratoire/laboratoire12.2A']
+      items: ['laboratoire/laboratoire12.2']
     }
 
 

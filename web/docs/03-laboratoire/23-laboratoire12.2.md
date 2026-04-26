@@ -1,5 +1,5 @@
 ---
-title: Classes Forme et Calculateur
+title: Classes Abstraite et Carte Bancaire
 ---
 # 🧪 Labo 12.2A – Pratique de classe abstraite et de surcharge
 
@@ -13,6 +13,8 @@ Comme il n'est pas désirable de laisser un utilisateur créer une forme génér
 ### 🛠️ Instructions
 
 Reprennez votre projet du labo 12.1 et faites les modifications à la classe ``Forme`` afin de la rendre abstraite. Pour confirmer que la classe est abstraite faite un teste en essayant de créer une instance de ``Forme``.
+
+Le projet du laboratoire 12.1 est disponible ici 👉 [Laboratoire12_1](../../static/files/laboratoires/Laboratoire12_1.zip)
 
 ---
 
@@ -72,7 +74,15 @@ L’objectif de cet exercice est de modeliser une hierarchie de classes comporta
 
 ### 🛠️ Instructions
 
-À l'aide de visio (ou autre logiciel), identifié les classes requises pour modeliser le problème précédant. Assurez-vous d'identifier d'avoir une classe abstraite au départ de votre hiearchie de classe. Assurez-vous aussi de mettre les attributs, propriétés et méthodes au bon niveau. Ça serait aussi bien de mettre des constantes dans vos classes pour les montants et limites.
+À l'aide de visio (ou autre logiciel), vous devez compléter le diagramme suivant. Le début de la hiearchie commence par une classe abstraite. Assurez-vous aussi de mettre les attributs, propriétés et méthodes au bon niveau selon les besoins de l'énoncé. Ça serait aussi bien de mettre des constantes dans vos classes pour les montants et limites.
+
+![diagramme-cartes](@site/static/img/R23/diagramme-carte.png)
+
+:::info
+
+Dans un diagramme UML une flèche vide (blanche) indique la classe parent. Donc dans le diagramme précédent, ``CarteReguliere`` dérive (ou hérite) de ``Carte`` et ainsi de suite pour les autres cartes.
+
+:::
 
 ---
 
@@ -83,11 +93,49 @@ L’objectif de cet exercice est créer les classes des modèles précédents da
 
 ### 🛠️ Instructions
 
-Téléchargez le projet de départ ici (). 
-Ajoutez les classes dans le projet ``Modeles``.
-Faites usage du projet de tests unitaires afin de valider votre implémentation.
+Téléchargez le projet de départ ici 👉 [Laboratoire12_2](../../static/files/laboratoires/Laboratoire12_2.zip).
+
+Les classes sont déjà présentes dans le projet ``Modeles``. Cependant vous devez les compléter. La classe abstraite ``Carte`` vous est aussi fournie et vous n'avez pas à la modifier.
+
+De plus, un projet de tests unitaires est disponible afin de valider votre implémentation. Des classes de tests sont disponibles pour chacunes des carte. Il faut décommenter la première ligne lorsque sous serez prêt à tester. Voir :
+1. ``//#define _TESTS_CARTE_REGULIERE`` dans le fichier de la classe ``TestCarteReguliere``.
+2. ``//#define _TESTS_CARTE_BONI`` dans le fichier de la classe ``TestCarteBoni``.
+3. ``//#define _TESTS_CARTE_VIP`` dans le fichier de la classe ``TestCarteVIP``.
+
 
 Quelques éléments à garder en têtes:
 - Vous devez mettre en place des exceptions dans les propriétés afin d'assurer une bonne encapsulation.
 - Assurez-vous de bien utiliser les 3 niveaux de protections des attributs, propriétés et méthodes de vos classes (``public``, ``protected``, ``private``)
 - Vos classes ne devrait pas contenir du copié-collé de code commun. Assurez-vous de le placer au bon endroit dans la hierarchie de classe. Faites usage du mot clé ``base`` pour accèder au code du parent.
+
+
+---
+
+## Exercice 4 – Intégration dans une application
+
+### 🎯 Objectif 
+L’objectif de cet exercice est d'utiliser vos classes dans une application WinForm.
+
+### 🛠️ Instructions
+
+Toujours à partir du projet fourni dans l'exercice précédent, complétez les TODOs suivants:
+
+1. Dans le constructeur ``CreditApp``, créez 3 cartes.
+    - Carte régulière avec une limite de 1000$ et un taux de 3%.
+    - Carte bonis avec une limite de 2000$, un taux de 4.5% et un taux boni de 2%.
+    - Carte VIP avec une limite de 5000$, un taux de 5.5% et un taux boni de 3%.
+2. Toujours dans le constructeur ``CreditApp``, ajouter ces 3 cartes à ``lstCartes``.
+3. Dans la méthode ``RaffraichirDetailsCarte``, mettre à jour les champs suivants à l'aide des propriétés de la carte sélectionnée:
+    - ``txtTaux`` (doit s'afficher avec un pourcentage Ex: 3.5%)
+    - ``txtLimite`` (doit s'afficher en format monétaire)
+    - ``txtSolde`` (doit s'afficher en format monétaire)
+    - ``txtAvantage``
+4. Dans la méthode ``btnEmprunter_Click``, implémenter le code nécessaire pour faire un emprunt sur la carte active.
+    - N'oubliez pas d'appeler ``RaffraichirDetailsCarte`` si l'opération est un succès
+    - Dans le cas contraire, il faudrait afficher un message d'erreur à l'aide de ``MessageBox``
+5. Dans la méthode ``btnEmprunter_Click``, implémenter le code nécessaire pour faire un remboursement sur la carte active.
+    - N'oubliez pas d'appeler ``RaffraichirDetailsCarte`` si l'opération est un succès
+    - Dans le cas contraire, il faudrait afficher un message d'erreur à l'aide de ``MessageBox``
+6. Dans la méthode ``btnAjouterInterets_Click``, implémenter le code nécessaire pour appliquer les intérêt sur la carte active.
+
+Une application démo est disponible à la racine du projet afin de valider votre implémentation.
