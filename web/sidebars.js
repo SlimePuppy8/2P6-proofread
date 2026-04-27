@@ -385,7 +385,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[15] }, { "1020": g1010[15] }],
           "Philippe": [{ "1050": g1050[15] }],
-          "David": [{ "1030": g1030[15]  }, { "1040": g1030[15]  }],
+          "David": [{ "1030": g1030[15] }, { "1040": g1030[15] }],
           "Jimmy": [{ "1060": g1060[15] }]
         },
         tooltip: "cache"
@@ -399,7 +399,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[16] }, { "1020": g1010[16] }],
           "Philippe": [{ "1050": g1050[16] }],
-          "David": [{ "1030": g1030[16]  }, { "1040": g1030[16]  }],
+          "David": [{ "1030": g1030[16] }, { "1040": g1030[16] }],
           "Jimmy": [{ "1060": g1060[16] }]
         },
         tooltip: "cache"
@@ -409,31 +409,31 @@ const sidebars = {
       type: "doc",
 
       label: "9.2 - TP2 (Suite)",
-      id: "cours/tp2-suite",     
+      id: "cours/tp2-suite",
       customProps: {
         avancementLabel: "TP2",
-        avancement: 0.6,         
+        avancement: 0.6,
         calendrier: {
           "Jamil": [{ "1010": g1010[17] }, { "1020": g1010[17] }],
           "Philippe": [{ "1050": g1050[17] }],
-          "David": [{ "1030": g1030[17]  }, { "1040": g1030[17]  }],
+          "David": [{ "1030": g1030[17] }, { "1040": g1030[17] }],
           "Jimmy": [{ "1060": g1060[17] }]
         },
         tooltip: "cache"
       }
-    },  
+    },
     {
       type: "doc",
 
       label: "10.1 - Intégration",
-      id: "cours/integration-module2",      
+      id: "cours/integration-module2",
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.8,
         calendrier: {
           "Jamil": [{ "1010": g1010[18] }, { "1020": g1010[18] }],
           "Philippe": [{ "1050": g1050[18] }],
-          "David": [{ "1030": g1030[18]  }, { "1040": g1030[18]  }],
+          "David": [{ "1030": g1030[18] }, { "1040": g1030[18] }],
           "Jimmy": [{ "1060": g1060[18] }]
         },
         tooltip: "cache"
@@ -450,7 +450,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[19] }, { "1020": g1010[19] }],
           "Philippe": [{ "1050": g1050[19] }],
-          "David": [{ "1030": g1030[19]  }, { "1040": g1030[19]  }],
+          "David": [{ "1030": g1030[19] }, { "1040": g1030[19] }],
           "Jimmy": [{ "1060": g1060[19] }]
         },
         tooltip: "cache"
@@ -465,7 +465,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[20] }, { "1020": g1010[20] }],
           "Philippe": [{ "1050": g1050[20] }],
-           "David": [{ "1030": g1030[20]  }, { "1040": g1030[20]  }],
+          "David": [{ "1030": g1030[20] }, { "1040": g1030[20] }],
           "Jimmy": [{ "1060": g1060[20] }]
         },
         tooltip: "cache"
@@ -473,13 +473,13 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "11.2 - rencontre 22",
+      label: "11.2 - Héritage et interfaces",
       id: "cours/rencontre22",
       customProps: {
         calendrier: {
           "Jamil": [{ "1010": g1010[21] }, { "1020": g1010[21] }],
           "Philippe": [{ "1050": g1050[21] }],
-          "David": [{ "1030": g1030[21]  }, { "1040": g1030[21]  }],
+          "David": [{ "1030": g1030[21] }, { "1040": g1030[21] }],
           "Jimmy": [{ "1060": g1060[21] }]
         },
         tooltip: "cache"
@@ -493,7 +493,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[22] }, { "1020": g1010[22] }],
           "Philippe": [{ "1050": g1050[22] }],
-          "David": [{ "1030": g1030[22]  }, { "1040": g1030[22]  }],
+          "David": [{ "1030": g1030[22] }, { "1040": g1030[22] }],
           "Jimmy": [{ "1060": g1060[22] }]
         },
         tooltip: "cache"
@@ -507,7 +507,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[23] }, { "1020": g1010[23] }],
           "Philippe": [{ "1050": g1050[23] }],
-          "David": [{ "1030": g1030[23]  }, { "1040": g1030[23]  }],
+          "David": [{ "1030": g1030[23] }, { "1040": g1030[23] }],
           "Jimmy": [{ "1060": g1060[23] }]
         },
         tooltip: "cache"
@@ -521,7 +521,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[24] }, { "1020": g1010[24] }],
           "Philippe": [{ "1050": g1050[24] }],
-          "David": [{ "1030": g1030[24]  }, { "1040": g1030[24]  }],
+          "David": [{ "1030": g1030[24] }, { "1040": g1030[24] }],
           "Jimmy": [{ "1060": g1060[24] }]
         },
         tooltip: "cache"
@@ -535,7 +535,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[25] }, { "1020": g1010[25] }],
           "Philippe": [{ "1050": g1050[25] }],
-          "David": [{ "1030": g1030[25]  }, { "1040": g1030[25]  }],
+          "David": [{ "1030": g1030[25] }, { "1040": g1030[25] }],
           "Jimmy": [{ "1060": g1060[25] }]
         },
         tooltip: "cache"
@@ -549,7 +549,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[26] }, { "1020": g1010[26] }],
           "Philippe": [{ "1050": g1050[26] }],
-          "David": [{ "1030": g1030[26]  }, { "1040": g1030[26]  }],
+          "David": [{ "1030": g1030[26] }, { "1040": g1030[26] }],
           "Jimmy": [{ "1060": g1060[26] }]
         },
         tooltip: "cache"
@@ -566,7 +566,7 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[27] }, { "1020": g1010[27] }],
           "Philippe": [{ "1050": g1050[27] }],
-          "David": [{ "1030": g1030[27]  }, { "1040": g1030[27]  }],
+          "David": [{ "1030": g1030[27] }, { "1040": g1030[27] }],
           "Jimmy": [{ "1060": g1060[27] }]
         },
         tooltip: "cache"
@@ -580,8 +580,8 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[28] }, { "1020": g1010[28] }],
           "Philippe": [{ "1050": g1050[28] }],
-          "David": [{ "1030": g1030[28]  }, { "1040": g1030[28]  }],
-           "Jimmy": [{ "1060": g1060[28] }]
+          "David": [{ "1030": g1030[28] }, { "1040": g1030[28] }],
+          "Jimmy": [{ "1060": g1060[28] }]
         },
         tooltip: "cache"
       }
@@ -595,8 +595,8 @@ const sidebars = {
         calendrier: {
           "Jamil": [{ "1010": g1010[29] }, { "1020": g1010[29] }],
           "Philippe": [{ "1050": g1050[29] }],
-          "David": [{ "1030": g1030[29]  }, { "1040": g1030[29]  }],
-           "Jimmy": [{ "1060": g1060[29] }]
+          "David": [{ "1030": g1030[29] }, { "1040": g1030[29] }],
+          "Jimmy": [{ "1060": g1060[29] }]
         },
         tooltip: "cache"
       }
@@ -720,6 +720,14 @@ const sidebars = {
       collapsible: true,
       collapsed: collapseBloc1,
       items: ['laboratoire/laboratoire10.2']
+
+    },
+    {
+      type: 'category',
+      label: 'Laboratoire 11.2',
+      collapsible: true,
+      collapsed: collapseBloc1,
+      items: ['laboratoire/laboratoire11.2A', 'laboratoire/laboratoire11.2B']
 
     },
     {
