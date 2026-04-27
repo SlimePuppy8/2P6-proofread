@@ -487,7 +487,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.1 - rencontre23",
+      label: "12.1 - Polymorphisme",
       id: "cours/rencontre23",
       customProps: {
         calendrier: {
@@ -501,7 +501,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.2 - rencontre24",
+      label: "12.2 - Polymorphisme (suite)",
       id: "cours/rencontre24",
       customProps: {
         calendrier: {
@@ -729,6 +729,21 @@ const sidebars = {
       collapsed: collapseBloc1,
       items: ['laboratoire/laboratoire11.2A', 'laboratoire/laboratoire11.2B']
 
+    },
+    {
+      type: 'category',
+      label: 'Laboratoire 12.1',
+      collapsible: true,
+      collapsed: collapseBloc1,
+      items: ['laboratoire/laboratoire12.1']
+    }
+    ,
+    {
+      type: 'category',
+      label: 'Laboratoire 12.2',
+      collapsible: true,
+      collapsed: collapseBloc1,
+      items: ['laboratoire/laboratoire12.2']
     }
 
 
