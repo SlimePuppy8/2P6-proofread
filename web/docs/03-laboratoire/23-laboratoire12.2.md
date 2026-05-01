@@ -62,7 +62,7 @@ Le type de carte doit être représenté dans la méthode ``ToString``. Ex: "VIP
 |---------|-------------------|
 | [ 0, 100$ [     | base + 1% |
 | [ 100$, 500$ [  | base + 2% |
-| Plus de 500$    | base + 3% |
+| 500$ ou plus    | base + 3% |
 
 Une fonction virtuelle ``DéterminerPointsBonis`` partagé avec la ``CarteBoni`` serait fort utile ici.
 
