@@ -22,11 +22,14 @@
     "bootstrap": "^5.3.8",
     "clsx": "^2.1.1",
     "docusaurus-lunr-search": "^3.6.0",
+    "gray-matter": "^4.0.3",
     "prism-react-renderer": "^2.4.0",
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-player": "^2.14.1"
+    "react-player": "^2.14.1",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.10.1",

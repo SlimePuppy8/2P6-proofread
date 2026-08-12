@@ -18,8 +18,16 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --examen-bg: #ffebec;
   --examen-font-color: #003100;
+  --formatif-bg: #fffdeb;
+  --formatif-font-color: #003100;
   --remise-tp-bg: #e6f6e6;
   --remise-tp-font-color: #003100;
+  --module-border-width: 4px;
+  --module1-border: #7070ff;
+  --module2-border: #6ab16a;
+  --module3-border: #f0b066;
+  --custom-tag-yellow-bg: #b3b010;
+  --custom-tag-yellow-fg: #ffffff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -34,43 +42,168 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --examen-bg: #4b1113;
   --examen-font-color: #f4e7ec;
+  --formatif-bg: #4b3911;
+  --formatif-font-color: #f4e7ec;
   --remise-tp-bg: #003100;
   --remise-tp-font-color: #d3f0e6;
+  --module1-border: #3e3ec2;
+  --module2-border: #008d00;
+  --module3-border: #c78800;
+  --custom-tag-yellow-bg: #f1f391;
+  --custom-tag-yellow-fg: #000000;
+
+}
+
+.module1 {
+  border: 0px solid var(--module1-border);
+  border-left-width: var(--module-border-width);
+}
+.module1-debut {
+  border: 0px solid var(--module1-border);
+  border-left-width: var(--module-border-width);
+  border-top-width: 2px;
+  border-image: linear-gradient(to right, var(--module1-border), transparent) 1;
+}
+.module1-debut::before {
+  content: "Module 1 - Concepts généraux";
+  text-align: left;
+  width: 100%;
+  display: block;
+  font-size: 0.65em;
+  padding-left: 1em;
+}
+
+.module2 {
+  border: 0px solid var(--module2-border);
+  border-left-width: var(--module-border-width);
+}
+.module2-debut {
+  border: 0px solid var(--module2-border);
+  border-left-width: var(--module-border-width);
+  border-top-width: 2px;
+  border-image: linear-gradient(to right, var(--module2-border), transparent) 1;
+}
+.module2-debut::before {
+  content: "Module 2 - Ordinateurs et réseaux";
+  text-align: left;
+  width: 100%;
+  display: block;
+  font-size: 0.65em;
+  padding-left: 1em;
+}
+
+.module3 {
+  border: 0px solid var(--module3-border);
+  border-left-width: var(--module-border-width);
+}
+.module3-debut {
+  border: 0px solid var(--module3-border);
+  border-left-width: var(--module-border-width);
+  border-top-width: 2px;
+  border-image: linear-gradient(to right, var(--module3-border), transparent) 1;
+}
+.module3-debut::before {
+  content: "Module 3 - Applications et données";
+  text-align: left;
+  width: 100%;
+  display: block;
+  font-size: 0.65em;
+  padding-left: 1em;
 }
 
 .examen {
   background-color: var(--examen-bg);
   color: var(--examen-font-color);
 }
+.examen1 {
+  background-color: var(--examen-bg);
+  color: var(--examen-font-color);
+  border: 0px solid var(--module1-border);
+  border-left-width: var(--module-border-width);
+  border-bottom-width: 2px;
+  border-image: linear-gradient(to right, var(--module1-border), transparent) 1;
+}
+.examen2 {
+  background-color: var(--examen-bg);
+  color: var(--examen-font-color);
+  border: 0px solid var(--module2-border);
+  border-left-width: var(--module-border-width);
+  border-bottom-width: 2px;
+  border-image: linear-gradient(to right, var(--module2-border), transparent) 1;
+}
+.examen3 {
+  background-color: var(--examen-bg);
+  color: var(--examen-font-color);
+  border: 0px solid var(--module3-border);
+  border-left-width: var(--module-border-width);
+  border-bottom-width: 2px;
+  border-image: linear-gradient(to right, var(--module3-border), transparent) 1;
+}
 
+.formatif {
+  background-color: var(--formatif-bg);
+  color: var(--formatif-font-color);
+}
+.formatif1 {
+  background-color: var(--formatif-bg);
+  color: var(--formatif-font-color);
+  border: 0px solid var(--module1-border);
+  border-left-width: var(--module-border-width);
+}
+.formatif2 {
+  background-color: var(--formatif-bg);
+  color: var(--formatif-font-color);
+  border: 0px solid var(--module2-border);
+  border-left-width: var(--module-border-width);
+}
+.formatif3 {
+  background-color: var(--formatif-bg);
+  color: var(--formatif-font-color);
+  border: 0px solid var(--module3-border);
+  border-left-width: var(--module-border-width);
+}
+
+.remise-tp1 {
+  border: 0px solid var(--module1-border);
+  border-left-width: var(--module-border-width);
+}
 .remise-tp1::after {
   content: "Remise TP1";
   text-align: center;
   width: 100%;
   display: block;
   background: var(--remise-tp-bg);
-  font-size: 0.75em;
+  font-size: 0.65em;
   color: var(--remise-tp-font-color);
 }
 
+.remise-tp2 {
+  border: 0px solid var(--module2-border);
+  border-left-width: var(--module-border-width);
+}
 .remise-tp2::after {
   content: "Remise TP2";
   text-align: center;
   width: 100%;
   display: block;
   background: var(--remise-tp-bg);
-  font-size: 0.75em;
+  font-size: 0.65em;
   color: var(--remise-tp-font-color);
 }
 
+.remise-tp3 {
+  border: 0px solid var(--module3-border);
+  border-left-width: var(--module-border-width);
+}
 .remise-tp3::after {
   content: "Remise TP3";
   text-align: center;
   width: 100%;
   display: block;
   background: var(--remise-tp-bg);
-  font-size: 0.75em;
+  font-size: 0.65em;
   color: var(--remise-tp-font-color);
+
 }
 
 .remise-tp4::after {
@@ -81,4 +214,35 @@
   background: var(--remise-tp-bg);
   font-size: 0.75em;
   color: var(--remise-tp-font-color);
+}
+
+.menu__list-item.module1,    .menu__link.module1,
+.menu__list-item.module2,    .menu__link.module2,
+.menu__list-item.module3,    .menu__link.module3,
+.menu__list-item.formatif1,  .menu__link.formatif1,
+.menu__list-item.formatif2,  .menu__link.formatif2,
+.menu__list-item.formatif3,  .menu__link.formatif3,
+.menu__list-item.examen1,    .menu__link.examen1,
+.menu__list-item.examen2,    .menu__link.examen2,
+.menu__list-item.examen3,    .menu__link.examen3,
+.menu__list-item.remise-tp1, .menu__link.remise-tp1,
+.menu__list-item.remise-tp2, .menu__link.remise-tp2,
+.menu__list-item.remise-tp3, .menu__link.remise-tp3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1px;
+  padding-bottom: 1px
+}
+
+.custom-tag-yellow {
+  background-color: var(--custom-tag-yellow-bg);
+  color: var(--custom-tag-yellow-fg);
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  width: fit-content;
+  margin-bottom: 1em;
 }

@@ -3,543 +3,216 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   docs: [
-    {
-      type: "doc",
-      label: "1.1 - Rencontre",
-      id: "cours/rencontre1.1", // Doit matcher le nom du document qui est dans docs/01-cours/. Les chiffres au début (ex : 01-) sont ignorés.
-      customProps: { // Attention, il faut recompiler à chaque modification dans sidebar.js pour que les modifications s'appliquent.
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-09"}  // Date du cours pour le groupe 1010 du le Prof 1
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-09"},  // Date du cours pour le groupe 1020 du le Prof 2
-            {"1030": "2025-06-09"} // Date du cours pour le groupe 1030 du le Prof 2
-          ]
-        },
-        tooltip: "visible" // Valeurs possibles visible ou cache, valeur par défaut "visible"
-      }
-    },
-    {
-      type: "doc",
-      label: "1.2 - Rencontre",
-      id: "cours/rencontre1.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-09"} // Date du cours pour le groupe 1010 du le Prof 1
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-09"}, // Date du cours pour le groupe 1020 du le Prof 2
-            {"1030": "2025-06-09"} // Date du cours pour le groupe 1030 du le Prof 2
-          ]
-        },
-        tooltip: "cache"
-      }
-    },
-    {
-      type: "doc",
-      label: "2.1 - Rencontre",
-      id: "cours/rencontre2.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-11"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-09"},
-            {"1030": "2025-06-09"}
-          ]
-        },
-        avancementLabel: "TP1 - Créé",
-        avancement: 0.0
-      }
-    },
-    {
-      type: "doc",
-      label: "2.2 - Rencontre",
-      id: "cours/rencontre2.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-11"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-11"},
-            {"1030": "2025-06-11"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 0.1
-      }
-    },
-    {
-      type: "doc",
-      label: "3.1 - Rencontre",
-      id: "cours/rencontre3.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-12"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-11"},
-            {"1030": "2025-06-11"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 0.25
-      }
-    },
-    {
-      type: "doc",
-      label: "3.2 - Rencontre",
-      id: "cours/rencontre3.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-12"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-12"},
-            {"1030": "2025-06-12"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 0.5
-      }
-    },
-    {
-      type: "doc",
-      label: "4.1 - Rencontre",
-      id: "cours/rencontre4.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-16"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-12"},
-            {"1030": "2025-06-12"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 0.75
-      }
-    },
-    {
-      type: "doc",
-      label: "4.2 - Rencontre",
-      id: "cours/rencontre4.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-16"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-16"},
-            {"1030": "2025-06-16"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 1
-      }
-    },
-    {
-      type: "doc",
-      label: "5.1 - Rencontre",
-      id: "cours/rencontre5.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-18"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-18"},
-            {"1030": "2025-06-18"}
-          ]
-        },
-        avancementLabel: "TP2 - Créé",
-        avancement: 0.0
-      },
-      "className": "remise-tp1"
-    },
-    {
-      type: "doc",
-      label: "5.2 - Rencontre",
-      id: "cours/rencontre5.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-18"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-18"},
-            {"1030": "2025-06-18"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.1
-      }
-    },
-    {
-      type: "doc",
-      label: "6.1 - Rencontre",
-      id: "cours/rencontre6.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-19"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-19"},
-            {"1030": "2025-06-19"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.3
-      }
-    },
-    {
-      type: "doc",
-      label: "6.2 - Rencontre",
-      id: "cours/rencontre6.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-19"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-19"},
-            {"1030": "2025-06-19"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.4
-      }
-    },
-    {
-      type: "doc",
-      label: "7.1 - Rencontre",
-      id: "cours/rencontre7.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-23"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-16"},
-            {"1030": "2025-06-16"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.4
-      }
-    },
-    {
-      type: "doc",
-      label: "7.2 - Rencontre",
-      id: "cours/rencontre7.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-23"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-19"},
-            {"1030": "2025-06-19"}
-          ]
-        }
-      },
-      "className": "examen"
-    },
-    {
-      type: "doc",
-      label: "8.1 - Rencontre",
-      id: "cours/rencontre8.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-25"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-23"},
-            {"1030": "2025-06-23"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.6
-      }
-    },
-    {
-      type: "doc",
-      label: "8.2 - Rencontre",
-      id: "cours/rencontre8.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-25"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-23"},
-            {"1030": "2025-06-23"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.7
-      }
-    },
-    {
-      type: "doc",
-      label: "9.1 - Rencontre",
-      id: "cours/rencontre9.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-26"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-25"},
-            {"1030": "2025-06-25"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.9
-      }
-    },
-    {
-      type: "doc",
-      label: "9.2 - Rencontre",
-      id: "cours/rencontre9.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-26"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-25"},
-            {"1030": "2025-06-25"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 1
-      },
-      "className": "remise-tp2"
-    },
-    {
-      type: "doc",
-      label: "10.1 - Rencontre",
-      id: "cours/rencontre10.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-01"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-26"},
-            {"1030": "2025-06-26"}
-          ]
-        },
-        avancementLabel: "TP3 - Créé",
-        avancement: 0.0
-      }
-    },
-    {
-      type: "doc",
-      label: "10.2 - Rencontre",
-      id: "cours/rencontre10.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-01"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-26"},
-            {"1030": "2025-06-26"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.1
-      }
-    },
-    {
-      type: "doc",
-      label: "11.1 - Rencontre",
-      id: "cours/rencontre11.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-02"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-26"},
-            {"1030": "2025-06-26"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.2
-      }
-    },
-    {
-      type: "doc",
-      label: "11.2 - Rencontre",
-      id: "cours/rencontre11.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-02"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-01"},
-            {"1030": "2025-07-01"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.3
-      }
-    },
-    {
-      type: "doc",
-      label: "12.1 - Rencontre",
-      id: "cours/rencontre12.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-03"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-01"},
-            {"1030": "2025-07-01"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.4
-      }
-    },
-    {
-      type: "doc",
-      label: "12.2 - Rencontre",
-      id: "cours/rencontre12.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-03"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-01"},
-            {"1030": "2025-07-01"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.5
-      }
-    },
-    {
-      type: "doc",
-      label: "13.1 - Rencontre",
-      id: "cours/rencontre13.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-07"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-02"},
-            {"1030": "2025-07-02"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.6
-      }
-    },
-    {
-      type: "doc",
-      label: "13.2 - Rencontre",
-      id: "cours/rencontre13.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-07"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-07"},
-            {"1030": "2025-07-07"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.7
-      }
-    },
-    {
-      type: "doc",
-      label: "14.1 - Rencontre",
-      id: "cours/rencontre14.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-10"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-04"},
-            {"1030": "2025-07-04"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.8
-      }
-    },
-    {
-      type: "doc",
-      label: "14.2 - Rencontre",
-      id: "cours/rencontre14.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-09"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-07"},
-            {"1030": "2025-07-07"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 1
-      }
-    },
-    {
-      type: "doc",
-      label: "15.1 - Rencontre",
-      id: "cours/rencontre15.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-09"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-02"},
-            {"1030": "2025-07-02"}
-          ]
-        }
-      },
-      "className": "remise-tp3"
-    },
-    {
-      type: "doc",
-      label: "15.2 - Rencontre",
-      id: "cours/rencontre15.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-10"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-04"},
-            {"1030": "2025-07-04"}
-          ]
-        }
-      },
-      "className": "examen"
-    }
+    { type: "doc", id: "cours/r1.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-08-25"},
+                          {"1020": "2026-08-25"}],
+          "Vincent":     [{"1030": "2026-08-25"}],
+          "Mathieu":     [{"1040": "2026-08-24"},
+                          {"1050": "2026-08-24"}],
+        }  }},
+    { type: "doc", id: "cours/r1.2", customProps: { calendrier: {
+          "Jean-Michel": [{ "1010": "2026-08-28" }, 
+                          { "1020": "2026-08-28" }],
+          "Vincent":     [{ "1030": "2026-08-28" }],
+          "Mathieu":     [{ "1040": "2026-08-26" }, 
+                          { "1050": "2026-08-26" }]
+        }, avancementLabel: "TP1", avancement: 0.05 }},
+    { type: "doc", id: "cours/r2.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-09-01"},
+                          {"1020": "2026-09-01"}],
+          "Vincent":     [{"1030": "2026-09-01"}],
+          "Mathieu":     [{"1040": "2026-08-31"},
+                          {"1050": "2026-08-31"}],
+        }, avancementLabel: "TP1", avancement: 0.25 }},
+    { type: "doc", id: "cours/r2.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-09-04"},
+                          {"1020": "2026-09-04"}],
+          "Vincent":     [{"1030": "2026-09-04"}],
+          "Mathieu":     [{"1040": "2026-09-02"},
+                          {"1050": "2026-09-02"}],
+        }, avancementLabel: "TP1", avancement: 0.50 }},
+    { type: "doc", id: "cours/r3.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-09-08"},
+                          {"1020": "2026-09-08"}],
+          "Vincent":     [{"1030": "2026-09-08"}],
+          "Mathieu":     [{"1040": "2026-09-09"},
+                          {"1050": "2026-09-09"}],
+        }, avancementLabel: "TP1", avancement: 0.75 }},
+    { type: "doc", id: "cours/r3.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-09-11"},
+                          {"1020": "2026-09-11"}],
+          "Vincent":     [{"1030": "2026-09-11"}],
+          "Mathieu":     [{"1040": "2026-09-14"},
+                          {"1050": "2026-09-14"}],
+        }, avancementLabel: "TP1", avancement: 1.00 }},
+    { type: "doc", id: "cours/r4.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-09-15"},
+                          {"1020": "2026-09-15"}],
+          "Vincent":     [{"1030": "2026-09-15"}],
+          "Mathieu":     [{"1040": "2026-09-16"},
+                          {"1050": "2026-09-16"}],
+        }  }},
+    { type: "doc", id: "cours/r4.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-09-18"},
+                          {"1020": "2026-09-18"}],
+          "Vincent":     [{"1030": "2026-09-18"}],
+          "Mathieu":     [{"1040": "2026-09-21"},
+                          {"1050": "2026-09-21"}],
+        }  }},
+    { type: "doc", id: "cours/r5.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-09-22"},
+                          {"1020": "2026-09-22"}],
+          "Vincent":     [{"1030": "2026-09-22"}],
+          "Mathieu":     [{"1040": "2026-09-23"},
+                          {"1050": "2026-09-23"}],
+        }, avancementLabel: "TP2", avancement: 0.10 }},
+    { type: "doc", id: "cours/r5.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-09-25"},
+                          {"1020": "2026-09-25"}],
+          "Vincent":     [{"1030": "2026-09-25"}],
+          "Mathieu":     [{"1040": "2026-09-28"},
+                          {"1050": "2026-09-28"}],
+        }, avancementLabel: "TP2", avancement: 0.20 }},
+    { type: "doc", id: "cours/r6.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-09-29"},
+                          {"1020": "2026-09-29"}],
+          "Vincent":     [{"1030": "2026-09-29"}],
+          "Mathieu":     [{"1040": "2026-09-30"},
+                          {"1050": "2026-09-30"}],
+        }, avancementLabel: "TP2", avancement: 0.30 }},
+    { type: "doc", id: "cours/r6.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-10-02"},
+                          {"1020": "2026-10-02"}],
+          "Vincent":     [{"1030": "2026-10-02"}],
+          "Mathieu":     [{"1040": "2026-10-06"},
+                          {"1050": "2026-10-06"}],
+        }, avancementLabel: "TP2", avancement: 0.40 }},
+    { type: "doc", id: "cours/r7.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-10-09"},
+                          {"1020": "2026-10-09"}],
+          "Vincent":     [{"1030": "2026-10-09"}],
+          "Mathieu":     [{"1040": "2026-10-07"},
+                          {"1050": "2026-10-07"}],
+        }, avancementLabel: "TP2", avancement: 0.50 }},
+    { type: "doc", id: "cours/r7.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-10-20"},
+                          {"1020": "2026-10-20"}],
+          "Vincent":     [{"1030": "2026-10-20"}],
+          "Mathieu":     [{"1040": "2026-10-19"},
+                          {"1050": "2026-10-19"}],
+        }, avancementLabel: "TP2", avancement: 0.60 }},
+    { type: "doc", id: "cours/r8.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-10-23"},
+                          {"1020": "2026-10-23"}],
+          "Vincent":     [{"1030": "2026-10-23"}],
+          "Mathieu":     [{"1040": "2026-10-21"},
+                          {"1050": "2026-10-21"}],
+        }, avancementLabel: "TP2", avancement: 0.75 }},
+    { type: "doc", id: "cours/r8.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-10-27"},
+                          {"1020": "2026-10-27"}],
+          "Vincent":     [{"1030": "2026-10-27"}],
+          "Mathieu":     [{"1040": "2026-10-26"},
+                          {"1050": "2026-10-26"}],
+        }, avancementLabel: "TP2", avancement: 0.90 }},
+    { type: "doc", id: "cours/r9.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-10-30"},
+                          {"1020": "2026-10-30"}],
+          "Vincent":     [{"1030": "2026-10-30"}],
+          "Mathieu":     [{"1040": "2026-10-28"},
+                          {"1050": "2026-10-28"}],
+        }, avancementLabel: "TP2", avancement: 1.00 }},
+    { type: "doc", id: "cours/r9.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-11-03"},
+                          {"1020": "2026-11-03"}],
+          "Vincent":     [{"1030": "2026-11-03"}],
+          "Mathieu":     [{"1040": "2026-11-02"},
+                          {"1050": "2026-11-02"}],
+        }  }},
+    { type: "doc", id: "cours/r10.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-11-06"},
+                          {"1020": "2026-11-06"}],
+          "Vincent":     [{"1030": "2026-11-06"}],
+          "Mathieu":     [{"1040": "2026-11-04"},
+                          {"1050": "2026-11-04"}],
+        }  }},
+    { type: "doc", id: "cours/r10.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-11-10"},
+                          {"1020": "2026-11-10"}],
+          "Vincent":     [{"1030": "2026-11-10"}],
+          "Mathieu":     [{"1040": "2026-11-09"},
+                          {"1050": "2026-11-09"}],
+        }, avancementLabel: "T31", avancement: 0.10 }},
+    { type: "doc", id: "cours/r11.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-11-13"},
+                          {"1020": "2026-11-13"}],
+          "Vincent":     [{"1030": "2026-11-13"}],
+          "Mathieu":     [{"1040": "2026-11-16"},
+                          {"1050": "2026-11-16"}],
+        }, avancementLabel: "TP3", avancement: 0.20 }},
+    { type: "doc", id: "cours/r11.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-11-17"},
+                          {"1020": "2026-11-17"}],
+          "Vincent":     [{"1030": "2026-11-17"}],
+          "Mathieu":     [{"1040": "2026-11-18"},
+                          {"1050": "2026-11-18"}],
+        }, avancementLabel: "TP3", avancement: 0.30 }},
+    { type: "doc", id: "cours/r12.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-11-20"},
+                          {"1020": "2026-11-20"}],
+          "Vincent":     [{"1030": "2026-11-20"}],
+          "Mathieu":     [{"1040": "2026-11-23"},
+                          {"1050": "2026-11-23"}],
+        }, avancementLabel: "TP3", avancement: 0.40 }},
+    { type: "doc", id: "cours/r12.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-11-24"},
+                          {"1020": "2026-11-24"}],
+          "Vincent":     [{"1030": "2026-11-24"}],
+          "Mathieu":     [{"1040": "2026-11-25"},
+                          {"1050": "2026-11-25"}],
+        }, avancementLabel: "TP3", avancement: 0.50 }},
+    { type: "doc", id: "cours/r13.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-11-27"},
+                          {"1020": "2026-11-27"}],
+          "Vincent":     [{"1030": "2026-11-27"}],
+          "Mathieu":     [{"1040": "2026-11-30"},
+                          {"1050": "2026-11-30"}],
+        }, avancementLabel: "TP3", avancement: 0.60 }},
+    { type: "doc", id: "cours/r13.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-12-01"},
+                          {"1020": "2026-12-01"}],
+          "Vincent":     [{"1030": "2026-12-01"}],
+          "Mathieu":     [{"1040": "2026-12-02"},
+                          {"1050": "2026-12-02"}],
+        }, avancementLabel: "TP3", avancement: 0.70 }},
+    { type: "doc", id: "cours/r14.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-12-04"},
+                          {"1020": "2026-12-04"}],
+          "Vincent":     [{"1030": "2026-12-04"}],
+          "Mathieu":     [{"1040": "2026-12-07"},
+                          {"1050": "2026-12-07"}],
+        }, avancementLabel: "TP3", avancement: 0.80 }},
+    { type: "doc", id: "cours/r14.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-12-08"},
+                          {"1020": "2026-12-08"}],
+          "Vincent":     [{"1030": "2026-12-08"}],
+          "Mathieu":     [{"1040": "2026-12-09"},
+                          {"1050": "2026-12-09"}],
+        }, avancementLabel: "TP3", avancement: 1.00 }},
+    { type: "doc", id: "cours/r15.1", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-12-11"},
+                          {"1020": "2026-12-11"}],
+          "Vincent":     [{"1030": "2026-12-11"}],
+          "Mathieu":     [{"1040": "2026-12-14"},
+                          {"1050": "2026-12-14"}],
+        }  }},
+    { type: "doc", id: "cours/r15.2", customProps: { calendrier: {
+          "Jean-Michel": [{"1010": "2026-12-22"},
+                          {"1020": "2026-12-22"}],
+          "Vincent":     [{"1030": "2026-12-22"}],
+          "Mathieu":     [{"1040": "2026-12-23"},
+                          {"1050": "2026-12-23"}],
+        }  }},
   ],
   "tp": [
     {

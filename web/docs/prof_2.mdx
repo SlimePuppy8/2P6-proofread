@@ -1,0 +1,25 @@
+---
+title: "Vincent Carrier"
+sidebar_position: 1
+slug: /vincent
+hide_table_of_contents: true
+---
+
+
+<DocsViewer
+    tabs={[
+    {
+        id: "calendrier",
+        label: "Prof 1", // Modifier pour le nom de l'enseignant
+        icon: "📅",
+        component: <MainDocsCalendar professorName="Prof 1" />, // Doit matcher le nom du professeur qui est dans l'attribut "calendrier" des cours qui sont dans sidebar.js
+    },
+    {
+        id: "horaire",
+        label: "Horaire Prof X",  // Modifier pour le nom de l'enseignant
+        icon: "🎈",
+        component: <WeeklySchedule title="Professeur X" dataUrl="/horaire_profx.json" />
+    }
+    ]}
+    defaultTabId="calendrier"
+/>

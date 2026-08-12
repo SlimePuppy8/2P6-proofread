@@ -1,39 +1,62 @@
 ---
+title: Introduction à la cybersécurité
 sidebar_position: 1
 slug: /
 hide_table_of_contents: true
 ---
 
-# Accueil
+Bienvenue au cours d'**introduction à la cybersécurité** (420-3S4-EM). 
+
+Ce cours se veut une introduction aux notions de cybersécurité essentielles à toute personne occupant un poste professionnel en technologies de l'information. Il s'agit d'un cours de tronc commun s'adressant aux deux profils (*développement de logiciels* et *infrastructures TI*).
+
+Dans ce cours, nous aborderons la cybersécurité en 3 grands volets:
+
+- La cybersécurité en général, les grands principes, la terminologie technique
+- Les méthodes d'attaque et de défense d'un poste de travail et d'un réseau informatique
+- Les méthodes d'attaque et de défense d'une application
+
 
 <DocsViewer
     tabs={[
     {
-        id: "grid",
-        label: "Cours",
-        icon: "📋",
+        id: "cours",
+        label: "Planification des rencontres",
+        icon: "⭐",
         component: <MainDocsGrid />,
-        // Les titres et les sous-titres sont définis dans les attributs "title" et "description" de chaque document des cours.
     }, 
     {
-        id: "calendar-prof1",
-        label: "Prof 1", // Modifier pour le nom de l'enseignant
-        icon: "📅",
-        component: <MainDocsCalendar professorName="Prof 1" />, // Doit matcher le nom du professeur qui est dans l'attribut "calendrier" des cours qui sont dans sidebar.js
+        id: "jeanmichel", label: "Jean-Michel Nadeau", icon: "😺",
+        component: <div><DocsViewer
+            tabs={[
+                { id: "horaire", label: "Horaire", icon: "💼",
+                    component: <WeeklySchedule title="Horaire de Jean-Michel Nadeau" 
+                                               dataUrl="/horaire_a26_jeanmichel.json" /> },
+                { id: "calendrier", label: "Calendrier", icon: "📅",
+                    component: <MainDocsCalendar professorName="Jean-Michel" /> },
+            ]} defaultTabId="horaire" /> </div> 
     },
     {
-        id: "calendar-prof2",
-        label: "Prof 2",  // Modifier pour le nom de l'enseignant
-        icon: "📅",
-        component: <MainDocsCalendar professorName="Prof 2" />, // Doit matcher le nom du professeur qui est dans l'attribut "calendrier" des cours qui sont dans sidebar.js
+        id: "vincent", label: "Vincent Carrier", icon: "🪈",
+        component: <div><DocsViewer
+            tabs={[
+                { id: "horaire", label: "Horaire", icon: "💼",
+                    component: <WeeklySchedule title="Horaire de Vincent Carrier"
+                                               dataUrl="/horaire_a26_vincent.json" /> },
+                { id: "calendrier", label: "Calendrier", icon: "📅",
+                    component: <MainDocsCalendar professorName="Vincent" /> },
+            ]} defaultTabId="horaire" /> </div> 
     },
-    //* Ajouter d'autres enseignants ici. Voir sidebar.js pour configurer les calendriers.
     {
-        id: "horaire-profx",
-        label: "Horaire Prof X",  // Modifier pour le nom de l'enseignant
-        icon: "🎈",
-        component: <WeeklySchedule title="Professeur X" dataUrl="/horaire_profx.json" />
+        id: "mathieu", label: "Mathieu Briau", icon: "👾",
+        component: <div><DocsViewer
+            tabs={[
+                { id: "horaire", label: "Horaire", icon: "💼",
+                    component: <WeeklySchedule title="Horaire de Mathieu Briau"
+                                               dataUrl="/horaire_a26_mathieu.json" /> },
+                { id: "calendrier", label: "Calendrier", icon: "📅",
+                    component: <MainDocsCalendar professorName="Mathieu" /> },
+            ]} defaultTabId="horaire" /> </div> 
     },
     ]}
-    defaultTabId="grid"
+    defaultTabId="cours"
 />

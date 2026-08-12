@@ -6,6 +6,37 @@ import { useColorMode } from "@docusaurus/theme-common";
 import sidebarDocs from "./sidebarDocs";
 import ProgressBar from "./ProgressBar";
 
+function normalizeGroupDateEntries(
+  groupedate: unknown
+): Array<Record<string, string>> {
+  const toDateOnlyString = (value: unknown): string => {
+    if (value instanceof Date) {
+      return value.toISOString().split("T")[0];
+    }
+    if (typeof value === "string") {
+      const parsed = new Date(value);
+      if (!isNaN(parsed.getTime())) {
+        return parsed.toISOString().split("T")[0];
+      }
+      return value;
+    }
+    return String(value ?? "");
+  };
+
+  if (Array.isArray(groupedate)) {
+    return (groupedate as Array<Record<string, unknown>>).map((entry) => {
+      const [groupe, date] = Object.entries(entry)[0] ?? ["", ""];
+      return { [groupe]: toDateOnlyString(date) };
+    });
+  }
+  if (groupedate && typeof groupedate === "object") {
+    return Object.entries(groupedate as Record<string, unknown>).map(
+      ([groupe, date]) => ({ [groupe]: toDateOnlyString(date) })
+    );
+  }
+  return [];
+}
+
 export default function MainDocsGrid() {
   const [docs, setDocs] = useState<any[]>([]);
   const [meta, setMeta] = useState<any[]>([]);
@@ -29,11 +60,13 @@ export default function MainDocsGrid() {
     const docsList = sidebarDocs.map((entry: any) => {
       const suffix = entry.id.split("/").pop();
       const doc = meta.find((d: any) => d.id.endsWith(suffix));
+      const sidebarProps = doc?.sidebar_custom_props ?? entry.customProps;
+      const sidebarClassName = doc?.sidebar_class_name ?? entry.className;
       return {
         ...doc,
         _sidebarLabel: entry.label,
-        _sidebarProps: entry.customProps,
-        _sidebarClassName: entry.className,
+        _sidebarProps: sidebarProps,
+        _sidebarClassName: sidebarClassName,
       };
     });
     setDocs(docsList);
@@ -51,6 +84,9 @@ export default function MainDocsGrid() {
     }
     if (className && className.includes("examen")) {
       return "var(--examen-bg)";
+    }
+    if (className && className.includes("formatif")) {
+      return "var(--formatif-bg)";
     }
     return "inherit";
   };
@@ -145,7 +181,7 @@ export default function MainDocsGrid() {
                 <strong>Calendrier :</strong>
                 <ul style={{ margin: 0, paddingLeft: 16, whiteSpace: "nowrap" }}>
                   {Object.entries(calendrier).map(([nom, groupedate]) => (
-                    (groupedate as Array<Record<string, string>>).map((groupeObj, index) => {
+                    normalizeGroupDateEntries(groupedate).map((groupeObj, index) => {
                         const [groupe, date] = Object.entries(groupeObj)[0];
                         return (
                           <li key={index} style={{ whiteSpace: "nowrap" }}>

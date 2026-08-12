@@ -41,6 +41,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   background: var(--ifm-background-surface-color);
+  -webkit-user-select: none;
   user-select: none;
 }
 

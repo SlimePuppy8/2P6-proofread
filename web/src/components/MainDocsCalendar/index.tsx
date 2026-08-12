@@ -24,6 +24,37 @@ interface MainDocsCalendarProps {
   professorName: string;
 }
 
+function normalizeGroupDateEntries(
+  groupedate: unknown
+): Array<Record<string, string>> {
+  const toDateOnlyString = (value: unknown): string => {
+    if (value instanceof Date) {
+      return value.toISOString().split("T")[0];
+    }
+    if (typeof value === "string") {
+      const parsed = new Date(value);
+      if (!isNaN(parsed.getTime())) {
+        return parsed.toISOString().split("T")[0];
+      }
+      return value;
+    }
+    return String(value ?? "");
+  };
+
+  if (Array.isArray(groupedate)) {
+    return (groupedate as Array<Record<string, unknown>>).map((entry) => {
+      const [groupe, date] = Object.entries(entry)[0] ?? ["", ""];
+      return { [groupe]: toDateOnlyString(date) };
+    });
+  }
+  if (groupedate && typeof groupedate === "object") {
+    return Object.entries(groupedate as Record<string, unknown>).map(
+      ([groupe, date]) => ({ [groupe]: toDateOnlyString(date) })
+    );
+  }
+  return [];
+}
+
 export default function MainDocsCalendar({
   professorName,
 }: MainDocsCalendarProps) {
@@ -57,28 +88,6 @@ export default function MainDocsCalendar({
     return simpleHash(groupe) % 15;
   };
 
-  // Fonction pour détecter l'année à partir de la première date trouvée
-  const detectYearFromSidebar = (): number => {
-    for (const entry of sidebarDocs) {
-      if (entry.customProps?.calendrier) {
-        const groupedate = Object.values(entry.customProps.calendrier);
-        const groupe = Object.values(groupedate[0]);
-        const firstDate = Object.values(groupe[0])[0] as string;
-        if (firstDate) {
-          return new Date(firstDate).getFullYear();
-        }
-      }
-    }
-    return new Date().getFullYear(); // Fallback vers l'année courante
-  };
-
-  // Initialiser la date courante basée sur l'année détectée
-  useEffect(() => {
-    const detectedYear = detectYearFromSidebar();
-    const today = new Date();
-    setCurrentDate(new Date(detectedYear, today.getMonth(), 1));
-  }, []);
-
   useEffect(() => {
     fetch("docsMetadata.json")
       .then((res) => res.json())
@@ -92,11 +101,13 @@ export default function MainDocsCalendar({
     const docsList = sidebarDocs.map((entry: any) => {
       const suffix = entry.id.split("/").pop();
       const doc = meta.find((d: any) => d.id.endsWith(suffix));
+      const sidebarProps = doc?.sidebar_custom_props ?? entry.customProps;
+      const sidebarClassName = doc?.sidebar_class_name ?? entry.className;
       return {
         ...doc,
         _sidebarLabel: entry.label,
-        _sidebarProps: entry.customProps,
-        _sidebarClassName: entry.className,
+        _sidebarProps: sidebarProps,
+        _sidebarClassName: sidebarClassName,
       };
     });
     setDocs(docsList);
@@ -108,7 +119,9 @@ export default function MainDocsCalendar({
         doc._sidebarProps?.calendrier &&
         doc._sidebarProps.calendrier[professorName]
       ) {
-        const groupedate = doc._sidebarProps.calendrier[professorName] as Array<Record<string, string>>;
+        const groupedate = normalizeGroupDateEntries(
+          doc._sidebarProps.calendrier[professorName]
+        );
         groupedate.forEach((groupeObj) => {
           const [groupe, date] = Object.entries(groupeObj)[0];
           events.push({
@@ -124,8 +137,18 @@ export default function MainDocsCalendar({
         
       }
     });
+
+    if (currentDate === null) {
+      const firstEventDate = events[0]?.date;
+      const detectedYear = firstEventDate
+        ? new Date(firstEventDate).getFullYear()
+        : new Date().getFullYear();
+      const today = new Date();
+      setCurrentDate(new Date(detectedYear, today.getMonth(), 1));
+    }
+
     setCalendarEvents(events);
-  }, [meta, professorName]);
+  }, [meta, professorName, currentDate]);
 
   const handleEventClick = (event: CalendarEvent) => {
     // Trouver le document correspondant

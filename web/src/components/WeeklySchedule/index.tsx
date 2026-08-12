@@ -23,6 +23,7 @@ interface ScheduleCategory {
 }
 
 interface WeeklyScheduleData {
+  name?: string;
   startHour?: string;
   endHour?: string;
   slotMinutes?: number;

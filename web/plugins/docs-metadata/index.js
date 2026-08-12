@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const matter = require("gray-matter");
 
 /**
  * Extrait le frontmatter d'un contenu Markdown
@@ -9,16 +10,8 @@ const path = require("path");
  * @returns {Object} frontmatter
  */
 function extractFrontmatter(content) {
-  const match = content.match(/^---([\s\S]*?)---/);
-  if (!match) return null;
-  const frontmatter = {};
-  match[1].split("\n").forEach((line) => {
-    const [key, ...rest] = line.split(":");
-    if (key && rest.length) {
-      frontmatter[key.trim()] = rest.join(":").trim();
-    }
-  });
-  return frontmatter;
+  const parsed = matter(content);
+  return parsed.data || null;
 }
 
 /**
@@ -90,6 +83,7 @@ function generateSidebarDocs() {
     __dirname,
     "../../src/components/MainDocsGrid/sidebarDocs.js"
   );
+  delete require.cache[require.resolve(sidebarPath)];
   const sidebars = require(sidebarPath);
   // Ne prendre que la section 'docs'
   let allEntries = [];
@@ -108,8 +102,14 @@ function generateSidebarDocs() {
  * Plugin Docusaurus pour exposer les métadonnées des documents
  */
 module.exports = function pluginDocsMetadata(context, options) {
+  const docsGlob = path.join(context.siteDir, "docs/**/*.{md,mdx}");
+  const sidebarsPath = path.join(context.siteDir, "sidebars.js");
+
   return {
     name: "docusaurus-plugin-docs-metadata",
+    getPathsToWatch() {
+      return [docsGlob, sidebarsPath];
+    },
     /**
      * Chargement des métadonnées à partir des fichiers Markdown
      */
