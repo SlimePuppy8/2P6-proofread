@@ -11,7 +11,7 @@
     },
     { "id": "3t5-1020-t", "category": "blue", "courseCode": "420-3T5-EM",
       "title": "Automatisation de tâches", "courseGroup": "1020",
-      "day": "jeudi", "start": "14:40", "end": "17:00", "room": "D0620"
+      "day": "jeudi", "start": "15:10", "end": "17:30", "room": "D0620"
     },
     { "id": "3t5-1010-l", "category": "blue", "courseCode": "420-3T5-EM",
       "title": "Automatisation de tâches", "courseGroup": "1010",
@@ -31,15 +31,15 @@
     },
     { "id": "dispo-cai-1", "category": "green",
       "title": "Centre d'aide en informatique",
-      "day": "null", "start": "13:10", "end": "15:00", "room": "D0008"
+      "day": "mardi", "start": "12:10", "end": "14:00", "room": "E209"
     },
     { "id": "dispo-bur-1", "category": "green",
       "title": "Disponibilité à mon bureau",
-      "day": "null", "start": "17:10", "end": "18:00", "room": "E209"
+      "day": "lundi", "start": "14:35", "end": "16:00", "room": "E209"
     },
     { "id": "dispo-bur-2", "category": "green",
       "title": "Disponibilité à mon bureau",
-      "day": "null", "start": "17:10", "end": "18:00", "room": "E209"
+      "day": "null", "start": "10:00", "end": "11:00", "room": "E209"
     },
     { "id": "reunion-dep", "category": "gray",
       "title": "Réunion départementale",

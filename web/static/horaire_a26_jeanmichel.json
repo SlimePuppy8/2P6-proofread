@@ -1,7 +1,7 @@
 {
   "name": "Jean-Michel Nadeau",
   "startHour": "08:00",
-  "endHour": "18:00",
+  "endHour": "20:00",
   "slotMinutes": 60,
   "days": ["lundi", "mardi", "mercredi", "jeudi", "vendredi"],
   "events": [
@@ -19,7 +19,7 @@
     },
     { "id": "3s4-1020-t", "category": "yellow", "courseCode": "420-3S4-EM", 
       "title": "Introduction à la cybersécurité", "courseGroup": "1020", 
-      "day": "mardi", "start": "8:10", "end": "10:00", "room": "D0622"
+      "day": "mardi", "start": "8:10", "end": "10:00", "room": "D0602"
     },
     { "id": "3s4-1010-l", "category": "yellow", "courseCode": "420-3S4-EM", 
       "title": "Introduction à la cybersécurité", "courseGroup": "1010", 
