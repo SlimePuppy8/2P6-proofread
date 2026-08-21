@@ -1,7 +1,7 @@
 {
   "name": "Mathieu Briau",
   "startHour": "08:00",
-  "endHour": "20:00",
+  "endHour": "18:00",
   "slotMinutes": 60,
   "days": ["lundi", "mardi", "mercredi", "jeudi", "vendredi"],
   "events": [
